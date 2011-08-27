@@ -1,2 +1,9 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+#content > div, #content > article {
+  padding-top: 0px;
+}
+
+body > header {
+  background: black top left url('/images/brakeman_header.jpg') no-repeat;
+}
