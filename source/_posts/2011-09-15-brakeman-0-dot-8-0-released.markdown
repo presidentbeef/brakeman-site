@@ -41,13 +41,13 @@ The example from the [Rails guide](http://guides.rubyonrails.org/getting_started
 
     end
 
-This would raise a warning, mostly because it is a bad idea to have passwords in plaintext right in your source code.
+This would raise a warning, mostly because it is a bad idea to have passwords in plain text right in your source code.
 
 ## Changes to Existing Warnings
 
 Mass assignment has been changed to raise a warning if there is any user input when calling `Model.new`.
 
-`auto_link` was previously set to be a "known dangerous" method because it did not escape its output. That changed in Rails 3.0.6, however, so it would be considered safe for versions 3.0.6 and up. But then `auto_link` was removed in Rails 3.1, so for 3.1 and up it will be treated as a regular method.
+`auto_link` was previously set to be a "known dangerous" method because it did not escape its output. That was fixed in Rails 3.0.6, so it will be considered safe for versions 3.0.6 and up. But then `auto_link` was removed in Rails 3.1, so for 3.1 and up it will be treated as a regular method.
 
 ## Changes to Output
 
