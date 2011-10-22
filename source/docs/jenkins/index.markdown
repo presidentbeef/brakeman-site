@@ -7,8 +7,8 @@ sharing: false
 footer: true
 ---
 
-[Jenkins](http://jenkins-ci.org/) (formerly known as Hudson) is a continuous integration tool.
+[Jenkins](http://jenkins-ci.org/) (or [Hudson](http://hudson-ci.org)) is a continuous integration tool.
 
-There is a plugin for using Brakeman available [here](https://github.com/presidentbeef/brakeman-jenkins-plugin). This plugin will allow you to run Brakeman automatically when code changes and aggregate the results.
+A [Brakeman plugin for Jenkins](http://wiki.jenkins-ci.org/display/JENKINS/Brakeman+Plugin) is available which will allow you to run Brakeman automatically when code changes and report the results.
 
 Check [here](docs/jenkins/installation) for instructions on how to install the plugin.
