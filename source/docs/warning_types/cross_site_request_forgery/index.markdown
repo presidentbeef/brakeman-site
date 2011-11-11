@@ -1,0 +1,17 @@
+---
+layout: page
+title: "Cross Site Request Forgery"
+date: 2011-11-10 12:24
+comments: false
+sharing: true
+footer: true
+---
+
+Cross-site request forgery is #5 on the [OWASP Top Ten](https://www.owasp.org/index.php/Top_10_2010-A5). CSRF allows an attacker to perform actions on a website as if they are an authenticated user.
+
+This warning is raised when no call to `protect_from_forgery` is found in `ApplicationController`. This method prevents CSRF.
+
+See [the Ruby Security Guide](http://guides.rubyonrails.org/security.html#cross-site-request-forgery-csrf) for details.
+
+---
+Back to [Warning Types](/docs/warning_types)

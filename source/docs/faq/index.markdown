@@ -27,7 +27,27 @@ The code in the warning is what is seen by brakeman, while the code in the conte
 
 ### Why is a variable shown as "SomeModel.new" when it clearly is not?
 
-Records from a model will be sometimes displayed this way. This happens, for example, when a collection of query results is being iterated over.
+Records from a model will be sometimes displayed this way. 
+
+For example, if `User` is a model and there is an action like
+
+    class UsersController
+
+      def list
+        @users = User.all
+      end
+
+    end
+
+and a corresponding view containing
+
+    <% @users.each do |user| %>
+      <%= user.name %>
+    <% end %>
+
+This will produce a warning (in Rails 2.x) that looks like
+
+    Unescaped model attribute near line 3: User.new.name
 
 ### Brakeman reports 0 warnings. Am I safe?
 

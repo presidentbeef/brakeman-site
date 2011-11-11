@@ -1,0 +1,18 @@
+---
+layout: page
+title: "Attribute Restriction"
+date: 2011-11-10 12:46
+comments: false
+sharing: true
+footer: true
+---
+
+This warning comes up if a model does not limit what attributes can be set through mass assignment.
+
+In particular, this check looks for `attr_accessible` inside model definitions. If it is not found, this warning will be issued.
+
+Note that disabling mass assignment globally will suppress these warnings.
+
+---
+
+Back to [Warning Types](/docs/warning_types)
