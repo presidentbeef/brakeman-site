@@ -11,4 +11,8 @@ footer: true
 
 A [Brakeman plugin for Jenkins](http://wiki.jenkins-ci.org/display/JENKINS/Brakeman+Plugin) is available which will allow you to run Brakeman automatically when code changes and report the results.
 
-Check [here](docs/jenkins/installation) for instructions on how to install the plugin.
+It will also produce trend graphs like this:
+
+![Example Plugin Graph](/images/brakeman_trend_graph.png "Example Plugin Graph")
+
+Check [here](/docs/jenkins/installation) for instructions on how to install the plugin.
