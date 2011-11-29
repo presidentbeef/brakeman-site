@@ -18,4 +18,6 @@ Alternatively, you can supply a path as an option to Brakeman:
 
     brakeman your_rails_app
 
-Next, you may want to read about the many [options](/docs/options) for output and scanning.
+---
+[Brakeman Options](/docs/options)
+[More documentation](/docs)

@@ -23,3 +23,6 @@ Read more about the different warnings Brakeman reports:
 * [File Access](/docs/warning_types/file_access)
 * [Basic Authentication](/docs/warning_types/basic_auth)
 * [Session Settings](/docs/warning_types/session_settings) 
+
+---
+[More Documentation](/docs)

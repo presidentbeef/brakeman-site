@@ -19,3 +19,8 @@ If you must have the latest and greatest, then you can build the gem yourself:
     cd brakeman
     gem build brakeman.gemspec
     gem install brakeman-*.gem
+
+---
+[Running Brakeman](/docs/running)
+[More documentation](/docs)
+

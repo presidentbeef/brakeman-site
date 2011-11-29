@@ -62,3 +62,9 @@ Brakeman cannot understand everything which is happening in the code. Sometimes 
 The best course of action is to use both Brakeman and a regular website security scanner. They are complementary approaches.
 
 If you happen to use the Hudson/Jenkins continuous integration tool, there is a [Brakeman plugin](/docs/jenkins) for it.
+
+---
+[Installing Brakeman](/docs/install)
+[More documentation](/docs)
+
+
