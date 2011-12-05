@@ -22,6 +22,7 @@ footer: true
 
 ## More Information
 
+* [Brakeman Presentations](/docs/presentations)
 * [Confidence Levels]({{ root_url }}/docs/confidence)
 * [Warning Types]({{ root_url }}/docs/warning_types)
 * [FAQ]({{ root_url }}/docs/faq)
