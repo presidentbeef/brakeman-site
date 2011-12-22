@@ -106,3 +106,7 @@ For example, to only show high confidence warnings:
     brakeman -w3
 
 See [confidence levels](/docs/confidence) for more information.
+
+---
+
+[More documentation](/docs)

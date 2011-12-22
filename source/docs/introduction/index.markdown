@@ -65,6 +65,6 @@ If you happen to use the Hudson/Jenkins continuous integration tool, there is a 
 
 ---
 [Installing Brakeman](/docs/install)
-[More documentation](/docs)
 
+[More documentation](/docs)
 

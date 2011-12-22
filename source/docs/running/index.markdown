@@ -20,4 +20,5 @@ Alternatively, you can supply a path as an option to Brakeman:
 
 ---
 [Brakeman Options](/docs/options)
+
 [More documentation](/docs)

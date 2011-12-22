@@ -22,5 +22,5 @@ If you must have the latest and greatest, then you can build the gem yourself:
 
 ---
 [Running Brakeman](/docs/running)
-[More documentation](/docs)
 
+[More documentation](/docs)
