@@ -7,11 +7,23 @@ sharing: false
 footer: true
 ---
 
+### gem install
+
 Brakeman is best installed via [RubyGems](http://rubygems.org/):
 
     gem install brakeman
 
 This will provide the `brakeman` executable.
+
+### bundler
+
+Brakeman can be added to a Gemfile:
+
+    gem "brakeman"
+
+It is recommended to _always_ use the latest version of Brakeman.
+
+### git clone
 
 If you must have the latest and greatest, then you can build the gem yourself:
 

@@ -14,16 +14,23 @@ footer: true
 * [Running Brakeman]({{ root_url }}/docs/running)
 * [Brakeman Options]({{ root_url }}/docs/options)
 
+## Next Steps
+
+* [Confidence Levels]({{ root_url }}/docs/confidence)
+* [Warning Types]({{ root_url }}/docs/warning_types)
+* [Reducing False Positives](/docs/reducing_false_positives)
+* [Using Brakeman as a Library](/docs/brakeman_as_a_library)
+
+## More Information
+
+* [Video](/docs/video)
+* [Presentations](/docs/presentations)
+* [FAQ]({{ root_url }}/docs/faq)
+
 ## Hudson/Jenkins Integration
 
 * [Introduction]({{ root_url }}/docs/jenkins)
 * [Installation]({{ root_url }}/docs/jenkins/installation)
 * [Job Setup]({{ root_url }}/docs/jenkins/setup)
 
-## More Information
 
-* [Video](/docs/video)
-* [Presentations](/docs/presentations)
-* [Confidence Levels]({{ root_url }}/docs/confidence)
-* [Warning Types]({{ root_url }}/docs/warning_types)
-* [FAQ]({{ root_url }}/docs/faq)
