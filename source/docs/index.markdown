@@ -20,6 +20,7 @@ footer: true
 * [Warning Types]({{ root_url }}/docs/warning_types)
 * [Reducing False Positives](/docs/reducing_false_positives)
 * [Using Brakeman as a Library](/docs/brakeman_as_a_library)
+* [Brakeman and Rake](/docs/rake)
 
 ## More Information
 
