@@ -57,3 +57,6 @@ Here is a list of options:
  * :skip_libs - do not process lib/ directory (default: false)
  * :skip_checks - checks not to run (run all if not specified)
 
+---
+
+[More documentation](/docs)

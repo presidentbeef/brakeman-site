@@ -52,3 +52,7 @@ To ignore this kind of output, use the `--report-direct` option. This also appli
 ### Ignoring Model Attributes
 
 Brakeman assumes database values are suspect (and so should you). But for some applications this does not make sense. Use the `--ignore-model-output` option to suppress reporting model attributes as cross-site scripting vulnerabilities.
+
+---
+
+[More documentation](/docs)

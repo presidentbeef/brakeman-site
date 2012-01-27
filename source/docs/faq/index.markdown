@@ -52,3 +52,7 @@ This will produce a warning (in Rails 2.x) that looks like
 ### Brakeman reports 0 warnings. Am I safe?
 
 **No**. It just means Brakeman didn't find any problems. There may be vulnerabilities Brakeman does not test for or did not discover. No security tool has 100% coverage.
+
+---
+
+[More documentation](/docs)
