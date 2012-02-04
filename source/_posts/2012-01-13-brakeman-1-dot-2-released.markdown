@@ -59,4 +59,4 @@ This release adds experimental support for rescanning a subset of paths in a Rai
 
 ### Issues
 
-Please report _any_ problems or questions on [GitHub](https://github.com/presidentbeef/brakeman/issues) or send a tweet to [@BrakemanScanner](https://twitter.com/#!/brakemanscanner)!
+Please report _any_ problems or questions on [GitHub](https://github.com/presidentbeef/brakeman/issues) or send a tweet to [@Brakeman](https://twitter.com/#!/brakemanscanner)!

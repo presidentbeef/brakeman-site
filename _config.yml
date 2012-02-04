@@ -49,7 +49,7 @@ default_asides: [custom/asides/about.html, custom/asides/github.html, asides/rec
 # ----------------------- #
 
 # Twitter
-twitter_user: BrakemanScanner
+twitter_user: brakeman
 twitter_tweet_count: 2
 twitter_show_replies: false
 twitter_follow_button: true

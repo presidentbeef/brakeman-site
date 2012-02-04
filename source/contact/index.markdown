@@ -21,4 +21,4 @@ Archives are available for browsing on [The Mail Archive](http://www.mail-archiv
 
 ### Twitter
 
-Follow Brakeman on Twitter [@BrakemanScanner](http://twitter.com/brakemanscanner) for news and announcements.
+Follow Brakeman on Twitter [@Brakeman](http://twitter.com/brakeman) for news and announcements.
