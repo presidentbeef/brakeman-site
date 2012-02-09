@@ -27,6 +27,8 @@ footer: true
 * [Video](/docs/video)
 * [Presentations](/docs/presentations)
 * [FAQ]({{ root_url }}/docs/faq)
+* [Testing Brakeman](/docs/testing_brakeman)
+* [Contributing](/docs/contributing)
 
 ## Hudson/Jenkins Integration
 
