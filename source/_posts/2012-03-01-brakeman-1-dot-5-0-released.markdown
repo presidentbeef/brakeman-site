@@ -8,8 +8,8 @@ categories:
 
 A release was forced today because two new Rails vulnerabilities were reported (the first since November):
 
- * [Manual options are not escaped in select()](http://groups.google.com/group/rubyonrails-security/browse_thread/thread/edd28f1e3d04e913)
- * [Some operations on SafeBuffer mistakenly return strings marked as html_safe](http://groups.google.com/group/rubyonrails-security/browse_thread/thread/9da0c515a6c4664)
+ * [Manual options are not escaped in select()](http://groups.google.com/group/rubyonrails-security/browse_thread/thread/9da0c515a6c4664)
+ * [Some operations on SafeBuffer mistakenly return strings marked as html_safe](http://groups.google.com/group/rubyonrails-security/browse_thread/thread/edd28f1e3d04e913)
 
 This release includes checks for these two vulnerabilities.
 
