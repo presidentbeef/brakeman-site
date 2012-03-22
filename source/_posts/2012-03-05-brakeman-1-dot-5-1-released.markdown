@@ -10,6 +10,7 @@ After the excitment yesterday with a mass assignment vulnerability being exploit
 
 This lead to re-examination of Brakeman's code for detecting that mass assignment has been globally disabled - and it turns out there was a bug or two. So here is a bug-fix release of Brakeman to correct that and some other minor issues.
 
+Upgrading to 1.5.1 may increase the number of warnings reported.
 
 _Changes since 1.5.0_:
 
