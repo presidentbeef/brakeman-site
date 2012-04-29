@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://brakemanscanner.org
-title: Brakeman
+title: Brakeman - Rails Security Scanner
 subtitle: Static analysis security scanner for Ruby on Rails
 author: Justin Collins
 simple_search: http://google.com/search
