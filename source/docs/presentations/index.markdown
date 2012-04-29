@@ -7,6 +7,8 @@ sharing: false
 footer: true
 ---
 
+RailsConf 2012 - [Keeping Rails Applications on Track with Brakeman](/docs/presentations/Brakeman-RailsConf2012.pdf) (PDF)
+
 AppSec USA 2011 - [Brakeman and Jenkins](/docs/presentations/Brakeman%20and%20Jenkins%20-%20AppSecUSA%202011.pdf) (PDF)
 
 OWASP LA, June 2011 - [Automated Detection of Security Vulnerabilities in Ruby on Rails Applications](http://cs.ucla.edu/~collins/documents/Justin_Collins-OWASPLA-Brakeman.pdf) (PDF)
