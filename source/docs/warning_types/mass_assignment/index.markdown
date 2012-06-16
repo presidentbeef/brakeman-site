@@ -33,7 +33,7 @@ In Rails 3.1 and newer, mass assignment can easily be disabled:
 
 Unfortunately, it can also easily be bypassed:
 
-    User.new(params[:user], :without_protection => true
+    User.new(params[:user], :without_protection => true)
 
 Brakeman will warn on uses of `without_protection`.
 
