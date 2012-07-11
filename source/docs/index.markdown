@@ -27,6 +27,7 @@ footer: true
 * [Video](/docs/video)
 * [Presentations](/docs/presentations)
 * [FAQ]({{ root_url }}/docs/faq)
+* [Troubleshooting](/docs/troubleshooting)
 * [Testing Brakeman](/docs/testing_brakeman)
 * [Contributing](/docs/contributing)
 
@@ -35,5 +36,4 @@ footer: true
 * [Introduction]({{ root_url }}/docs/jenkins)
 * [Installation]({{ root_url }}/docs/jenkins/installation)
 * [Job Setup]({{ root_url }}/docs/jenkins/setup)
-
 
