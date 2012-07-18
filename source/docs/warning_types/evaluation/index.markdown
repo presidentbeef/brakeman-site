@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("dangerous_evaluation/");
+window.location.replace("http://brakemanscanner.org/docs/warning_types/dangerous_evaluation/");
 </script>
 
 Content moved to [Dangerous Evaluation](dangerous_evaluation/).

@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("format_validation/");
+window.location.replace("http://brakemanscanner.org/docs/warning_types/format_validation/");
 </script>
 
 Content moved to [Format Validation](format_validation/).

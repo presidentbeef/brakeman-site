@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("basic_authentication/");
+window.location.replace("http://brakemanscanner.org/docs/warning_types/basic_authentication/");
 </script>
 
 Content moved to [Basic Authentication](basic_authentication/).

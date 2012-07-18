@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("dynamic_render_paths/");
+window.location.replace("http://brakemanscanner.org/docs/warning_types/dynamic_render_paths/");
 </script>
 
 Content has moved to [Dynamic Render Paths](dynamic_render_paths)
