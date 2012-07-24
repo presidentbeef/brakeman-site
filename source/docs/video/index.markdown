@@ -9,6 +9,7 @@ footer: true
 
  * [Starting off with Brakeman](/docs/video/intro)
  * [Brakeman Tech Talk at Highgroove Studios](http://vimeo.com/35766582)
+ * [Guard Brakeman](https://www.youtube.com/watch?v=CMgYcr9_ONs)
  * [OC Rails Presentation](http://vimeo.com/32850101)
  * [AppSec USA 2011 Presentation](http://vimeo.com/32696936)
 
