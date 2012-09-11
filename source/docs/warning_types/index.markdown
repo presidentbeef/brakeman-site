@@ -11,6 +11,7 @@ Read more about the different warnings Brakeman reports:
 
 * [Cross Site Scripting](/docs/warning_types/cross_site_scripting)
 * [Cross Site Scripting (JSON)](/docs/warning_types/cross_site_scripting_to_json)
+* [Cross Site Scripting (Content Tag)](/docs/warning_types/content_tag)
 * [SQL Injection](/docs/warning_types/sql_injection)
 * [Command Injection](/docs/warning_types/command_injection)
 * [Mass Assignment](/docs/warning_types/mass_assignment)
