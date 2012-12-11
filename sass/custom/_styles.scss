@@ -11,3 +11,11 @@ body > header {
 div#github a {
   margin-left: 8px;
 }
+
+div.articlelogo {
+  float:left;
+  padding: 17px 10px 0px 0px;
+  background: center no-repeat url('/images/brakeman_logo_small.png');
+  width: 20px;
+  height: 30px;
+}

@@ -1,7 +1,8 @@
 {% unless page.no_header %}
   <header>
+    <div class="articlelogo">&nbsp;</div>
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | titlecase }}</a></h1>
+    <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | titlecase }}</a></h1>
     {% else %}
       <h1 class="entry-title">{{ page.title | titlecase }}</h1>
     {% endif %}
