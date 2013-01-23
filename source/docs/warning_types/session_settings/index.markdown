@@ -7,13 +7,11 @@ sharing: true
 footer: true
 ---
 
-### HTTP Only
+<script>
+window.location.replace("http://brakemanscanner.org/docs/warning_types/session_setting/");
+</script>
 
-It is recommended that session cookies be set to "http-only". This helps prevent stealing of cookies via cross site scripting.
-
-### Secret Length
-
-Brakeman will warn if the key length for the session cookies is less than 30 characters.
+Content has moved to [Session Setting](/docs/warning_types/session_setting/)
 
 ---
 Back to [Warning Types](/docs/warning_types)
