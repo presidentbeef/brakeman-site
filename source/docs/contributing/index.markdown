@@ -19,6 +19,10 @@ Brakeman should work on most platforms without a problem. It is typically tested
 
 New feature implementations should be submitted as a pull request on [GitHub](https://github.com/presidentbeef/brakeman).
 
+### Contributing Documentation
+
+Documentation patches can be submitted as pull requests to the [brakeman-site](https://github.com/presidentbeef/brakeman-site) repository.
+
 ### False Negatives and False Positives
 
 If you have code that raises warnings when it shouldn't, or does not raise warnings when it should, please consider reporting them with code which reproduces the problem.

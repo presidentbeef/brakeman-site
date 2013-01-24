@@ -13,7 +13,7 @@ Ruby must be installed on the Jenkins server.
 
 ## Enable the plugin
 
-On the job configuration page, check the box next to "Publish Brakeman warnings".
+On the job configuration page, check the box next to "Publish Brakeman warnings". On newer builds of Jenkins, you'll find this under the "Add post-build action" dropdown at the bottom of the page.
 
 The plugin will look for an output file from Brakeman in the work directory. The name of the output file can be specified here, but the default should be fine.
 
