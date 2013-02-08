@@ -16,7 +16,7 @@ Read more about the different warnings Brakeman reports:
 * [Command Injection](/docs/warning_types/command_injection)
 * [Mass Assignment](/docs/warning_types/mass_assignment)
 * [Attribute Restriction](/docs/warning_types/attribute_restriction)
-* [Cross-Site Request Forgery](/docs/warning_types/cross_site_request_forgery)
+* [Cross-Site Request Forgery](/docs/warning_types/cross-site_request_forgery)
 * [Unsafe Redirects](/docs/warning_types/redirect)
 * [Default Routes](/docs/warning_types/default_routes)
 * [Format Validation](/docs/warning_types/format_validation)
