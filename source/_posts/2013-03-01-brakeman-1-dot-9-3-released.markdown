@@ -23,6 +23,8 @@ _Changes since 1.9.2_:
 
 ### Warning Fingerprints and New Identifiers
 
+*This is a breaking change: `brakeman --compare` will not work with reports generated from earlier versions.* 
+
 Tracking of new and fixed warnings is often required when integrating Brakeman with other tools. Current approaches rely on fragile values such as the warning messages or formatting of the code output.
 
 Additionally, warnings are grouped into large categories, such as "SQL Injection". Sometimes more fine-grained categorization is required that does not rely on a value intended for display that may need to changed.
@@ -127,4 +129,4 @@ Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or
 
 ### Roadmap
 
-The [Brakeman roadmap](https://github.com/presidentbeef/brakeman/wiki/Roadmap) has one more release (1.9.2) planned before 2.0. The next release will likely only include bug and false positive fixes. Brakeman 2.0 will *definitely* include breaking changes, especially for JSON reports.
+The [Brakeman roadmap](https://github.com/presidentbeef/brakeman/wiki/Roadmap) has one more release (1.9.4) planned before 2.0. The next release will likely only include bug and false positive fixes. Brakeman 2.0 will *definitely* include breaking changes, especially for JSON reports.
