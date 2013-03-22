@@ -19,7 +19,7 @@ This will provide the `brakeman` executable.
 
 Brakeman can be added to a Gemfile:
 
-    gem "brakeman"
+    gem "brakeman", :require => false
 
 It is recommended to _always_ use the latest version of Brakeman.
 
