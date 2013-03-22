@@ -15,7 +15,7 @@ _Changes since 1.9.3_:
  * Add check for CVE-2013-1856
  * Add check for CVE-2013-1857
  * Fix `--compare` to work with older versions
- * Add "no-referrer' to HTML report links
+ * Add "no-referrer" to HTML report links
  * Don't warn when invoking `send` on user input
  * Slightly faster cloning of Sexps
  * Detect another way to add `strong_parameters` ([#288](https://github.com/presidentbeef/brakeman/issues/288))
