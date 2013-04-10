@@ -27,7 +27,7 @@ Read more about the different warnings Brakeman reports:
 * [Session Settings](/docs/warning_types/session_setting) 
 * [Dangerous Send](/docs/warning_types/dangerous_send)
 * [Mail Link](/docs/warning_types/CVE-2011-0446)
-* [Remote Code Execution](/docs/warning_types/remote_code_exection)
+* [Remote Code Execution](/docs/warning_types/remote_code_execution)
 * [Remote Execution in YAML.load](/docs/warning_types/remote_code_execution_yaml_load)
 
 ---
