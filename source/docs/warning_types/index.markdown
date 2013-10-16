@@ -27,6 +27,7 @@ Read more about the different warnings Brakeman reports:
 * [File Access](/docs/warning_types/file_access)
 * [Basic Authentication](/docs/warning_types/basic_authentication)
 * [Session Settings](/docs/warning_types/session_setting) 
+* [Information Disclosure](/docs/warning_types/information_disclosure)
 * [Dangerous Send](/docs/warning_types/dangerous_send)
 * [Mail Link](/docs/warning_types/CVE-2011-0446)
 * [Remote Code Execution](/docs/warning_types/remote_code_execution)
