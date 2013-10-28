@@ -51,7 +51,13 @@ A small fix prevents Brakeman from raising an error when a route is a redirect o
 
 ### Command Injection False Positives
 
-There should be fewer false positives for command injection when interpolated values are literals. Also now ignores commonly used values `RAILS_ROOT`, `Rails.env`, and `Rails.root`.
+There should be fewer false positives for command injection when interpolated values are literals. The check also now ignores commonly used values `RAILS_ROOT`, `Rails.env`, and `Rails.root`.
+
+Additionally, reported "dangerous" values (`user_input` in JSON reports) for command injection are more specific. For example:
+
+    system "rm -rf #{some_var}"
+
+used to report the entire string `"rm -rf #{some_var}"` as dangerous, even though it's really warning about the interpolation of `some_var`. Now Brakeman will report the first potentially dangerous interpolated value. Note that this does not change fingerprints for existing warnings.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/404))
 
@@ -61,3 +67,8 @@ Please report any [issues](https://github.com/presidentbeef/brakeman/issues) wit
 
 Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter.
 
+### Verification
+
+The SHA-1 for the Brakeman 2.2.0 gem is:
+
+    f3a2b369bda79c677a913cdb2350cbda8bce8a90  brakeman-2.2.0.gem
