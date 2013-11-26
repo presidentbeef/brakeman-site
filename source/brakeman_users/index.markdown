@@ -13,6 +13,7 @@ Here are a few of the companies using Brakeman:
 
 [![Braintree Payments](/images/users/braintree.svg)](https://www.braintreepayments.com)
 [![Code Climate](/images/users/codeclimate.png)](https://codeclimate.com/)
+[![Icicle Technologies](/images/users/icicletech.png)](http://www.icicletech.com)
 [![Logical Reality Design](/images/users/lrdesign.png)](http://lrdesign.com)
 [![nVisium](/images/users/nvisium.png)](https://www.nvisium.com/)
 [![New Relic](/images/users/newrelic.png)](http://newrelic.com)
