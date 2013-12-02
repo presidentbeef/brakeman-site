@@ -13,6 +13,7 @@ Here are a few of the companies using Brakeman:
 
 [![Braintree Payments](/images/users/braintree.svg)](https://www.braintreepayments.com)
 [![Code Climate](/images/users/codeclimate.png)](https://codeclimate.com/)
+[![GitHub](/images/users/github.png)](https://github.com/)
 [![Icicle Technologies](/images/users/icicletech.png)](http://www.icicletech.com)
 [![Logical Reality Design](/images/users/lrdesign.png)](http://lrdesign.com)
 [![nVisium](/images/users/nvisium.png)](https://www.nvisium.com/)
@@ -20,7 +21,6 @@ Here are a few of the companies using Brakeman:
 [![Semaphore](/images/users/semaphore.png)](https://semaphoreapp.com/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
 
-[GitHub](https://github.com/)<br>
 [Groupon](http://groupon.com)<br>
 [Jemurai](http://jemurai.com/)<Br>
 [MPower Payments](http://www.mpowerpayments.com)<br>
