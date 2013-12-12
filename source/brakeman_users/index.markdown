@@ -28,4 +28,8 @@ Here are a few of the companies using Brakeman:
 [University of Washington Center for Commercialization](http://depts.washington.edu/uwc4c)<br>
 [WiseCash](https://www.wisecashhq.com/)
 
+Additionally, use of Brakeman is recommended by:
+
+[![Cigital](/images/users/cigital.png)](http://cigital.com)
+
 To add your company or logo here, please [tweet @Brakeman](https://twitter.com/intent/tweet?text=%40brakeman+Please+list+our+company%27s+name+%28and+logo%29+as+a+proud+Brakeman+user!) or [open an issue](https://github.com/presidentbeef/brakeman-site/issues/new?title=Please+list+our+company+%28and+logo%29+as+a+proud+Brakeman+user!).
