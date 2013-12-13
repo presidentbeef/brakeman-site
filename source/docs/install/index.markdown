@@ -15,6 +15,20 @@ Brakeman is best installed via [RubyGems](http://rubygems.org/):
 
 This will provide the `brakeman` executable.
 
+Brakeman gems are now signed, which means the contents of the gem can be verified using the [public Brakeman certificate](https://github.com/presidentbeef/brakeman/blob/master/brakeman-public_cert.pem).
+
+To verify the gem, first add the certificate as "trusted":
+
+    gem cert --add <(curl -Ls https://raw.github.com/presidentbeef/brakeman/master/brakeman-public_cert.pem)
+
+If that looks scary, the certificate can always be downloaded manually and then added. The certificate only needs to be added once.
+
+Then the gem can be verified at install:
+
+    gem install brakeman -P MediumSecurity
+
+"HighSecurity" cannot be used at this time since it requires all dependencies to also be signed by their authors.
+
 ### bundler
 
 Brakeman can be added to a Gemfile:
