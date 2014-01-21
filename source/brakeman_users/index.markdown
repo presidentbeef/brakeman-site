@@ -21,6 +21,7 @@ Here are a few of the companies using Brakeman:
 [![New Relic](/images/users/newrelic.png)](http://newrelic.com)
 [![Semaphore](/images/users/semaphore.png)](https://semaphoreapp.com/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
+[![PullReview](/images/users/pullreview.png)](https://www.pullreview.com/)
 
 [Groupon](http://groupon.com)<br>
 [Jemurai](http://jemurai.com/)<Br>
@@ -33,4 +34,4 @@ Additionally, use of Brakeman is recommended by:
 
 [![Cigital](/images/users/cigital.png)](http://cigital.com)
 
-To add your company or logo here, please [tweet @Brakeman](https://twitter.com/intent/tweet?text=%40brakeman+Please+list+our+company%27s+name+%28and+logo%29+as+a+proud+Brakeman+user!) or [open an issue](https://github.com/presidentbeef/brakeman-site/issues/new?title=Please+list+our+company+%28and+logo%29+as+a+proud+Brakeman+user!).
+To add your company or logo here, please [open an issue](https://github.com/presidentbeef/brakeman-site/issues/new?title=Please+list+our+company+%28and+logo%29+as+a+proud+Brakeman+user!) or [tweet @Brakeman](https://twitter.com/intent/tweet?text=%40brakeman+Please+list+our+company%27s+name+%28and+logo%29+as+a+proud+Brakeman+user!).
