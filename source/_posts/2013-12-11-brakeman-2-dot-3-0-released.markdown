@@ -50,7 +50,7 @@ Brakeman now warns on uses of `Parameters#permit!`, which bypasses mass assignme
 
 ### Slim XSS False Positives
 
-([Noah Davis](https://github.com/noahd1)) provided a fix for XSS false positives in Slim templates when ActiveRecord is loaded. While Brakeman itself does not depend on ActiveRecord, it might be loaded if Brakeman is run with Bundler or as part of a Rake task.
+([Noah Davis](https://github.com/noahd1)) provided a fix for XSS false positives in Slim templates when ActiveSupport is loaded. While Brakeman itself does not depend on ActiveSupport, it might be loaded if Brakeman is run with Bundler or as part of a Rake task.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/410))
 
