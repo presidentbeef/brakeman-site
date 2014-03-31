@@ -35,7 +35,7 @@ This results in this kind of warning:
     Possible SQL injection near line 37:
     User.first.where((((("username = '" + params[:user][:name].downcase) + "' AND password = '") + params[:user][:password]) + "'"))
 
-See [the Ruby Security Guide](http://guides.rubyonrails.org/security.html#sql-injection) for more information.
+See [the Ruby Security Guide](http://guides.rubyonrails.org/security.html#sql-injection) for more information and [Rails-SQLi.org](http://rails-sqli.org) for many examples of SQL injection in Rails.
 
 ---
 Back to [Warning Types](/docs/warning_types)
