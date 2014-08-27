@@ -30,7 +30,7 @@ This release is mostly bug fixes and updates, but does include two new options.
 
 ### External Check Option
 
-[Clint Gibler](ihttps://github.com/clintgibler) has added the `--add-checks-path` option to provide an path to search for additional checks. This is useful if you wish to write your own custom rules for Brakeman to run.
+[Clint Gibler](https://github.com/clintgibler) has added the `--add-checks-path` option to provide an path to search for additional checks. This is useful if you wish to write your own custom rules for Brakeman to run.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/532))
 
