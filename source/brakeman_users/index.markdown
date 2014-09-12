@@ -20,8 +20,9 @@ Here are a few of the companies using Brakeman:
 [![nVisium](/images/users/nvisium.png)](https://www.nvisium.com/)
 [![New Relic](/images/users/newrelic.png)](http://newrelic.com)
 [![Semaphore](/images/users/semaphore.png)](https://semaphoreapp.com/)
-[![Twitter](/images/users/twitter.png)](https://twitter.com)
 [![PullReview](/images/users/pullreview.png)](https://www.pullreview.com/)
+[![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
+[![Twitter](/images/users/twitter.png)](https://twitter.com)
 
 [Groupon](http://groupon.com)<br>
 [Jemurai](http://jemurai.com/)<Br>
