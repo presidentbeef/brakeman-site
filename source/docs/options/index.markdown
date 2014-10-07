@@ -7,105 +7,257 @@ sharing: false
 footer: true
 ---
 
-### Output Options
+This page may or may not be entirely up-to-date. For best results but less information, run `brakeman --help`.
 
-**Output File**
+Please note some options below are shown as the short (`-`) or long (`--`) forms, but all options have long forms.
 
-To specify an output file for the results:
+## Scanning Options
 
-    brakeman -o output_file
+Each check will be run in a separate thread by default. To disable this behavior:
 
-**Output Format**
+    brakeman -n
 
-The output format is determined by the file extension used with the `-o` option or by using the `-f` option. Current options are: `text`, `html`, `tabs`, and `csv`.
+By default, Brakeman scans the current directory. A path can also be specified as a bare argument, like:
 
-For example, to output an HTML report:
+    brakeman some/path/to/app
 
-    brakeman -o report.html
+But to be even more specific, the `-p` or `--path` option may be used:
 
-**Message Length**
-
-By default, brakeman truncates warning messages to 100 characters. The `--message-limit` option can be used to adjust this. Setting the limit to `-1` will disable truncation completely.
-
-**Quiet Operation**
+    brakeman -p path/to/app
 
 To suppress informational warnings and just output the report:
 
     brakeman -q
 
-**Debugging Information**
+Note all Brakeman output except reports are sent to stderr, making it simple to redirect stdout to a file and just get the report.
+
+Brakeman returns 0 as an exit code unless something went very wrong. To return an error code when warnings were found:
+
+    brakeman -z
+
+To force Brakeman into Rails 3 mode:
+
+    brakeman -3
+
+Or to force Brakeman into Rails 4 mode:
+
+    brakeman -4
+
+Beware some behavior and checks rely on knowing the exact version name. This shouldn't be a problem with any modern Rails app using a `Gemfile.lock` though.
+
+Brakeman used to parse `routes.rb` and attempt to infer which controller methods are used as actions. However, this is not perfect (especially for Rails 3/4), so now it assumes all controller methods are actions. To disable this behavior:
+
+    brakeman --no-assume-routes
+
+While this shouldn't be necessary, it is possible to force Brakeman to assume output is escaped by default:
+
+    brakeman --escape-html
+
+If Brakeman is running a bit slow, try
+
+    brakeman --faster
+
+This will disable some features, but will probably be much faster (currently it is the same as `--skip-libs --no-branching`). *WARNING*: This may cause Brakeman to miss some vulnerabilities.
+
+To disable flow sensitivity in `if` expressions:
+
+    brakeman --no-branching
+
+To instead limit the number of branches tracked for a given value:
+
+    brakeman --branch-limit LIMIT
+
+`LIMIT` should be an integer value. `0` is almost the same as `--no-branching` but `--no-branching` is preferred. The default value is `5`. Lower values generally make Brakeman go faster. `-1` is the same as unlimited.
+
+To skip certain files use:
+
+    brakeman --skip-files file1,file2,etc
+
+Note Brakeman does "whole program" analysis, therefore skipping a file may affect warning results from more than just that one file.
+
+The inverse but even more dangerous option is to specific which files to scan:
+
+    brakeman --only-files some_file,some_dir
+
+Again, since Brakeman looks at the whole program, it is very likely not going to behave as expected when scanning a subset of files. Also, if certain files are excluded Brakeman may not function at all.
+
+To skip processing of the `lib/` directory:
+
+    brakeman --skip-libs
+
+To run a subset of checks:
+
+    brakeman --test Check1,Check2,etc
+
+To exclude certain checks:
+
+    brakeman --except Check1,Check2,etc
+
+Note it is not necessary to include the `Check` part of the check. For example, these are equivalent:
+
+    brakeman --test CheckSQL
+    brakeman --test SQL
+
+## Output Options
 
 To see all kinds of debugging information:
 
     brakeman -d
 
-### Scanning Options
+To specify an output file for the results:
 
-**Specify Path to Application**
+    brakeman -o output_file
 
-Usually the path to the Rails app is the last argument. Optionally, the `--path` option can be used to specify a path.
+The output format is determined by the file extension or by using the `-f` option. Current options are: `text`, `html`, `tabs`, `json`, `markdown` and `csv`.
 
-**Manually Turn on XSS Protection**
+Multiple output files can be specified:
 
-If you are using the `rails_xss` gem or some other plugin, but Brakeman is not detecting it, the `--escape-html` option will use Erubis for rendering ERB files and turn on HTML escaping for ERB and HAML.
+    brakeman -o output.html -o output.json
 
-**Manually Turn on Rails 3 Support**
+To specify a CSS stylesheet to use with the HTML report:
 
-Brakeman should detect Rails 3 applications, but if not the `-3` will switch Brakeman to Rails 3 mode.
+    brakeman --css-file my_cool_styling
 
-**Specifying Which Checks to Run**
+By default, Brakeman will only report a single warning of a given type for the same line of code. This can be disabled using
 
-Specific checks can be skipped, if desired. The name needs to be the correct case. For example, to skip looking for default routes (`DefaultRoutes`):
+    brakeman --no-combine-locations
 
-    brakeman -x DefaultRoutes
+To disable highlighting of "dangerous" or "user input" values in warnings:
 
-Multiple checks should be separated by a comma:
+    brakeman --no-highlights
 
-    brakeman -x DefaultRoutes,Redirect
+To report controller and route information:
 
-To do the opposite and only run a certain set of tests:
+    brakeman --routes
 
-    brakeman -t SQL,ValidationRegex
+However, if you really want to know what routes an app has, use
 
-**Report Routes**
+    rake routes
 
-To see what actions brakeman has detected as being routes, use the `--routes` option.
+To set the limit on message length in HTML reports, use
 
-### Warning Options
+    brakeman --message-limit LIMIT
 
-**Ignore Safe Methods**
+The default LIMIT is 100.
 
-To indicate certain methods are "safe":
+To limit width of the tables output in text reports, use
 
-    brakeman -s benign_method,totally_safe
+    brakeman --table-width LIMIT
 
-**Assume Unknown Methods are Safe**
+By default, there is no limit.
 
-By default, brakeman will assume that unknown methods involving untrusted data are dangerous. For example, this would raise a warning (in Rails 2.x):
+Brakeman will bundle all warnings about models without `attr_accessible` into one warning. This was problem a mistake. It's more useful to get one warning per model with
+
+    brakeman --separate-models
+
+Sometimes you don't need a big report, just the summary:
+
+    brakeman --summary
+
+Reports show relative paths by default. To use absolute paths instead:
+
+    brakeman --absolute-paths
+
+This does not affect HTML or tab-separated reports.
+
+To output Markdown with nice links to files on Github, use
+
+    brakeman --github-repo USER/REPO[/PATH][@REF]
+
+For example,
+
+    brakeman --github-repo presidentbeef/inject-some-sql
+
+To compare results of a scan with a previous scan, use the JSON output option and then:
+
+    brakeman --compare old_report.json
+
+This will output JSON with two lists: one of fixed warnings and one of new warnings.
+
+## Ignoring Stuff
+
+Brakeman will ignore warnings if configured to do so. By default, it looks for a configuration file in `config/brakeman.ignore`.
+
+To specify a file to use:
+
+    brakeman -i path/to/config.ignore
+
+To create and manage this file, use:
+
+    brakeman -I
+
+To ignore possible XSS from model attributes:
+
+    brakeman --ignore-model-output
+
+Brakeman will raise warnings on models that use `attr_protected`. To suppress these warnings:
+
+    brakeman --ignore-protected
+
+Brakeman will assume that unknown methods involving untrusted data are dangerous. For example, this would cause a warning (Rails 2):
 
     <%= some_method(:option => params[:input]) %>
 
 To only raise warnings only when untrusted data is being directly used:
 
-    brakeman -r
+    brakeman --report-direct
 
-**Ignore Model Output**
+This option is not supported very consistently, though.
 
-By default, brakeman will report unescaped model attributes as dangerous. To disregard these warnings, use `--ignore-model-output`.
+To indicate certain methods return properly escaped output and should not be warned about in XSS checks:
 
-**Set Minimum Confidence Level**
+    brakeman --safe-methods benign_method_escapes_output,totally_safe_from_xss
 
-To only report warnings at or above a certain confidence level, use the `-w` option.
+Brakeman warns about use of user input in URLs generated with `link_to`. Since Rails does not provide anyway of making these URLs really safe (e.g. limiting protocols to HTTP(S)), safe methods can be ignored with
 
-1. Weak confidence
-2. Medium confidence
-3. High confidence
+    brakeman --url-safe-methods ensure_safe_protocol_or_something
 
-For example, to only show high confidence warnings:
+## Confidence Levels
+
+Brakeman assigns a confidence level to each warning. This provides a rough estimate of how certain the tool is that a given warning is actually a problem. Naturally, these ratings should not be taken as absolute truth.
+
+There are three levels of confidence:
+
+ + High - Either this is a simple warning (boolean value) or user input is very likely being used in unsafe ways.
+ + Medium - This generally indicates an unsafe use of a variable, but the variable may or may not be user input.
+ + Weak - Typically means user input was indirectly used in a potentially unsafe manner.
+
+To only get warnings above a given confidence level:
 
     brakeman -w3
 
-See [confidence levels](/docs/confidence) for more information.
+The `-w` switch takes a number from 1 to 3, with 1 being low (all warnings) and 3 being high (only highest confidence warnings).
+
+## Configuration Files
+
+Brakeman options can stored and read from YAML files. To simplify the process of writing a configuration file, the `-C` option will output the currently set options.
+
+Options passed in on the commandline have priority over configuration files.
+
+The default config locations are `./config/brakeman.yml`, `~/.brakeman/config.yml`, and `/etc/brakeman/config.yml`
+
+The `-c` option can be used to specify a configuration file to use.
+
+## Miscellaneous
+
+To list available checks with short descriptions:
+
+    brakeman --checks
+
+To generate a Rake task to run Brakeman:
+
+    brakeman --rake
+
+Note this is not recommended, since Rake will load your entire Rails app, which is not necessary for Brakeman and may cause library conflicts.
+
+To see Brakeman's version:
+
+    brakeman --version
+
+To see the real list of options:
+
+    brakeman --help
+
 
 ---
 
