@@ -144,7 +144,7 @@ To limit width of the tables output in text reports, use
 
     brakeman --table-width LIMIT
 
-By default, there is no limit.
+If no option is provided, Brakeman will attempt to guess the width of the terminal, otherwise it will limit the table width to 80 characters.
 
 Brakeman will bundle all warnings about models without `attr_accessible` into one warning. This was problem a mistake. It's more useful to get one warning per model with
 
