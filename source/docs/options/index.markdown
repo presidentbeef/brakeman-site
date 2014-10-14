@@ -13,6 +13,10 @@ Please note some options below are shown as the short (`-`) or long (`--`) forms
 
 ## Scanning Options
 
+There are some checks which are not run by default. To run all checks, use:
+
+    brakeman -A
+
 Each check will be run in a separate thread by default. To disable this behavior:
 
     brakeman -n
@@ -243,6 +247,10 @@ The `-c` option can be used to specify a configuration file to use.
 To list available checks with short descriptions:
 
     brakeman --checks
+
+To show checks which are optional (not run by default):
+
+    brakeman --optional-checks
 
 To generate a Rake task to run Brakeman:
 
