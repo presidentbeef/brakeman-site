@@ -18,6 +18,7 @@ Here are a few of the companies using Brakeman:
 [![GitHub](/images/users/github.png)](https://github.com/)
 [![Icicle Technologies](/images/users/icicletech.png)](http://www.icicletech.com)
 [![Logical Reality Design](/images/users/lrdesign.png)](http://lrdesign.com)
+[![Lumosity](/images/users/lumosity.png)](http://lumosity.com)
 [![nVisium](/images/users/nvisium.png)](https://www.nvisium.com/)
 [![New Relic](/images/users/newrelic.png)](http://newrelic.com)
 [![Semaphore](/images/users/semaphore.png)](https://semaphoreapp.com/)
