@@ -33,6 +33,7 @@ Read more about the different warnings Brakeman reports:
 * [Remote Code Execution](/docs/warning_types/remote_code_execution)
 * [Remote Execution in YAML.load](/docs/warning_types/remote_code_execution_yaml_load)
 * [SSL Verification Bypass](/docs/warning_types/ssl_verification_bypass)
+* [Unscoped Find](/docs/warning_types/unscoped_find)
 
 ---
 [More Documentation](/docs)
