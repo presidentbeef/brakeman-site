@@ -18,10 +18,11 @@ This will create a task in `lib/tasks/brakeman.rake` that looks like this:
     namespace :brakeman do
 
       desc "Run Brakeman"
-      task :run, :output_file do |t, args|
+      task :run, :output_files do |t, args|
         require 'brakeman'
 
-        Brakeman.run :app_path => ".", :output_file => args[:output_file], :print_report => true
+        files = args[:output_files].split(' ') if args[:output_files]
+        Brakeman.run :app_path => ".", :output_files => files, :print_report => true
       end
     end
 
@@ -35,7 +36,7 @@ or
 
     rake brakeman:run[report.html]
 
-This task can easily be customized. See [Brakeman as a Library](/docs/brakeman_as_a_library) for more information. 
+This task can easily be customized. See [Brakeman as a Library](/docs/brakeman_as_a_library) for more information.
 
 ---
 
