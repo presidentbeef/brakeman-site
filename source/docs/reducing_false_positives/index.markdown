@@ -7,7 +7,7 @@ sharing: false
 footer: true
 ---
 
-By default, Brakeman reports as much as possible. Because there is no way for Brakeman to know if certain items are actually safe or not, it errs on the side of reporting _too much_ rather than possibly not reporting a real problem. Sometimes, though, these false positives can become overwhelming. While there is no method currently for marking a specific warning as a false positive, Brakeman does provide options for customizing reports.
+By default, Brakeman reports as much as possible. Because there is no way for Brakeman to know if certain items are actually safe or not, it errs on the side of reporting _too much_ rather than possibly not reporting a real problem. Sometimes, though, these false positives can become overwhelming. Brakeman does provides many options for customizing reports. It is also possible [to ignore specific warnings](/docs/ignoring_false_positives).
 
 It is recommended to always run Brakeman with the default settings first (and then periodically after that), but it is possible to narrow down the results to make them less annoying.
 
@@ -54,5 +54,7 @@ To ignore this kind of output, use the `--report-direct` option. This also appli
 Brakeman assumes database values are suspect (and so should you). But for some applications this does not make sense. Use the `--ignore-model-output` option to suppress reporting model attributes as cross-site scripting vulnerabilities.
 
 ---
+
+[Ignoring false positives](/docs/ignoring_false_positives)
 
 [More documentation](/docs)
