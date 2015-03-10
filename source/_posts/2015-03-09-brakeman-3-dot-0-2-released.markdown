@@ -10,7 +10,7 @@ This is entirely a bugfix release, no new features. However, the fixes may cause
 
 *Changes since 3.0.1*:
 
-* Remove URI.escape from HTML reports with GitHub repos ([#624](https://github.com/presidentbeef/brakeman/issues/624))
+* Fix HTML reports with GitHub repos ([#624](https://github.com/presidentbeef/brakeman/issues/624))
 * Handle processing of explictly shadowed block arguments ([#612](https://github.com/presidentbeef/brakeman/issues/612))
 * Fix CSV output when there are no warnings ([#615](https://github.com/presidentbeef/brakeman/issues/615))
 * Update `ruby_parser` to ~> 3.6.2
@@ -98,7 +98,8 @@ Do not report about XSS regarding the value used in `case` expressions.
 
 The SHA1 sums for this release are
 
-
+    87413b544b5eae0cac9f037e2b62b1fe3f0fee5e  brakeman-3.0.2.gem
+    cfcf3080a992ca173c64dd98fe239e8bd9bb0eaa  brakeman-min-3.0.2.gem
 
 ### Reporting Issues
 
