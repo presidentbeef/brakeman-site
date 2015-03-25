@@ -17,11 +17,18 @@ This will provide the `brakeman` executable.
 
 Brakeman gems are now signed, which means the contents of the gem can be verified using the [public Brakeman certificate](https://github.com/presidentbeef/brakeman/blob/master/brakeman-public_cert.pem).
 
-To verify the gem, first add the certificate as "trusted":
+To verify the gem, first add the following certificates as "trusted":
 
+    # Brakeman
     gem cert --add <(curl -Ls https://raw.github.com/presidentbeef/brakeman/master/brakeman-public_cert.pem)
 
-If that looks scary, the certificate can always be downloaded manually and then added. The certificate only needs to be added once.
+    # ruby_parser, etc.
+    gem cert --add <(curl -Ls http://www.zenspider.com/~ryan/gem-public_cert.pem)
+
+    # multijson
+    gem cert --add <(curl -Ls https://raw.githubusercontent.com/intridea/multi_json/master/certs/rwz.pem)
+
+If that looks scary, the certificates can always be downloaded manually and then added. The certificates only need to be added once (until they expire).
 
 Then the gem can be verified at install:
 
