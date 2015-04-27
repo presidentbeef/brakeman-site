@@ -22,7 +22,7 @@ Here are a few of the companies using Brakeman:
 [![Lumosity](/images/users/lumosity.png)](http://lumosity.com)
 [![nVisium](/images/users/nvisium.png)](https://www.nvisium.com/)
 [![New Relic](/images/users/newrelic.png)](http://newrelic.com)
-[![Semaphore](/images/users/semaphore.png)](https://semaphoreapp.com/)
+[![Semaphore](/images/users/semaphore.png)](https://semaphoreci.com/)
 [![PullReview](/images/users/pullreview.png)](https://www.pullreview.com/)
 [![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
