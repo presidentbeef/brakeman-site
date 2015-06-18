@@ -8,6 +8,8 @@ categories:
 
 This is mostly a bug fix release, but does introduce a new warning code for when `protect_from_forgery` is not set to raise exceptions in Rails 4.
 
+*Changes since 3.0.2*:
+
 * Warn about `protect_from_forgery` without exceptions ([Neil Matatall](https://github.com/oreoshake))
 * Add Rake task to exit with error code on warnings ([masarakki](https://github.com/masarakki))
 * Ignore `quoted_table_name` in SQL ([Gabriel Sobhrinho](https://github.com/sobrinho))
