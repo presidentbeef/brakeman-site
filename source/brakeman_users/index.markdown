@@ -32,7 +32,8 @@ Here are a few of the companies using Brakeman:
 [MPower Payments](http://www.mpowerpayments.com)<br>
 [RightScale](http://www.rightscale.com/)<br>
 [University of Washington Center for Commercialization](http://depts.washington.edu/uwc4c)<br>
-[WiseCash](https://www.wisecashhq.com/)
+[WiseCash](https://www.wisecashhq.com/)<br>
+[Acorns](https://www.acorns.com/)
 
 Additionally, use of Brakeman is recommended by:
 
