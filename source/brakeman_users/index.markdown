@@ -27,13 +27,13 @@ Here are a few of the companies using Brakeman:
 [![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
 
+[Acorns](https://www.acorns.com/)
 [Groupon](http://groupon.com)<br>
 [Jemurai](http://jemurai.com/)<Br>
 [MPower Payments](http://www.mpowerpayments.com)<br>
 [RightScale](http://www.rightscale.com/)<br>
 [University of Washington Center for Commercialization](http://depts.washington.edu/uwc4c)<br>
 [WiseCash](https://www.wisecashhq.com/)<br>
-[Acorns](https://www.acorns.com/)
 
 Additionally, use of Brakeman is recommended by:
 
