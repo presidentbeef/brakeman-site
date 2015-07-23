@@ -27,7 +27,7 @@ Here are a few of the companies using Brakeman:
 [![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
 
-[Acorns](https://www.acorns.com/)
+[Acorns](https://www.acorns.com/)<br>
 [Groupon](http://groupon.com)<br>
 [Jemurai](http://jemurai.com/)<Br>
 [MPower Payments](http://www.mpowerpayments.com)<br>
