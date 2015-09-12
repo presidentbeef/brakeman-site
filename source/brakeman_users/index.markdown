@@ -26,6 +26,7 @@ Here are a few of the companies using Brakeman:
 [![PullReview](/images/users/pullreview.png)](https://www.pullreview.com/)
 [![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
+[![The Winnower](/images/users/winnower.png)](https://www.thewinnower.com/)
 
 [Acorns](https://www.acorns.com/)<br>
 [Groupon](http://groupon.com)<br>
