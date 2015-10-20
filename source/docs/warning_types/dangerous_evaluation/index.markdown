@@ -7,8 +7,8 @@ sharing: true
 footer: true
 ---
 
-User input in an `eval` statement is VERY dangerous, so this will always raise a warning. Brakeman looks for calls to `eval`, `instance_eval`, `class_eval`, and `module_eval`.
+<script>
+window.location.replace("http://brakemanscanner.org/docs/warning_types/dangerous_eval/");
+</script>
 
----
-Back to [Warning Types](/docs/warning_types)
-
+Content moved to [Dangerous Eval](dangerous_eval/).
