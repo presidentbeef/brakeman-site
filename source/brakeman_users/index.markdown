@@ -13,6 +13,7 @@ Here are a few of the companies using Brakeman:
 
 [![Blackhawk Network](/images/users/blackhawknetwork.png)](http://blackhawknetwork.com/)
 [![Braintree Payments](/images/users/braintree.png)](https://www.braintreepayments.com)
+[![Carousel Apps](/images/users/carousel.png)](https://carouselapps.com/)
 [![Code Climate](/images/users/codeclimate.png)](https://codeclimate.com/)
 [![CodeDX](/images/users/codedx.png)](http://codedx.com/)
 [![Conviso](/images/users/conviso.png)](https://www.conviso.com.br/)
