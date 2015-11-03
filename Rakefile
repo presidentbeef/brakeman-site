@@ -20,6 +20,7 @@ deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
+work_dir        = "_work"     # directory for temporary work files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
@@ -133,6 +134,75 @@ task :new_page, :filename do |t, args|
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
+end
+
+desc "Move warning type docs from brakeman into #{source_dir}/docs/warning_types"
+task :copy_docs_from_brakeman do
+  require './plugins/titlecase.rb'
+
+  FileUtils.mkdir_p(work_dir)
+
+  cd work_dir do
+    FileUtils.rm_rf("brakeman")
+    system "git clone --quiet --depth=1 git@github.com:presidentbeef/brakeman.git"
+  end
+
+  warning_types = Dir.entries("#{work_dir}/brakeman/docs/warning_types")
+  warning_types = warning_types.reject { |type| type.start_with?(".") }
+
+  warning_types.each do |warning_type|
+    title                = warning_type.gsub(/[-_]/, ' ').titlecase
+    path                 = "docs/warning_types/#{warning_type}"
+    filename             = "#{path}/index.markdown"
+    source_filename      = "#{work_dir}/brakeman/#{filename}"
+    destination_filename = "#{source_dir}/#{filename}"
+    source_contents      = File.read(source_filename)
+
+    if File.exist?(destination_filename)
+      destination_contents = File.read(destination_filename)
+
+      # Strip destination content of headers, footers, and surrounding lines
+      # breaks to prepare for a comparison with the source content.
+      in_header_or_footer = false
+      destination_contents = destination_contents.each_line.reject do |line|
+        if line == "---\n"
+          in_header_or_footer = !in_header_or_footer
+          true
+        else
+          in_header_or_footer
+        end
+      end
+      destination_contents.shift while destination_contents.first == "\n"
+      destination_contents.pop while destination_contents.last == "\n"
+      destination_contents = destination_contents.join
+
+      if source_contents == destination_contents
+        puts "## Skipping #{destination_filename}"
+        next
+      end
+    end
+
+    FileUtils.mkdir_p("#{source_dir}/#{path}")
+
+    puts "## Writing #{destination_filename}"
+    File.open(destination_filename, "w") do |file|
+      file.puts "---"
+      file.puts "layout: page"
+      file.puts "title: \"#{title}\""
+      file.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      file.puts "comments: false"
+      file.puts "sharing: true"
+      file.puts "footer: true"
+      file.puts "---"
+      file.puts
+      file.puts source_contents
+      file.puts
+      file.puts "---"
+      file.puts "Back to [Warning Types](/docs/warning_types)"
+    end
+  end
+
+  FileUtils.rm_rf(work_dir)
 end
 
 # usage rake isolate[my-post]
