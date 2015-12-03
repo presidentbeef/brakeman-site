@@ -1,27 +1,31 @@
 ---
 layout: post
 title: "Brakeman 3.1.3 Released"
-date: 2015-11-23 23:23
+date: 2015-12-02 09:23
 comments: true
-categories: 
 ---
 
-This is a small release, except for one major new feature: Brakeman is now available as an engine on the new Code Climate platform!
+This is a small bug fix release, except for one major new feature: [Brakeman is now available as an engine on the new Code Climate platform](https://codeclimate.com/changelog/5653c9b67f7feb0048003051)!
 
 _Changes since 3.1.2_:
 
-* Add Code Climate output format ([Ashley Baldwin-Hunter](https://github.com/ABaldwinHunter)/[Devon Blandin](https://github.com/dblandin)/[John Pignata](https://github.com/presidentbeef/brakeman/pull/759)/[Michael Bernstein](https://github.com/mrb))
+* Add Code Climate output format ([Ashley Baldwin-Hunter](https://github.com/ABaldwinHunter) / [Devon Blandin](https://github.com/dblandin) / [John Pignata](https://github.com/presidentbeef/brakeman/pull/759) / [Michael Bernstein](https://github.com/mrb))
 * Restore minimum Highline version ([Kevin Glowacz](https://github.com/kjg))
 * Depend on safe\_yaml 1.0 or later ([#753](https://github.com/presidentbeef/brakeman/issues/752))
+* Check for session secret in secrets.yml ([#760](https://github.com/presidentbeef/brakeman/issues/760))
+* Avoid warning on `without_protection: true` with hash literal ([#769](https://github.com/presidentbeef/brakeman/issues/769))
+* Respect `exit_on_warn` in config file ([#771](https://github.com/presidentbeef/brakeman/pull/771))
 * Avoid outputting false for `user_input` in JSON
 * Iteratively replace variables
 * CallIndex improvements
 * Improved tests for the Brakeman module ([Bethany Rentz](https://github.com/bethanyr)) 
 * Make sure a `before_filter` with block is a call ([#763](https://github.com/presidentbeef/brakeman/issues/763))
 
-### Code Climate
+### Code Climate Platform
 
-([changes](https://github.com/presidentbeef/brakeman/pull/758))
+Thanks to several folks at [Code Climate](https://codeclimate.com/), this release adds the ability to run Brakeman as an analysis engine on [Code Climate’s platform](https://codeclimate.com/changelog/5653c9b67f7feb0048003051). You can now run Brakeman as part of Code Climate’s hosted analysis, or on your command line with their open source CLI. Brakeman can be integrated with results from your other favorite static analysis tools, giving you a unified view of issues in your code.
+
+([main changes](https://github.com/presidentbeef/brakeman/pull/758))
 
 ### Dependencies
 
@@ -30,6 +34,24 @@ Brakeman 3.1.0 relaxed the [Highline](https://github.com/JEG2/highline) dependen
 Highline and safe\_yaml now have minimum versions specified.
 
 (changes [here](https://github.com/presidentbeef/brakeman/pull/762) and [here](https://github.com/presidentbeef/brakeman/pull/753))
+
+### More Secrets
+
+Production session secrets stored in `config/secrets.yml` will now raise a warning.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/776)
+
+### Mass Assignment False Positive
+
+Previously, Brakeman would warn on any mass assignment using `without_protection: true`. [This blog post](https://carouselapps.com/2015/11/24/using-brakeman/) noted Brakeman would even warn if the values for mass assignment were a hash literal. This has been fixed.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/773))
+
+### Harcode Mode in Config
+
+Brakeman now supports turning on "hardcore mode" (setting `:exit_on_warn: true`) in a config file. This causes Brakeman return a non-zero exit code if any warnings are found.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/774))
 
 ### JSON Output
 
