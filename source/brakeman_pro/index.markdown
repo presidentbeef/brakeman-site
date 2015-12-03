@@ -9,8 +9,7 @@ footer: true
 
 Brakeman began as a free and open source project and it will always be available under an open source license.
 
-Brakeman Pro provides a graphical interface, advanced management of warnings and reports, paid support, and commercial licensing. Purchasing a Brakeman Pro license also supports the continued development of the open source tool.
-
+The commercial [Brakeman Pro](https://brakemanpro.com/) version provides a graphical interface, advanced management of warnings and reports, paid support, and commercial licensing. Purchasing a Brakeman Pro license also supports the continued development of the open source version.
 
 [![Brakeman Pro](/images/bmp.png)](https://brakemanpro.com)
 
