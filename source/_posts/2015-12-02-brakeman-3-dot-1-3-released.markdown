@@ -23,7 +23,7 @@ _Changes since 3.1.2_:
 
 ### Code Climate Platform
 
-Thanks to several folks at [Code Climate](https://codeclimate.com/), this release adds the ability to run Brakeman as an analysis engine on [Code Climate’s platform](https://codeclimate.com/changelog/5653c9b67f7feb0048003051). You can now run Brakeman as part of Code Climate’s hosted analysis, or on your command line with their open source CLI. Brakeman can be integrated with results from your other favorite static analysis tools, giving you a unified view of issues in your code.
+Thanks to the folks at [Code Climate](https://codeclimate.com/), this release adds the ability to run Brakeman as an analysis engine on [Code Climate’s platform](https://codeclimate.com/changelog/5653c9b67f7feb0048003051). You can now run Brakeman as part of Code Climate’s hosted analysis, or on your command line with their open source CLI. Brakeman can be integrated with results from your other favorite static analysis tools, giving you a unified view of issues in your code.
 
 ([main changes](https://github.com/presidentbeef/brakeman/pull/758))
 
@@ -81,7 +81,7 @@ Thanks to [Bethany Rentz](https://github.com/bethanyr), [test coverage](https://
 
 Another small announcement: the first public release of [Brakeman Pro](http://brakemanscanner.org/brakeman_pro/) (the commercial version of Brakeman) is now available for purchase. If you are looking to financially support development of Brakeman, would like paid support, need a commercial license, or just want a slick GUI, consider checking out [Brakeman Pro](https://brakemanpro.com/).
 
-For some clarification regarding the future of Brakeman and Brakeman Pro, please see [this email from earlier this year](http://librelist.com/browser//brakeman/2015/2/24/future-of-brakeman/).
+For some clarification regarding the future of Brakeman and Brakeman Pro, please see [this email from earlier in the year](http://librelist.com/browser//brakeman/2015/2/24/future-of-brakeman/).
 
 ### SHAs
 
