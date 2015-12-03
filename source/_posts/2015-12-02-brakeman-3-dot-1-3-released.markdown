@@ -87,6 +87,8 @@ For some clarification regarding the future of Brakeman and Brakeman Pro, please
 
 The SHA256 sums for this release are
 
+    57b0edcc289eb74359d2042a38ea519f96f606c89dc879e5fb53971d3d656707  brakeman-3.1.3.gem
+    85473af3a55c440959ea91f94fe14177ac58aa35b44fbb007c93cd742803eae6  brakeman-min-3.1.3.gem
 
 ### Reporting Issues
 
