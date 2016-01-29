@@ -29,7 +29,7 @@ This release adds warnings for the latest Rails CVEs.
 
 ### Render Remote Code Execution
 
-First up, [CVE-2016-0752](https://groups.google.com/d/msg/rubyonrails-security/335P1DcLG00/OfB9_LhbFQAJ) allows an attacker to render files outside of the application path as well as [execute arbitary code](https://nvisium.com/blog/2016/01/26/rails-dynamic-render-to-rce-cve-2016-0752/). Passing in `params` values directly is [especially dangerous](https://twitter.com/joernchen/status/456822118500823040). Brakeman has warned about passing user input to `render` since it was first released as "dynamic render path" warnings. For calls to `render` that directly pass in `params`, it has been changed to a remote code execution warning in affected versions.
+First up, [CVE-2016-0752](https://groups.google.com/d/msg/rubyonrails-security/335P1DcLG00/OfB9_LhbFQAJ) allows an attacker to render files outside of the application path as well as [execute arbitrary code](https://nvisium.com/blog/2016/01/26/rails-dynamic-render-to-rce-cve-2016-0752/). Passing in `params` values directly is [especially dangerous](https://twitter.com/joernchen/status/456822118500823040). Brakeman has warned about passing user input to `render` since it was first released as "dynamic render path" warnings. For calls to `render` that directly pass in `params`, it has been changed to a remote code execution warning in affected versions.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/807))
 
@@ -41,13 +41,13 @@ First up, [CVE-2016-0752](https://groups.google.com/d/msg/rubyonrails-security/3
 
 ### Basic Auth Timing Attack
 
-The implemenation of `http_basic_authenticate_with` did not use constant-time comparison when checking passwords, allowing timing attacks as described in [CVE-2015-7576](https://groups.google.com/d/msg/rubyonrails-security/ANv0HDHEC3k/mt7wNGxbFQAJ). Brakeman will warn about affected applications using `http_basic_authenticate_with`.
+The implementation of `http_basic_authenticate_with` did not use constant-time comparison when checking passwords, allowing timing attacks as described in [CVE-2015-7576](https://groups.google.com/d/msg/rubyonrails-security/ANv0HDHEC3k/mt7wNGxbFQAJ). Brakeman will warn about affected applications using `http_basic_authenticate_with`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/800))
 
 ### Bypass Record Deletion Filtering
 
-[CVE-2015-7577](https://groups.google.com/d/msg/rubyonrails-security/cawsWcQ6c8g/tegZtYdbFQAJ) is a bug where the `reject_if` option to `accepts_nested_attributes_for` will not be called if `allow_destroy` is set to `false`. Brakeman will warn on applications which meet all of these criteria.
+[CVE-2015-7577](https://groups.google.com/d/msg/rubyonrails-security/cawsWcQ6c8g/tegZtYdbFQAJ) is a bug where the `reject_if` option to `accepts_nested_attributes_for` will not be called if `allow_destroy` is set to `false`. Brakeman will warn on applications which meet all of these criteria and do not include the workaround in an initializer.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/804))
 
@@ -57,9 +57,9 @@ Brakeman will warn about [CVE-2015-7581](https://groups.google.com/d/msg/rubyonr
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/808))
 
-### Mimetype Denial of Service
+### Mime-type Denial of Service
 
-Sending many different mimetypes via `Accept` headers can cause a denial of service. Brakeman will warn about [CVE-2016-0751](https://groups.google.com/d/msg/rubyonrails-security/9oLY_FCzvoc/w9oI9XxbFQAJ) in affected versions of Rails unless the workaround is present.
+Sending many different mime-types via `Accept` headers can cause a denial of service. Brakeman will warn about [CVE-2016-0751](https://groups.google.com/d/msg/rubyonrails-security/9oLY_FCzvoc/w9oI9XxbFQAJ) in affected versions of Rails unless the workaround is present.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/801))
 
