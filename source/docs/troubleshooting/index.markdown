@@ -9,7 +9,7 @@ footer: true
 
 Rails applications tend to be complex and processing all possible scenarios is nearly impossible. Brakeman is built with reliability in mind and always attempts to at least generate a report. Unfortunately, that can some times hide problems. 
 
-Hopefully the information on this page can help when things go awry. Remember, you can always [open an issue](https://github.com/presidentbeef/brakeman/issues) or email the [mailing list](http://brakemanscanner.org/contact/) to get help.
+Hopefully the information on this page can help when things go awry. Remember, you can always [open an issue](https://github.com/presidentbeef/brakeman/issues) or ask on [Gitter](https://gitter.im/presidentbeef/brakeman) to get help.
 
 ### Problems
 

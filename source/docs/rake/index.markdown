@@ -7,6 +7,8 @@ sharing: false
 footer: true
 ---
 
+*Running Brakeman via Rake is discouraged because it loads the entire Rails application*
+
 Brakeman can generate and install a basic Rake task for a Rails application.
 
 To do so, just run this at the root directory of the Rails application:

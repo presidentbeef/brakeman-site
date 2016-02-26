@@ -7,6 +7,10 @@ sharing: false
 footer: true
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kda8RZ5NIlM?start=2603" frameborder="0" allowfullscreen>
+
+[Using Brakeman and Automation in Practice in the SDLC and Stuff - Netflix 2014](https://www.youtube.com/embed/kda8RZ5NIlM?start=2603)
+
 <iframe width="560" height="315" src="http://www.youtube.com/embed/p3VMf3oQWKg" frameborder="0" allowfullscreen></iframe>
 
 [Keeping Rails on Track with Brakeman - RailsConf 2012](http://confreaks.com/videos/890-railsconf2012-keeping-rails-applications-on-track-with-brakeman)
