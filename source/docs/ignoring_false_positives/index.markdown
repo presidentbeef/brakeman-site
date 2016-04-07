@@ -11,6 +11,19 @@ False positives (warnings about potential vulnerabilities which are not actual v
 
 The ignore configuration is a JSON file containing a list of warnings. This is essentially the same as the JSON report, except the warnings can also have a `note` field.
 
+    {
+        "ignored_warnings": [
+            {
+              "fingerprint": "a21418b38aa77ef73946105fb1c9e3623b7be67a2419b960793871587200cbcc",
+              "note": "ignore foo"
+            },
+            {
+              "fingerprint": "5945a9b096557ee5771c2dd12ea6cbec933b662d169e559f524ba01c44bf2452",
+              "note": "ignore bar"
+            }
+        ]
+    }
+
 This functionality was introduced in [Brakeman 2.1.0](/blog/2013/07/17/brakeman-2-dot-1-0-released/).
 
 ## Creating and Managing an Ignore File
