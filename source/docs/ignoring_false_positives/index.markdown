@@ -11,6 +11,8 @@ False positives (warnings about potential vulnerabilities which are not actual v
 
 The ignore configuration is a JSON file containing a list of warnings. This is essentially the same as the JSON report, except the warnings can also have a `note` field.
 
+A minimal configuration might look like this, although the auto-generated one will have more information:
+
     {
         "ignored_warnings": [
             {
