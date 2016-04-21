@@ -40,10 +40,14 @@ The commercial [Brakeman Pro](https://brakemanpro.com/) version provides a graph
  Manage all reports in one place         |  | ✓
  Filter, sort, and search warnings       |  | ✓
  Manage warnings as valid or false positives |  | ✓
+ Create custom rules                     |  | ✓
  Customized warning explanations         |  | ✓
  Syntax-highlighted code views           |  | ✓
  Store notes per warning                 |  | ✓
+ Analysis of view helpers                |  | ✓
  Render path navigation                  |  | ✓
+ Detect dynamic evaluation               |  | ✓
+ Detect use of basic authentication      |  | ✓
  PDF reports                             |  | ✓
  Paid support                            |  | ✓
 
