@@ -18,6 +18,7 @@ Here are a few of the companies using Brakeman:
 [![CodeDX](/images/users/codedx.png)](http://codedx.com/)
 [![Conviso](/images/users/conviso.png)](https://www.conviso.com.br/)
 [![DataCentred](/images/users/datacentred.png)](http://www.datacentred.co.uk/)
+[![Envato](/images/users/envato.png)](https://envato.com/)
 [![GitHub](/images/users/github.png)](https://github.com/)
 [![Icicle Technologies](/images/users/icicletech.png)](http://www.icicletech.com)
 [![Logical Reality Design](/images/users/lrdesign.png)](http://lrdesign.com)
