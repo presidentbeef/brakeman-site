@@ -80,13 +80,13 @@ Calls to `Array#first` will be replaced with the first value in the array when k
 
 ### Forgery Option 
 
-(Jason Yeo](https://github.com/jsyeo] provided a fix for when Brakeman encounters a non-Hash argument to `protect_from_forgery`.
+([Jason Yeo](https://github.com/jsyeo)) provided a fix for when Brakeman encounters a non-Hash argument to `protect_from_forgery`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/849))
 
 ### `u` Helper
 
-(Chad Dollins](] fixed XSS false positives when the `u` alias for `url_encode` is used.
+([Chad Dollins](https://github.com/cdollins)) fixed XSS false positives when the `u` alias for `url_encode` is used.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/863))
 
