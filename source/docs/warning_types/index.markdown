@@ -10,6 +10,7 @@ footer: true
 Read more about the different warnings Brakeman reports:
 
 * [Attribute Restriction](/docs/warning_types/attribute_restriction)
+* [Authentication](/docs/warning_types/authentication)
 * [Basic Authentication](/docs/warning_types/basic_authentication)
 * [Command Injection](/docs/warning_types/command_injection)
 * [Cross-Site Request Forgery](/docs/warning_types/cross-site_request_forgery)
