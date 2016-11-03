@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Brakeman 3.4.1 Released"
-date: 2016-11-01 14:07
+date: 2016-11-02 13:07
 comments: true
 categories: 
 ---
@@ -55,4 +55,3 @@ Thank you to everyone who reported bugs and contributed to this release.
 Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release! Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
 
 Also consider following [@brakeman](https://twitter.com/brakeman) on Twitter and hanging out [on Gitter](https://gitter.im/presidentbeef/brakeman) for questions and discussion.
-
