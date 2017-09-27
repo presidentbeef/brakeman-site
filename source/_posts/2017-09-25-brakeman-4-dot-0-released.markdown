@@ -42,6 +42,10 @@ _Changes since 3.7.2_:
 * Remove reliance on `CONFIDENCE` constant in checks
 * Fix `--exit-on-error` and `--exit-on-warn` in config files
 
+_Changes since 4.0.0_:
+
+* Do not use pager when `CI` environment variable is set
+
 ### New Default Exit Codes
 
 `--exit-on-warn` and `--exit-on-error` are now default behavior.
@@ -65,6 +69,8 @@ To revert back to the table format, use `-f tables` or `-o report.tables`.
 By default, output to the terminal will be paged with `less` or Highline's simple pager.
 
 To disable, use `--no-pager`.
+
+In 4.0.1 Brakeman will automatically disable the pager when the `CI` environment variable is set to `true`. This should be compatible with Travis CI, Circle CI, Codeship, and Bitbucket Pipelines.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1098))
 
@@ -110,11 +116,15 @@ For those with custom checks, the `CONFIDENCE` hash is still available and nothi
 
 ### Checksums
 
-The SHA256 sums for this release are:
+The SHA256 sums for these releases are:
 
     0038932b43dcf2bf698ad6637500f69b5e4226b10c011a4a6bcce93a77a5e045  brakeman-4.0.0.gem
     3688303859a7c9b452ddcef00f00f97789ce103774446d42851a763ecbf8df87  brakeman-lib-4.0.0.gem
     559196c6e41e5b180448564d9aca84fb775a39b77dd7d8d880a0ce0e77df8ae2  brakeman-min-4.0.0.gem
+
+    d93d6f8e9c2655520153fe0512b338753cc36fac56b80947f652fd33e9f80dfb  brakeman-4.0.1.gem
+    82ab1e51f712ad10109a4fe080f6389b28bbbef83e0ecd6c33defa90319b4bc5  brakeman-lib-4.0.1.gem
+    579f240cb8e5357fe5e45c09eb43f3512481f7086052337437e5c436c617da8b  brakeman-min-4.0.1.gem
 
 ### Reporting Issues
 
