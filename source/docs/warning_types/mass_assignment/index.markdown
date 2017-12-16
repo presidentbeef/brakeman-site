@@ -13,7 +13,9 @@ Example:
 
     User.new(params[:user])
 
-Unfortunately, if there is a user field called `admin` which controls administrator access, now any user can make themselves an administrator.
+Unfortunately, if there is a user field called `admin` which controls administrator access, now any user can make themselves an administrator with a query like
+
+    ?user[admin]=true
 
 ### Rails With Strong Parameters
 
@@ -23,7 +25,9 @@ Query parameters must be explicitly whitelisted via `permit` in order to be used
 
    User.new(params.permit(:name, :password))
 
-Care should be taken to only whitelist values that are safe for a user (or attacker) to set. Brakeman will warn on potentially dangerous attributes that are whitelisted.
+Care should be taken to only whitelist values that are safe for a user (or attacker) to set. Foreign keys such as `account_id` are likely unsafe, allowing an attacker to manipulate records belonging to other accounts.
+
+Brakeman will warn on potentially dangerous attributes that are whitelisted.
 
 Brakeman will also warn about uses of `params.permit!`, since that allows everything.
 
