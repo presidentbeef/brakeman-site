@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Options"
+date: 2018-05-29 08:08
+comments: false
+sharing: false
+footer: true
+---
+
 Brakemanのオプションドキュメント（[OPTIONS.md](https://github.com/presidentbeef/brakeman/blob/master/OPTIONS.md)）を翻訳しました。
 
 共同翻訳者は@jnchitoです。
