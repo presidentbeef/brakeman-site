@@ -274,3 +274,5 @@ To see the real list of options:
 ---
 
 [More documentation](/docs)
+
+[日本語](/docs/options/ja)
