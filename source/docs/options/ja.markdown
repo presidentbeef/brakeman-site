@@ -361,3 +361,4 @@ brakeman --version
 brakeman --help
 ```
 
+[その他のドキュメント](/docs)
