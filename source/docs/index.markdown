@@ -7,6 +7,8 @@ sharing: false
 footer: true
 ---
 
+New to Brakeman? See our [quickstart guide](/docs/quickstart)!
+
 ## Getting Started
 
 * [Introduction]({{ root_url }}/docs/introduction)
