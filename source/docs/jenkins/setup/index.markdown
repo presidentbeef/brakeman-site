@@ -28,7 +28,7 @@ This is the tricky part, and it depends on how Ruby is set up on the server. The
 If Ruby is installed globally, then this should work:
 
     gem install brakeman --no-ri --no-rdoc &&    
-    brakeman -o brakeman-output.tabs
+    brakeman --no-progress -o brakeman-output.tabs
 
 ### With RVM
 
@@ -36,7 +36,7 @@ If [RVM](http://beginrescueend.com/) is installed on the server:
 
     bash -l -c '
     gem install brakeman --no-ri --no-rdoc &&
-    brakeman -o brakeman-output.tabs'
+    brakeman --no-progress -o brakeman-output.json'
 
 It might make sense to also set up a separate gemset:
 
@@ -44,4 +44,4 @@ It might make sense to also set up a separate gemset:
     rvm gemset create my-brakeman-job &&
     rvm gemset use my-brakeman-job &&
     gem install brakeman --no-ri --no-rdoc &&
-    brakeman -o brakeman-output.tabs'
+    brakeman --no-progress -o brakeman-output.json'
