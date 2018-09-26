@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.4.1 Released"
 date: 2016-11-02 13:07
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 * Configurable engines path ([Jason Yeo](https://github.com/jsyeo))

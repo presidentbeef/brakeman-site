@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 4.2.1 Released"
 date: 2018-03-23 17:19
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small release to add warnings for [CVE-2018-3741](https://groups.google.com/d/msg/rubyonrails-security/tP7W3kLc5u4/uDy2Br7xBgAJ) and [CVE-2018-8048](https://groups.google.com/d/msg/rubyonrails-security/b__OeLG9bts/waZTvSM2AQAJ).

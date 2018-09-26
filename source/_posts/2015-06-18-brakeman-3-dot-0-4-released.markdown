@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.0.4 Released"
 date: 2015-06-18 10:50
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small release prompted by Tuesday's CVE announcements. New checks for the CVEs directly in Rails have been added, and can also test for the suggested workarounds. Please consider using [bundler-audit](https://github.com/rubysec/bundler-audit) for detecting known vulnerable versions of gems, as Brakeman has only limited coverage.

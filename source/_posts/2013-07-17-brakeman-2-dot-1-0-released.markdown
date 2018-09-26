@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.1.0 Released"
 date: 2013-07-17 16:36
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Brakeman recently passed 250,000 downloads on [RubyGems.org](http://rubygems.org/gems/brakeman)! Thanks to everyone who has contributed!

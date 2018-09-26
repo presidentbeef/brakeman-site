@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.7.0 Released"
 date: 2012-07-31 17:44
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release includes improvements to Rails 3 route processing, better performance, several bug fixes, and more!

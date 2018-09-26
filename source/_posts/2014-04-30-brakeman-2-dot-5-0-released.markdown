@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.5.0 Released"
 date: 2014-04-30 09:52
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release includes a number of false positive fixes, more Rails 4 support, a new check for regular expression denial of service, and Markdown output formatting.

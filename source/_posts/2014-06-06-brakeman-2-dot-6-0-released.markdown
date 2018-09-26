@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.6.0 Released"
 date: 2014-06-06 09:04
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release introduces significant changes to how and when files are parsed, which may introduce changes in existing warnings and errors.

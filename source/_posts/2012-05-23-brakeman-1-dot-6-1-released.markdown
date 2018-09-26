@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.6.1 Released"
 date: 2012-05-23 12:45
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Wow, it's been over a month since the last release!

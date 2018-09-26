@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.5.3 Released"
 date: 2012-04-10 13:18
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 A considerable number of bugs and odd cases have been fixed with this release, and one new check has been added. Upgrading is _always_ recommended!

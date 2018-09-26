@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.1.5 Released"
 date: 2016-01-28 08:26
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release adds warnings for the latest Rails CVEs.

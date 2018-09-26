@@ -1,13 +1,4 @@
-.bundle
-.DS_Store
+brakeman_site
+generated_site
+_site/
 .sass-cache
-_gist_cache
-_code_cache
-_deploy
-_work
-public
-sass.old
-source.old
-source/_stash
-source/stylesheets/screen.css
-vendor

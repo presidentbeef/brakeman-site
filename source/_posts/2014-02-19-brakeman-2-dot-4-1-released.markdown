@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.4.1 Released"
 date: 2014-02-19 10:53
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release only adds checks for the latest CVEs, no other changes.

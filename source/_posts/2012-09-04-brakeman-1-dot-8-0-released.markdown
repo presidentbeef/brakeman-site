@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.8.0 Released"
 date: 2012-09-04 11:26
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 _Changes since 1.7.1_:

@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 4.0 Released!"
 date: 2017-09-25 06:31
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 **This release has breaking changes!**

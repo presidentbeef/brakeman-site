@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 4.3.0 Released"
 date: 2018-05-10 15:36
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Did you know we recently broke [11 million gem downloads](http://bestgems.org/gems/brakeman)? Wow!

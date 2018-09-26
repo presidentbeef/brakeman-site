@@ -4,6 +4,7 @@ title: "Brakeman Plugin 'Officially' Available for Jenkins"
 date: 2011-10-21 11:54
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 While a Brakeman plugin for the [Jenkins](http://jenkins-ci.org)/[Hudson](http://hudson-ci.org) continuous integration tool has been available since January, thanks to [some prodding](https://github.com/presidentbeef/brakeman-jenkins-plugin/issues/1) the plugin is now available through the official Jenkins plugin manager.

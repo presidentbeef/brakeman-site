@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.6.2 Released"
 date: 2014-08-18 09:15
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release is mostly bug fixes and updates, but does include two new options.

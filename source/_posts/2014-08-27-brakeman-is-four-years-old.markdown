@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman is Four Years Old!"
 date: 2014-08-27 02:41
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Brakeman was first [publicly released](https://github.com/presidentbeef/brakeman/commit/cd1663fb22bbe2e1097bac8f9ee96fcdadc07fd2) four years ago today!

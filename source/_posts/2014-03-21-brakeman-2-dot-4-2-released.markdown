@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.4.2 Released"
 date: 2014-03-20 22:37
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release is only internal changes and bug fixes, but some scans may see significant time and memory improvements.

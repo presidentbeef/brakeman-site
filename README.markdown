@@ -4,15 +4,15 @@ This is the code for building https://brakemanscanner.org
 
 ## Development
 
-The site is built using (a very old version of) Octopress, which is a layer on top of Jekyll.
+The site is built using [Jekyll](https://jekyllrb.com/).
 
 Changes to the site content should be made in `source/`. Markdown is preferred.
 
-To build:
+To build/test:
 
-* Use Ruby 1.9.3
-* `bundle install` for dependencies
-* To preview: `rake preview` and visit http://localhost:4000
+    cd source
+    bundle install
+    jekyll serve
 
 ## License
 

@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.0.3 Released"
 date: 2015-04-30 09:50
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is mostly a bug fix release, but does introduce a new warning code for when `protect_from_forgery` is not set to raise exceptions in Rails 4.

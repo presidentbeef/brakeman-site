@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.6.1 Released"
 date: 2017-03-24 13:15
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small bug fix release to fix an issue when using `--compare`.

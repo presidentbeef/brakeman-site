@@ -4,6 +4,7 @@ title: "Brakeman 0.8.0 Released"
 date: 2011-09-15 10:06
 comments: true
 categories: release 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Change list for Brakeman 0.8.0:

@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.9.2 Released"
 date: 2013-02-13 15:48
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release is almost entirely enhancements to old checks or new checks for recent vulnerabilities. New features in the next release, I promise.

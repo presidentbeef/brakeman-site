@@ -28,10 +28,9 @@ layout: default
 </div>
 {% unless page.sidebar == false %}
 <aside role=sidebar>
-  {% if site.page_asides.size %}
-    {% include_array page_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
+  {% include custom/asides/about.html %}
+  {% include custom/asides/github.html %}
+  {% include asides/recent_posts.html %}
+  {% include asides/twitter.html %}
 </aside>
 {% endunless %}

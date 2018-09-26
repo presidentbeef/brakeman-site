@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.0.0 Released"
 date: 2015-01-02 17:09
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a major version release of Brakeman which introduces some backwards-incompatible changes. Very likely this release will cause many changes in reports, including fingerprints on existing warnings.

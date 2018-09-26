@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.5.2 Released - Important Fixes"
 date: 2012-03-22 13:34
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is update includes some important fixes. All users of the `rails_xss` plugin are particularly encouraged to upgrade.

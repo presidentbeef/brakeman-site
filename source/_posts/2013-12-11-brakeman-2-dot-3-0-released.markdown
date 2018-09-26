@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.3.0 Released"
 date: 2013-12-11 12:20
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small release, but adds several new warning codes for the latest Rails CVEs and a new check for uses of `permit!`. Also, this is the first signed gem release of Brakeman; see below for details.

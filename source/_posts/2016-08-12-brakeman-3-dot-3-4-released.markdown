@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.3.4/3.3.5 Released"
 date: 2016-08-12 08:26
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a quick release to add warnings for [CVE-2016-6316](https://groups.google.com/d/msg/ruby-security-ann/8B2iV2tPRSE/JkjCJkSoCgAJ) and [CVE-2016-6317](https://groups.google.com/d/msg/ruby-security-ann/WccgKSKiPZA/9DrsDVSoCgAJ). There was a bug in 3.3.4 that affected debug output which has been fixed in 3.3.5.

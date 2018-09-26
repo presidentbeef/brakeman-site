@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.6.2 Released"
 date: 2017-05-19 09:01
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 *Changes since 3.6.1:*

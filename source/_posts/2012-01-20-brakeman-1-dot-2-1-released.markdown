@@ -4,6 +4,7 @@ title: "Brakeman 1.2.1 Released"
 date: 2012-01-20 12:16
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is essentially just a bugfix release, but due to the fixes for `link_to` warnings, there is a good possibility the number of reported warnings will decrease when upgrading to this version.

@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.2.0 Released"
 date: 2016-02-24 15:46
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release sheds a couple dependencies and adds support for new Ruby 2.3 syntax.

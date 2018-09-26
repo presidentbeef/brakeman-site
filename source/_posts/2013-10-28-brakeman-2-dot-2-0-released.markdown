@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.2.0 Released"
 date: 2013-10-28 10:30
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small release, with some bug and false positive fixes alongside initial support for Rails engines and a new check for detailed exceptions.

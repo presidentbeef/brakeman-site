@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.6 Released"
 date: 2012-04-20 10:22
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 

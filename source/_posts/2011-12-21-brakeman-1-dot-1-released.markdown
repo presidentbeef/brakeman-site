@@ -4,6 +4,7 @@ title: "Brakeman 1.1 Released"
 date: 2011-12-21 19:12
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This was supposed to be a 1.0.1 release, but quite a bit of code changed.

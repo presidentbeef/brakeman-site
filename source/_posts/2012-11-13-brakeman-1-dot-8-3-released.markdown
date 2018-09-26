@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.8.3 Released"
 date: 2012-11-13 09:20
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is primarily a false positive reduction release. One major change is the change in dependency from the `json_pure` gem to `multi_json`.

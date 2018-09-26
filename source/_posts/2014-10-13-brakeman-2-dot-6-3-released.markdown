@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.6.3 Released"
 date: 2014-10-13 16:03
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is mostly a bug fix release, but does include new support for optional checks along with an optional check for unscoped calls to `find`.

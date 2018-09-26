@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.5.0 Released"
 date: 2012-03-01 20:23
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 A release was forced today because two new Rails vulnerabilities were reported (the first since November):

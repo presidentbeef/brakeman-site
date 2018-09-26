@@ -4,6 +4,7 @@ title: "Brakeman Has Been Acquired by Synopsys"
 date: 2018-06-28 13:37
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title/index.html
 ---
 
 We are excited to announce [Brakeman Pro](https://brakemanpro.com) has been acquired by Synopsys.

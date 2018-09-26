@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.9.1 Released"
 date: 2013-01-18 17:36
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This released was forced due to messed up dependencies with Brakeman 1.9.0 and Ruby2Ruby - my fault entirely! As such, this release does not match the roadmap for 1.9.1, which will be changed to 1.9.2.

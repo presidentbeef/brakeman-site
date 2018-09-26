@@ -3,7 +3,8 @@ layout: post
 title: "One Year Anniversary"
 date: 2011-08-27 01:00
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 One year ago, Brakeman 0.0.1 was released as a gem. Then it was promptly yanked and replaced with [Brakeman 0.0.2](http://rubygems.org/gems/brakeman/versions/0.0.2).

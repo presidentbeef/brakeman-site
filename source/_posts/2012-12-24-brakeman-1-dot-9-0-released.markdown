@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.9.0 Released"
 date: 2012-12-25 11:00
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Happy [Eggnog Riot](https://en.wikipedia.org/wiki/Eggnog_Riot) day!

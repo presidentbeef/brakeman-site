@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.1.2 Released"
 date: 2015-10-28 15:59
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release is mostly bug fixes and false positive reduction. However, please note fingerprints for inline render warnings will change.

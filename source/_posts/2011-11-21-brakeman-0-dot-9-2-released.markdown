@@ -4,6 +4,7 @@ title: "Brakeman 0.9.2 Released"
 date: 2011-11-21 17:12
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Changes:

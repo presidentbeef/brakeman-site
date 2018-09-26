@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.1.0 Released"
 date: 2015-08-30 21:46
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 There are several changes in this release which may affect consumers of the JSON report as well as anyone relying on the ignore configuration file. Please try out [this script](https://gist.github.com/presidentbeef/52d5cce0fd26b901179e) to migrate ignore configurations.

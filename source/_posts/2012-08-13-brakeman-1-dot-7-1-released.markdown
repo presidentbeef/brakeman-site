@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.7.1 Released"
 date: 2012-08-13 11:04
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small release to add checks for the [Rails vulnerabilities reported last week](http://weblog.rubyonrails.org/2012/8/9/ann-rails-3-2-8-has-been-released/).

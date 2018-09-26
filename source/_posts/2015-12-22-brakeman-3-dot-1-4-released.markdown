@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.1.4 Released"
 date: 2015-12-22 10:41
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Brakeman Pi!

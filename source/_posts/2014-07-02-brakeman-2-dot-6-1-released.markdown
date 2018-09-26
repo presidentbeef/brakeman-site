@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.6.1 Released"
 date: 2014-07-02 12:30
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a tiny release in response to today's CVEs.

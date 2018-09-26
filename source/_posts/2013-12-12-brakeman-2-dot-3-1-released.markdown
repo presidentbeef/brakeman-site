@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.3.1 Released"
 date: 2013-12-12 23:24
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Two minor bugs were fixed in this release. Please see the [2.3.0 release post](http://brakemanscanner.org/blog/2013/12/11/brakeman-2-dot-3-0-released/) if you are upgrading from an earlier version.

@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.0.0 Released"
 date: 2013-05-20 10:09
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Brakeman 2.0 is here! While it does include a lot of updates, the "2.0" is mostly to indicate this release includes some changes which may break external tools (also, who wants a version "1.10"?). Tool maintainers are encouraged to avoid dependencies on warning messages and types (use the "warning code" instead), and to use warning fingerprints + line numbers for comparing warnings.

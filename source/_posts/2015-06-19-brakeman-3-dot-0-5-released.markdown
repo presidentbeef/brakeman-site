@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.0.5 Released"
 date: 2015-06-19 18:09
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 And this is why you don't rush out releases.

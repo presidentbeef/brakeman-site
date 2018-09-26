@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.4.0 Released"
 date: 2012-02-25 09:57
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is not a big release, but it does add a new check. Also, processing for ERB templates with the `rails_xss` plugin has changed, so there is the possibility that line numbers for reported warnings will shift.

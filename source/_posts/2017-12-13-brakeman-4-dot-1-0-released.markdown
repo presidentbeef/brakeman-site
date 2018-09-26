@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 4.1.0 Released"
 date: 2017-12-12 18:01
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Wow, it has been *too* long since the last release!

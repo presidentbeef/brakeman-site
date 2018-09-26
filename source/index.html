@@ -12,13 +12,7 @@ layout: default
 {% endfor %}
 <nav role="pagination">
   <div>
-    {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
-    {% endif %}
     <a href="/blog/archives">Blog Archives</a>
-    {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-    {% endif %}
   </div>
 </nav>
 {% if site.disqus_short_name %}
@@ -34,9 +28,8 @@ layout: default
 {% endif %}
 </div>
 <aside role=sidebar>
-  {% if site.blog_index_asides.size %}
-    {% include_array blog_index_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
+  {% include custom/asides/about.html %}
+  {% include custom/asides/github.html %}
+  {% include asides/recent_posts.html %}
+  {% include asides/twitter.html %}
 </aside>

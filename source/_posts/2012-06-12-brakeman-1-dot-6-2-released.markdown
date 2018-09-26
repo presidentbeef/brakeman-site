@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.6.2 Released"
 date: 2012-06-12 17:07
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Besides checks for the latest CVEs, this release includes a slightly improved redirect check, noiser output with `--compare`, and better handling of `before_filter`.

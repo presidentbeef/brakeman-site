@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.4.0 Released"
 date: 2016-09-07 13:55
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Oops! Brakeman&#39;s 6th birthday was August 27th! 🎉 6 years, 61 contributors, 91 releases, 3.3 million gem downloads 🎉</p>&mdash; Brakeman Scanner (@brakeman) <a href="https://twitter.com/brakeman/status/772844048402964481">September 5, 2016</a></blockquote>

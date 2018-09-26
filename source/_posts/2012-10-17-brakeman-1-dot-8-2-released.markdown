@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.8.2 Released"
 date: 2012-10-17 10:44
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a bugfix release, in particular fixing rescanning (used by [guard-brakeman](https://github.com/guard/guard-brakeman)).

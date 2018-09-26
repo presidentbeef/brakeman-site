@@ -4,6 +4,7 @@ title: "Brakeman 1.0 Release Candidate Available"
 date: 2011-12-05 14:04
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Because there have been some major changes since 0.9.2, I have released a release candidate just in case there are problems. Please try it out and report any issues!

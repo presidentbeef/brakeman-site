@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.0.2 Released"
 date: 2015-03-09 14:54
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is entirely a bugfix release, no new features. However, the fixes may cause line numbers and warning fingerprints to change.

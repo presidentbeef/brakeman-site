@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.3.0 Released"
 date: 2016-05-05 09:49
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Brakeman 3.3.0 introduces a new packaging method for Brakeman which vendors all dependencies and does not include any gem dependencies in the gemspec. Please test and provide feedback if it does not work as expected.

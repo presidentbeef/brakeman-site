@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 4.3.1 Released"
 date: 2018-06-06 19:55
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Mostly false positive reduction and bug fixes in this one!

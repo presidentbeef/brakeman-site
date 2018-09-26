@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.9.4 Released"
 date: 2013-03-18 17:07
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 Another release forced out early due to Rails vulnerabilities reported today.

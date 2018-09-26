@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.9.5 Released"
 date: 2013-04-05 08:42
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 As planned, Brakeman 1.9.5 is mostly internal bug fixes and improvements, with the one exception being a new check for symbol creation from user input. Barring any emergencies, the next release will be 2.0.

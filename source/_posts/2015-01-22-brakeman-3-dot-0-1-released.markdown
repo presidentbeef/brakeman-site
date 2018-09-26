@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.0.1 Released"
 date: 2015-01-22 18:38
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small release, but may change some fingerprints of warnings in libraries. Also, the Slim dependency has been removed due to conflicts. See below for details.

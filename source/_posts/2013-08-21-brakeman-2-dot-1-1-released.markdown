@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.1.1 Released"
 date: 2013-08-21 12:00
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a small bug fix release. The only expected changes in warnings are for dangerous attributes in `attr_accessible`

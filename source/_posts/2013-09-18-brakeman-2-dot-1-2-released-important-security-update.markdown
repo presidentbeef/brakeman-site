@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.1.2 Released - Important Security Update"
 date: 2013-09-18 01:38
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 *Important*: Contrary to the "Brakeman Philosophy," there is one situation in which Brakeman attempts to load files from an application. This is a security risk since the code in the files would be executed (typical `require` behavior). Note that this is only a real problem if running Brakeman against code outside one's control. Since most users are scanning their own code, this should not be a concern for the majority of Brakeman users.

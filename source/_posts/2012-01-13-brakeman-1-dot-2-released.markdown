@@ -4,6 +4,7 @@ title: "Brakeman 1.2 Released"
 date: 2012-01-13 22:00
 comments: true
 categories: 
+permalink: /blog/:year/:month/:day/:title
 ---
 
 First Brakeman release of 2012!

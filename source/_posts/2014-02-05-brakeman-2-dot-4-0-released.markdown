@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 2.4.0 Released"
 date: 2014-02-05 01:15
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This is a fairly big release with some significant changes (especially for SQL injection warnings), so please test carefully. Existing warnings and fingerprints may change.

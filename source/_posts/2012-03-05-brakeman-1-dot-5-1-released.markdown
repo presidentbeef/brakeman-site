@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 1.5.1 Released"
 date: 2012-03-05 18:50
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 After the excitment yesterday with a mass assignment vulnerability being exploited in a very public manner on [Github](https://gist.github.com/1978249), interest in Brakeman has skyrocketed.

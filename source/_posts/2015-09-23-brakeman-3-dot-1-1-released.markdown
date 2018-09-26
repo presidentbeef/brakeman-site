@@ -3,7 +3,8 @@ layout: post
 title: "Brakeman 3.1.1 Released"
 date: 2015-09-23 08:11
 comments: true
-categories: 
+categories:
+permalink: /blog/:year/:month/:day/:title
 ---
 
 This release includes two new checks and a number of bug fixes.
