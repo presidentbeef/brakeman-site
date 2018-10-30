@@ -7,15 +7,11 @@ sharing: false
 footer: true
 ---
 
-*Running Brakeman via Rake is discouraged because it loads the entire Rails application*
+**Running Brakeman via Rake is discouraged because it loads the entire Rails application.** This is unnecessary and can cause strange behavior.
 
-Brakeman can generate and install a basic Rake task for a Rails application.
+### Example
 
-To do so, just run this at the root directory of the Rails application:
-
-    brakeman --rake
-
-This will create a task in `lib/tasks/brakeman.rake` that looks like this:
+Here is a simple Rake task to run Brakeman. It can be added to your `Rakefile` or in the `tasks/` directory.
 
     namespace :brakeman do
 
