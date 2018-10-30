@@ -35,7 +35,7 @@ Run `haml -e --debug file_name.html.haml` to check the output. Note that this wi
 
 ### File an Issue
 
-Please file [an issue](https://github.com/presidentbeef/brakeman/issues) with an example of the syntax which fails to parse.
+Please file [an issue](https://github.com/presidentbeef/brakeman/issues/new?template=parsing-error.md) with an example of the syntax which fails to parse.
 
 ---
 

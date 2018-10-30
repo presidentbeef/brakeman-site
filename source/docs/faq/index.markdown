@@ -13,11 +13,11 @@ Sorry about that! Please follow [these instructions](/docs/troubleshooting/hangi
 
 ### Brakeman is reporting parsing errors, but my app runs fine. What's going on?
 
-Brakeman relies on [ruby\_parser](https://github.com/seattlerb/ruby_parser) for parsing Ruby code. Support for Ruby 1.9 syntax is still in development, so Brakeman cannot handle all the new 1.9 syntax changes. Unfortunately, the next version of ruby\_parser (3.0) makes some large, incompatible changes which will also require major changes in Brakeman.
+Brakeman relies on [RubyParser](https://github.com/seattlerb/ruby_parser) for parsing Ruby code. RubyParser can lag behind the latest syntax changes in Ruby. 
 
 By the way, sometimes there are actual syntax errors! This can happen in code which is no longer used by the application.
 
-Please follow [these instructions](/docs/troubleshooting/syntax_errors) to find out what went wrong.
+Please follow [these instructions](/docs/troubleshooting/parse_errors) to find out what went wrong.
 
 ### What is the number in parentheses (red in HTML) in the report summary?
 
@@ -25,7 +25,7 @@ That number indicates how many high confidence warnings were found.
 
 ### Why are line numbers reported wrong?
 
-Line numbers are sometimes off. This can be due to the [parser](http://rubyforge.org/tracker/index.php?func=detail&aid=26435&group_id=439&atid=1778) reporting the wrong line number, or occasionally there is a bug in Brakeman.
+Line numbers are sometimes off. This can be due to the parser reporting the wrong line number, or occasionally there is a bug in Brakeman.
 
 However, it is important to note that the line number reported is where the vulnerability was found, not necessarily where it was introduced. For example, if a SQL query uses string interpolation which was assigned to a variable, the line with the query will be reported, not where the string is constructed.
 
@@ -54,16 +54,16 @@ For example, if `User` is a model and there is an action like
 and a corresponding view containing
 
     <% @users.each do |user| %>
-      <%= user.name %>
+      <%= user.name.html_safe %>
     <% end %>
 
-This will produce a warning (in Rails 2.x) that looks like
+This will produce a warning that looks like
 
     Unescaped model attribute near line 3: User.new.name
 
 ### Brakeman reports 0 warnings. Am I safe?
 
-**No**. It just means Brakeman didn't find any problems. There may be vulnerabilities Brakeman does not test for or did not discover. No security tool has 100% coverage.
+**No**. It just means Brakeman didn't find any problems. There are many vulnerabilities Brakeman cannot find. No security tool has 100% coverage.
 
 ---
 
