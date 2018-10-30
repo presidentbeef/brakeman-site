@@ -7,7 +7,7 @@ sharing: false
 footer: true
 ---
 
-Brakeman was initially designed to be used a command-line application. Recently, there have been some changes to allow it to be used as a library as well. Future releases will likely make it even easier to use.
+Brakeman was designed to be used a command-line application, but it is possible to run it as a library.
 
 ### Simple Example
 
@@ -15,11 +15,11 @@ Here is a simple example:
 
     require 'brakeman'
 
-    tracker = Brakeman.run "my/app"
+    tracker = Brakeman.run "my/rails_app"
 
     puts tracker.report
 
-This runs Brakeman against the Rails application in `my/app` and prints out the report. This is essentially equivalent to running Brakeman with no options.
+This runs Brakeman against the Rails application in `my/rails_app` and prints out the report. This is essentially equivalent to running Brakeman with no options.
 
 `Brakeman.run` returns a `Tracker` object ([doc](http://rubydoc.info/github/presidentbeef/brakeman/master/frames)) which contains all the information from the scan. `Tracker#checks` ([doc](http://rubydoc.info/github/presidentbeef/brakeman/master/frames)) holds the results from running the checks.
 
@@ -29,33 +29,53 @@ Most of the command-line options for Brakeman can be used with `Brakeman.run`, b
 
 If an options hash is used, then `:app_path` must be specified instead of just a string for the path:
 
-    Brakeman.run :app_path => "my/app"
+    Brakeman.run app_path: "my/rails_app"
 
-Here is a list of options:
+Below is a list of options, but always [check the source](https://github.com/presidentbeef/brakeman/blob/master/lib/brakeman/options.rb) for the latest.
 
- * :app_path - path to root of Rails app (required)
- * :assume_all_routes - assume all methods are routes (default: false)
- * :check_arguments - check arguments of methods (default: true)
- * :collapse_mass_assignment - report unprotected models in single warning (default: true)
- * :combine_locations - combine warning locations (default: true)
- * :config_file - configuration file
- * :escape_html - escape HTML by default (automatic)
- * :exit_on_warn - return false if warnings found, true otherwise. Not recommended for library use (default: false)
- * :html_style - path to CSS file
- * :ignore_model_output - consider models safe (default: false)
- * :message_limit - limit length of messages
- * :min_confidence - minimum confidence (0-2, 0 is highest)
- * :output_file - file for output
- * :output_format - format for output (:to_s, :to_tabs, :to_csv, :to_html)
- * :parallel_checks - run checks in parallel (default: true)
- * :print_report - if no output file specified, print to stdout (default: false)
- * :quiet - suppress most messages (default: true)
- * :rails3 - force Rails 3 mode (automatic)
- * :report_routes - show found routes on controllers (default: false)
- * :run_checks - array of checks to run (run all if not specified)
- * :safe_methods - array of methods to consider safe
- * :skip_libs - do not process lib/ directory (default: false)
- * :skip_checks - checks not to run (run all if not specified)
+* `:app_path` - Path to root of Rails app (required)
+* `:absolute_paths` - Show absolute path of each file (default: false)
+* `:additional_checks_path` - Array of additional directories containing additional out-of-tree checks to run
+* `:additional_libs_path` - Array of additional application relative lib directories (ex. app/mailers) to process
+* `:allow_check_paths_in_config` - Allow loading checks from configuration file (unsafe, default: false)
+* `:assume_all_routes` - Assume all methods are routes (default: true)
+* `:branch_limit` - Limit branching during dataflow analysis
+* `:check_arguments` - Check arguments of methods (default: true)
+* `:collapse_mass_assignment` - Report unprotected models in single warning (default: false)
+* `:combine_locations` - Combine warning locations (default: true)
+* `:config_file` - Configuration file
+* `:debug` - Verbose debug messages (default: false)
+* `:engine_paths` - Array of paths to Rails engines
+* `:escape_html` - Escape HTML by default (automatic)
+* `:exit_on_error` - Only affects Commandline module (default: true)
+* `:exit_on_warn` - Only affects Commandline module (default: true)
+* `:force_scan` - Scan application even if Rails is not detected
+* `:github_repo` - Github repo to use for file links (user/repo[/path][@ref])
+* `:highlight_user_input` - Highlight user input in reported warnings (default: true)
+* `:html_style` - Path to CSS file
+* `:ignore_file` - File to configure ignoring false positives
+* `:ignore_model_output` - Consider models safe in some checks (default: false)
+* `:index_libs` - Add libraries to call index (default: true)
+* `:min_confidence` - Minimum confidence (0-2, 0 is highest)
+* `:output_color` - Colorize text output format (automatic)
+* `:output_files` - Array of file names for output
+* `:output_formats` - Formats for output (`:text`, :`tabs`, `:json`, `:html`, `:table`)
+* `:pager` - Use pager for output (automatic)
+* `:parallel_checks` - Run checks in parallel (default: true)
+* `:parser_timeout` - Set timeout for parsing an individual file (default: 10 seconds)
+* `:print_report` - If no output file specified, print to stdout (default: false)
+* `:progress_report` - Report scan progress (default: true)
+* `:quiet` - Suppress most messages (default: false)
+* `:rails3` - Force Rails 3 mode (automatic)
+* `:rails4` - Force Rails 4 mode (automatic)
+* `:rails5` - Force Rails 5 mode (automatic)
+* `:report_routes` - Show found routes on controllers (default: false)
+* `:run_checks` - Array of checks to run (runs all default checks if not specified)
+* `:safe_methods` - Array of methods to consider safe from XSS
+* `:skip_libs` - Do not process lib/ directory (default: false)
+* `:skip_files` - List of files/directories to skip
+* `:skip_checks` - Checks not to run (run all if not specified)
+* `:summary_only` - Only output summary section of report for plain/table (`:summary_only`, `:no_summary`, or `true`)
 
 ---
 
