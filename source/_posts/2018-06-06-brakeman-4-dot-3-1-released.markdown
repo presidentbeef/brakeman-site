@@ -9,7 +9,7 @@ permalink: /blog/:year/:month/:day/:title
 
 Mostly false positive reduction and bug fixes in this one!
 
-_Changes since 4.3.1:_
+_Changes since 4.3.0:_
 
 * Add `:BRAKEMAN_SAFE_LITERAL` to represent known-safe literals
 * Handle `Array#map` and `Array#each` over literal arrays ([#1208](https://github.com/presidentbeef/brakeman/issues/1208) / [#1224](https://github.com/presidentbeef/brakeman/issues/1224))
