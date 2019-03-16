@@ -1,0 +1,103 @@
+---
+layout: post
+title: "Brakeman 4.5.0 Released"
+date: 2019-03-15 13:14
+comments: true
+categories:
+permalink: /blog/:year/:month/:day/:title
+---
+
+This release drops support for running Brakeman with versions of Ruby older than 2.3.0. As always, scanning code with older syntax continues to be supported.
+
+Also in this release: better supported for embedded "filters" in templates and (relatedly) the Sass dependency was removed!
+
+_Changes since 4.4.0:_
+
+* Officially drop support for running with older Ruby versions
+* More thoroughly handle `Shellwords` escaping ([#1323](https://github.com/presidentbeef/brakeman/issues/1323))
+* Handle non-integer version number comparisons ([#1305](https://github.com/presidentbeef/brakeman/issues/1305))
+* Better handling of splat/kwsplat arguments ([#1204](https://github.com/presidentbeef/brakeman/issues/1204))
+* Handle `**` inside Hash literals
+* Add support for CoffeeScript in Slim templates
+* Improve support for embedded template "filters"
+* Remove Sass dependency
+* Avoid joining strings with different encodings
+* Improve "user input" reported for SQL injection
+* Stop swallowing exceptions in `AliasProcessor`
+* Add original exception to `Tracker#errors` list
+* Use `FileParser` in `Scanner` to parse files
+* Set location information in `CheckContentTag`
+* Update RubyParser to 3.13.0
+
+### Dropped Support for Older Rubies
+
+Brakeman code will no longer attempt to maintain compatibility with Ruby 1.9.3, instead setting the minimum version to Ruby 2.3.0.
+
+Note that Ruby 2.2.0 reached end of life almost a year ago and is no longer receiving security updates.
+
+This does *not* affect the versions of Ruby code Brakeman can analyze. Thanks to RubyParser, scanning syntax back to Ruby 1.8 is still supported. 
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1329))
+
+### More Shell Escaping
+
+Brakeman is now better at handling shell escaping with `Shellwords` when checking for command injection. 
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1327))
+
+### Non-Integer Version Numbers
+
+When comparing non-integer version numbers (e.g., `"beta1"`), Brakeman will compare integers to integers and strings to strings instead of
+incorrectly converting some strings to integers.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1326))
+
+### More Splats
+
+Splat args (`*arg`) and double splat/keyword splats (`**kwargs`) are better supported now (instead of being ignored).
+Keyward splats inside of hash literals will be merged into the hash literal.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1315))
+
+### Embedded Template Filters
+
+Support for embedded filters in templates (e.g. `markdown` inside of Haml or Slim) has been completely rewritten. As a result, it is simpler to support embedded filters *and* it was possible to drop the Sass dependency. (The Sass gem itself is deprecated and will be [end of life as of March 31st, 2019](https://sass-lang.com/ruby-sass).)
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1314))
+
+### String Encoding
+
+Previously, it was possible to run into errors when Brakeman attempted to join or concatenate strings with different encodings. Now it will just fail and leave the strings apart.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1293))
+
+### Better Reporting of SQL Injection
+
+SQL injection warnings now have better information about which value triggered the warning. Previously, sometimes the value highlighted as "dangerous" was misleading and confusing.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1297))
+
+### RubyParser Updated 
+
+Thanks to [Ryan Davis](http://www.zenspider.com/), RubyParser now has better support for newer Ruby 2.5 and Ruby 2.6 syntax, along with many other fixes!
+
+This should address many of the parsing errors folks have been seeing.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1330))
+
+### Checksums
+
+The SHA256 sums for this release are:
+
+    c82c73e47668e1381829bcf50d09b952f7968bc36af9c5abd6ee20ee03882130  brakeman-4.5.0.gem
+    0d372dac72e6bf7f9ff9c2558e3f5d92ef62cd4c6ab051fcea88016f3bfa7470  brakeman-lib-4.5.0.gem
+    8565a780be3595ffc5a8d847f6eece8746a272138290fff115555d7aecaa1a38  brakeman-min-4.5.0.gem
+
+### Reporting Issues
+
+Thank you to everyone who reported bugs and contributed to this release!
+
+Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
+
+Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Gitter](https://gitter.im/presidentbeef/brakeman) for questions and discussion.
+
