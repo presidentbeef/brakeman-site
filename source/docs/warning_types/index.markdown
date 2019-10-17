@@ -37,6 +37,7 @@ Read more about the different warnings Brakeman reports:
 * [Unsafe Deserialization](/docs/warning_types/unsafe_deserialization)
 * [Unscoped Find](/docs/warning_types/unscoped_find)
 * [Unsafe Redirects](/docs/warning_types/redirect)
+* [Weak Hash](/docs/warning_types/weak_hash)
 
 ---
 [More Documentation](/docs)
