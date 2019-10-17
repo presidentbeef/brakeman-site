@@ -21,6 +21,7 @@ Read more about the different warnings Brakeman reports:
 * [Dangerous Send](/docs/warning_types/dangerous_send)
 * [Default Routes](/docs/warning_types/default_routes)
 * [Denial of Service](/docs/warning_types/denial_of_service)
+* [Divide By Zero](/docs/warning_types/divide_by_zero)
 * [Dynamic Render Paths](/docs/warning_types/dynamic_render_paths)
 * [File Access](/docs/warning_types/file_access)
 * [Format Validation](/docs/warning_types/format_validation)
