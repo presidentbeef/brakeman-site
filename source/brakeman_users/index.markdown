@@ -21,6 +21,7 @@ Here are a few of the companies using Brakeman:
 [![DataCentred](/images/users/datacentred.png)](http://www.datacentred.co.uk/)
 [![Envato](/images/users/envato.png)](https://envato.com/)
 [![GitHub](/images/users/github.png)](https://github.com/)
+[![Hix on Rails](/images/users/hix.png)](https://hixonrails.com/)
 [![Icicle Technologies](/images/users/icicletech.png)](http://www.icicletech.com)
 [![Logical Reality Design](/images/users/lrdesign.png)](http://lrdesign.com)
 [![Lumosity](/images/users/lumosity.png)](http://lumosity.com)
