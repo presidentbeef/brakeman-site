@@ -59,7 +59,7 @@ Below is a list of options, but always [check the source](https://github.com/pre
 * `:min_confidence` - Minimum confidence (0-2, 0 is highest)
 * `:output_color` - Colorize text output format (automatic)
 * `:output_files` - Array of file names for output
-* `:output_formats` - Formats for output (`:text`, :`tabs`, `:json`, `:html`, `:table`)
+* `:output_formats` - Formats for output (`:text`, `:json`, `:junit`, `:html`, `:table`, :`tabs`)
 * `:pager` - Use pager for output (automatic)
 * `:parallel_checks` - Run checks in parallel (default: true)
 * `:parser_timeout` - Set timeout for parsing an individual file (default: 10 seconds)
@@ -69,6 +69,7 @@ Below is a list of options, but always [check the source](https://github.com/pre
 * `:rails3` - Force Rails 3 mode (automatic)
 * `:rails4` - Force Rails 4 mode (automatic)
 * `:rails5` - Force Rails 5 mode (automatic)
+* `:rails6` - Force Rails 6 mode (automatic)
 * `:report_routes` - Show found routes on controllers (default: false)
 * `:run_checks` - Array of checks to run (runs all default checks if not specified)
 * `:safe_methods` - Array of methods to consider safe from XSS

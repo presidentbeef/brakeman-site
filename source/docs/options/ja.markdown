@@ -161,7 +161,7 @@ brakeman -d
 brakeman -o output_file
 ```
 
-出力フォーマットはファイル拡張子、もしくは`-f`オプションによって決まります。現在有効なオプションは、`text`、`html`、`tabs`、`json`、`markdown`、`csv`です。
+出力フォーマットはファイル拡張子、もしくは`-f`オプションによって決まります。現在有効なオプションは、`text`、`html`、`tabs`、`json`、`junit`、`markdown`、`csv`です。
 
 複数の出力ファイルを指定することもできます。
 

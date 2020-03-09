@@ -97,6 +97,7 @@ The available report types are:
 * `text` (default)
 * `html`
 * `json` (recommended for automation)
+* `junit` (JUnit XML)
 * `markdown` (with GitHub support)
 * `table` (old default)
 * `tabs` (tab-separated, originally for the Jenkins plugin, deprecated)
