@@ -29,9 +29,11 @@ More information:
 
 ### Symbol DoS
 
-Prior to Ruby 2.2, Symbols were not garbage collected. Creation of large numbers of Symbols could lead to a server running out of memory.
+[Prior to Ruby 2.2](https://www.ruby-lang.org/en/news/2014/12/25/ruby-2-2-0-released/), Symbols were not garbage collected. Creation of large numbers of Symbols could lead to a server running out of memory.
 
 If the application appears to be using an older version of Ruby, Brakeman checks for code where user input which is converted to a Symbol. When this is not restricted, an attacker could create an unlimited number of Symbols.
+
+Note: This is an optional check which can be enabled with `--enable SymbolDoS` or `--run-all-checks`.
 
 ---
 
