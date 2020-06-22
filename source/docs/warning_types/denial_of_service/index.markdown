@@ -9,30 +9,32 @@ footer: true
 
 Denial of Service (DoS) is any attack which causes a service to become unavailable for legitimate clients.
 
-For issues that Brakeman detects, this typically arises in the form of memory leaks. In particular, since Symbols are not garbage collected, creation of large numbers of Symbols could lead to a server running out of memory.
+Denial of Service can be caused by consuming large amounts of network, memory, or CPU resources.
 
-Brakeman checks for instances of user input which is converted to a Symbol. When this is not restricted, an attacker could create an unlimited number of Symbols.
+### Regex DoS
 
-The best approach is to simply never convert user-controlled input to a Symbol. If this cannot be avoided, use a whitelist of acceptable values.
+If an attacker can control the content of a regular expression, they may be able to construct a regular expression that requires exponential time to run.
+
+Brakeman will warn about dynamic regular expressions that inject user-supplied values.
 
 For example:
 
-    valid_values = ["valid", "values", "here"]
+    some.values.any? { |v| v.match /#{params[:query]}/ }
 
-    if valid_values.include? params[:value]
-      symbolized = params[:value].to_sym
-    end
+More information:
 
-However, Brakeman will still warn about this, because it cannot tell a valid guard expression has been used.
+* [ReDoS](https://en.wikipedia.org/wiki/ReDoS)
+* [Catastrophic Backtracking](https://www.regular-expressions.info/catastrophic.html)
+* [Regular Expression Matching Can Be Simple And Fast](https://swtch.com/~rsc/regexp/regexp1.html)
 
-Avoiding the warning itself becomes silly:
+### Symbol DoS
 
-    valid_values.each do |v|
-      if v == params[:value]
-        symbolized = v.to_sym
-        break
-      end
-    end
+Prior to Ruby 2.2, Symbols were not garbage collected. Creation of large numbers of Symbols could lead to a server running out of memory.
+
+If the application appears to be using an older version of Ruby, Brakeman checks for code where user input which is converted to a Symbol. When this is not restricted, an attacker could create an unlimited number of Symbols.
+
 ---
+
+[More Information](https://owasp.org/www-community/attacks/Denial_of_Service)
 
 Back to [Warning Types](/docs/warning_types)
