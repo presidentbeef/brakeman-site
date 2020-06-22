@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Brakeman 4.8.2 Released"
-date: 2020-04-12 16:00
+date: 2020-05-12 16:00
 comments: true
 categories:
 permalink: /blog/:year/:month/:day/:title
