@@ -12,7 +12,7 @@ This release introduces a new option and two new checks!
 _Changes since 4.8.1:_
 
 * Add `--text-fields` option
-* Add check for [CVE-2020-8159](ihttps://groups.google.com/d/msg/rubyonrails-security/CFRVkEytdP8/c5gmICECAgAJ)
+* Add check for [CVE-2020-8159](https://groups.google.com/d/msg/rubyonrails-security/CFRVkEytdP8/c5gmICECAgAJ)
 * Add check for escaping HTML entities in JSON configuration option
 * Fix `authenticate_or_request_with_http_basic` check for passed blocks ([Hugo Corbucci](https://github.com/hugocorbucci))
 
