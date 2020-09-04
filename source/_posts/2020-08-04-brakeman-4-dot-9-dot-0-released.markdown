@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Brakeman 4.9.0 Released"
-date: 2020-08-04 16:00
+date: 2020-08-04 11:30
 comments: true
 categories:
 permalink: /blog/:year/:month/:day/:title
@@ -9,7 +9,7 @@ permalink: /blog/:year/:month/:day/:title
 
 It's been a while! This will (probably) be the last minor release before **5.0**.
 
-_Changes since 4.9.0:_
+_Changes since 4.8.2:_
 
 * Add `--ensure-ignore-notes` ([Eli Block](https://github.com/eliblock))
 * Add check for user input in `ERB.new` ([Matt Hickman](https://github.com/mhickman))
