@@ -22,7 +22,7 @@ To avoid introducing a vulnerabilty with `request.get?`,
 either use completely separate routes and actions for `GET` vs `POST` (preferred!):
 
 ```ruby
-get '/some/path', to: 'my_controller#some_action`
+get '/some/path', to: 'my_controller#some_action'
 post '/some/path', to: 'my_controller#a_different_action'
 ```
 
