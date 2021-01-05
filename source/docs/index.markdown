@@ -34,9 +34,7 @@ New to Brakeman? See our [quickstart guide](/docs/quickstart)!
 * [Testing Brakeman](/docs/testing_brakeman)
 * [Contributing](/docs/contributing)
 
-## Hudson/Jenkins Integration
+## Continuous Integration 
 
-* [Introduction]({{ root_url }}/docs/jenkins)
-* [Installation]({{ root_url }}/docs/jenkins/installation)
-* [Job Setup]({{ root_url }}/docs/jenkins/setup)
+* [Brakeman with Jenkins]({{ root_url }}/docs/jenkins)
 
