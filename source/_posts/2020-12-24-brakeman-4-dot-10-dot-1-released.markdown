@@ -9,7 +9,7 @@ permalink: /blog/:year/:month/:day/:title
 
 This releases fixes Ruby 3.0 compatibility (meaning running under 3.0, new syntax is not supported yet).
 
-_Changes since 4.10.1:_
+_Changes since 4.10.0:_
 
 * Declare REXML as a dependency (Ruby 3.0 compatibility)
 * Use `Sexp#sexp_body` instead of `Sexp#[..]` (Ruby 3.0 compatibility)
