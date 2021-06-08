@@ -68,6 +68,9 @@ some_call(a, b, c)
 
 The SHA256 sums for this release are:
 
+    4c1b7c7747ecfca11a822a4bab5ad05f13515e195d7d34590d3add215573b431  brakeman-5.0.1.gem
+    79129c2977936113fc87a9a2e9490b734f088286d0b33ed9ca61cb6587dc18c7  brakeman-lib-5.0.1.gem
+    549034d7aeb2a5ca8fe299c41b91938d502a89e70a1afa68643ca3c9e5ccaf96  brakeman-min-5.0.1.gem
 
 ### Reporting Issues
 
