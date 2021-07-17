@@ -7,70 +7,72 @@ categories:
 permalink: /blog/:year/:month/:day/:title
 ---
 
-This is a _huge_ release! (So many changes, I had to look up how to nest lists in Markdown!)
-Thank you to the many contributors to this release.
+This is a _huge_ release! (So many changes, I had to look up how to nest lists in Markdown...)
 
-There are several new features, take a look below!
+Thank you to the many contributors!
+
+There are several new features, take a look below.
 
 _Changes since 5.0.4:_
 
 * Report Formats
-  * Add GitHub Actions format (Klaus Badelt)
-  * Add ignored warnings to SARIF report (Eli Block)
-  * Fix SARIF report when checks have no description (Eli Block)
-  * Adjust copy of `--interactive` menu (Elia Schito)
-* Read and parse files in parallel
+  * Add GitHub Actions format ([Klaus Badelt](https://github.com/klausbadelt))
+  * Add ignored warnings to SARIF report ([Eli Block](https://github.com/eliblock))
+  * Fix SARIF report when checks have no description ([Eli Block](https://github.com/eliblock))
+  * Adjust copy of `--interactive` menu ([Elia Schito](https://github.com/elia))
+* Performance
+  * Read and parse files in parallel
 * Ruby Interpretation  
-  * Initial support for ActiveRecord enums
+  * Initial support for ActiveRecord enums ([#1492](https://github.com/presidentbeef/brakeman/issues/1492))
   * Interprocedural dataflow from very simple class methods
-  * Support `Array#fetch` and `Hash#fetch`
+  * Support `Array#fetch` and `Hash#fetch` ([#1571](https://github.com/presidentbeef/brakeman/issues/1571))
   * Support `Array#push`
   * Support `Array#*`
   * Better `Array#join` support
   * Support `Hash#values` and `Hash#values_at`
   * Support `Hash#include?`
 * SQL Injection
-  * Add `--sql-safe-methods` option (Esty Scheiner)
   * Update SQL injection check for Rails 6.0/6.1
+  * Add `--sql-safe-methods` option ([Esty Scheiner](https://github.com/escheiner))
   * Ignore dates in SQL
-  * Ignore `sanitize_sql_like` in SQL
-  * Ignore method calls on numbers in SQL
+  * Ignore `sanitize_sql_like` in SQL ([#1571](https://github.com/presidentbeef/brakeman/issues/1571))
+  * Ignore method calls on numbers in SQL ([#1571](https://github.com/presidentbeef/brakeman/issues/1571))
 * Other Fixes
-  * Ignore renderables in dynamic render path check (Brad Parker)
-  * Fix false positive in command injection with `Open3.capture` (Richard Fitzgerald)
-  * Fix infinite loop on mixin self-includes (Andrew Szczepanski)
-  * Check for user-controlled evaluation even if it's a call target
+  * Ignore renderables in dynamic render path check ([Brad Parker](https://github.com/bradparker))
+  * Fix false positive in command injection with `Open3.capture` ([Richard Fitzgerald](https://github.com/xulaus))
+  * Fix infinite loop on mixin self-includes ([Andrew Szczepanski](https://github.com/Skipants))
+  * Check for user-controlled evaluation even if it's a call target ([#1590](https://github.com/presidentbeef/brakeman/issues/1590))
 * Refactoring
-  * Refactor `cookie?`/`param?` methods (Keenan Brock)
+  * Refactor `cookie?`/`param?` methods ([Keenan Brock](https://github.com/kbrock))
   * Better method definition tracking and lookup
 
 ## Report Formats
 
-[Klaus Badelt]() added support for GitHub Actions annotation format with `-f github`.
+[Klaus Badelt](https://github.com/klausbadelt) added support for GitHub Actions annotation format with `-f github`.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1580))
 
-[Eli Block]() added support for reporting ignored warnings in SARIF using the "suppressed" property.
+[Eli Block](https://github.com/eliblock) added support for reporting ignored warnings in SARIF using the "suppressed" property and fixed a SARIF bug.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1620))
 
-[Elia Schito]() clarified some text in the `--interactive` menu for ignoring warnings.
+[Elia Schito](https://github.com/elia) clarified some text in the `--interactive` menu for ignoring warnings.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1598))
 
 ## Parallel File Parsing
 
-Brakeman now uses the [`parallel`]() gem to read and parse files in parallel.
+Brakeman now uses the [`parallel`](https://rubygems.org/gems/parallel) gem to read and parse files in parallel.
 
 By default, `parallel` will split the reading/parsing into a number of separate processes based on
 number of CPUs.
 
-In testing, this has dramatically improved over scan time for large code bases.
+In testing, this has dramatically improved speed for large code bases - around 35% reduction in overall scan time.
 
 However, if you run into weird behavior (e.g. scanning just hangs during file parsing), this feature
 can be disabled using `--no-threads`.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1617))
 
 ## Ruby Interpretation
 
@@ -94,7 +96,7 @@ This should help prevent some false positives.
 
 ### Enums
 
-Since [ActiveRecord enums]() essentially generate some class (and instance) methods that return fixed literal values, the above class method return values
+Since [ActiveRecord enums](https://api.rubyonrails.org/v6.1.4/classes/ActiveRecord/Enum.html) essentially generate some class (and instance) methods that return fixed literal values, the above class method return values
 is also used to support `enum`.
 
 For example:
@@ -106,7 +108,7 @@ end
 User.statuses[:pending] # => 0
 ```
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1572))
 
 ### Hash and Array Methods
 
@@ -114,31 +116,23 @@ In some ways, Brakeman is a very poor Ruby interpreter.
 To "understand" the code it analyzes, Brakeman essentially evaluates some methods.
 This release adds and improves support for evaluating a number of `Hash` and `Array` methods.
 
-* Support `Array#fetch` and `Hash#fetch` (`Array#[]` and `Hash#[]` have been supported for a long time!)
-([changes]())
+* Support `Array#fetch` and `Hash#fetch`
+([changes](https://github.com/presidentbeef/brakeman/pull/1589))
 
-* Support `Array#push` (`Array#<<` has been supported for a long time!)
-([changes]())
+* Support `Array#push`
+([changes](https://github.com/presidentbeef/brakeman/pull/1600))
 
-* Support `Array#*` (`Array#join` has been supported for a long time!)
-([changes]())
-
-* Better `Array#join` support
-([changes]())
+* Support `Array#*` and improve `Array#join`
+([changes](https://github.com/presidentbeef/brakeman/pull/1599))
 
 * Support `Hash#values` and `Hash#values_at`
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1595))
 
 * Support `Hash#include?`
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1618/commits/3554a2c7f259b3a96dc69877c9596c81190eed8d))
 
 ## SQL Injection
 
-### Safe Methods
-
-[Esty Scheiner]() added the `--sql-safe-methods` option to ignore some methods when checking for SQL injection.
-
-([changes]())
 
 ### Updates for Rails 6.0/6.1
 
@@ -162,34 +156,40 @@ Not _really_ vulnerable:
 
 (Also, https://rails-sqli.org/ has also been updated with Rails 6 information!)
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1619))
+
+### Safe Methods
+
+[Esty Scheiner](https://github.com/escheiner) added the `--sql-safe-methods` option to ignore some methods when checking for SQL injection.
+
+([changes](https://github.com/presidentbeef/brakeman/pull/1601))
 
 ### False Positives
 
 Brakeman no longer warns about SQL injection for:
 
 * Dates and methods called on dates
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1615))
 
 * Method calls on number literals
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1586))
 
 * `sanitize_sql_like`
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1587))
 
 ## Misc Fixes
 
-[Brad Parker]() updated the dynamic render path check to ignore "renderables".
+[Brad Parker](https://github.com/bradparker) updated the dynamic render path check to ignore "renderables".
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/issues/1529))
 
-[Richard Fitzgerald]() fixed a command injection false positive when using `Open3.capture`.
+[Richard Fitzgerald](https://github.com/xulaus) fixed a command injection false positive when using `Open3.capture`.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1612))
 
-[Andrew Szczepanski]() fixed an infinite loop when a mixin appears to include itself.
+[Andrew Szczepanski](https://github.com/Skipants) fixed an infinite loop when a mixin appears to include itself.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1611))
 
 Brakeman will now warn about user-controlled evaluation even if the evaluation is a call target itself.
 
@@ -198,17 +198,17 @@ For example:
 eval(params[:debug]).do_something_else
 ```
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1592))
 
 ## Refactoring
 
-[Keenan Brock]() cleaned up the `cookie?`/`param?` utility methods.
+[Keenan Brock](https://github.com/kbrock) cleaned up the `cookie?`/`param?` utility methods.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1608))
 
 In support of `enum` and simple class methods, Brakeman now has a cleaner way of tracking and looking up method definitions.
 
-([changes]())
+([changes](https://github.com/presidentbeef/brakeman/pull/1596))
 
 ## New and Updated Options
 
