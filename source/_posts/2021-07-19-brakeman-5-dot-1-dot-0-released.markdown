@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Brakeman 5.1.0 Released"
-date: 2021-07-19 10:50
+date: 2021-07-19 15:00
 comments: true
 categories:
 permalink: /blog/:year/:month/:day/:title
