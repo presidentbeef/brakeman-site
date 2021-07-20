@@ -118,16 +118,12 @@ This release adds and improves support for evaluating a number of `Hash` and `Ar
 
 * Support `Array#fetch` and `Hash#fetch`
 ([changes](https://github.com/presidentbeef/brakeman/pull/1589))
-
 * Support `Array#push`
 ([changes](https://github.com/presidentbeef/brakeman/pull/1600))
-
 * Support `Array#*` and improve `Array#join`
 ([changes](https://github.com/presidentbeef/brakeman/pull/1599))
-
 * Support `Hash#values` and `Hash#values_at`
 ([changes](https://github.com/presidentbeef/brakeman/pull/1595))
-
 * Support `Hash#include?`
 ([changes](https://github.com/presidentbeef/brakeman/pull/1618/commits/3554a2c7f259b3a96dc69877c9596c81190eed8d))
 
@@ -154,7 +150,7 @@ Not _really_ vulnerable:
 * `order` (in Rails 6.1)
 * `reorder` (in Rails 6.1)
 
-(Also, https://rails-sqli.org/ has also been updated with Rails 6 information!)
+(Also, [https://rails-sqli.org/] has also been updated with Rails 6 information!)
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1619))
 
@@ -170,10 +166,8 @@ Brakeman no longer warns about SQL injection for:
 
 * Dates and methods called on dates
 ([changes](https://github.com/presidentbeef/brakeman/pull/1615))
-
 * Method calls on number literals
 ([changes](https://github.com/presidentbeef/brakeman/pull/1586))
-
 * `sanitize_sql_like`
 ([changes](https://github.com/presidentbeef/brakeman/pull/1587))
 
@@ -222,6 +216,10 @@ In support of `enum` and simple class methods, Brakeman now has a cleaner way of
 ### Checksums
 
 The SHA256 sums for this release are:
+
+    2cc7a174bc9ebb90161f218ea35905de8d749210f69a0bfda9fba71429dc5047  brakeman-5.1.0.gem
+    b8182c9fd7d6d116b2b531c5d8fe0bf9c8da14118b755ed00be8de8c4684ad10  brakeman-lib-5.1.0.gem
+    e38ff386530bc5585e2efd183ba73c08abb740c3b26072662025a3d9395b707a  brakeman-min-5.1.0.gem
 
 ### Reporting Issues
 
