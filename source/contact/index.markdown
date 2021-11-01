@@ -11,9 +11,9 @@ footer: true
 
 For any issues, bugs, or problems, please consider filing an [issue](https://github.com/presidentbeef/brakeman/issues) on GitHub.
 
-### Gitter
+### Discussions
 
-For more real-time discussion, visit us on [Gitter](https://gitter.im/presidentbeef/brakeman).
+For discussion and general questions, join in on [GitHub Discussions](https://github.com/presidentbeef/brakeman/discussions/)!
 
 ### Twitter
 
