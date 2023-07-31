@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-Injection is #1 on the 2010 [OWASP Top Ten](https://www.owasp.org/index.php/Top_10_2010-A1) web security risks. Command injection occurs when shell commands unsafely include user-manipulatable values.
+Injection is #1 on the 2010 [OWASP Top Ten](https://web.archive.org/web/20190223031311/https://www.owasp.org/index.php/Top_10_2010-A1) web security risks. Command injection occurs when shell commands unsafely include user-manipulatable values.
 
 There are many ways to run commands in Ruby:
 
