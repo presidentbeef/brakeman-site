@@ -75,13 +75,16 @@ To instead limit the number of branches tracked for a given value:
 
 To skip certain files use:
 
-    brakeman --skip-files file1,file2,etc
+    brakeman --skip-files file1,file2,dir1/
 
-Note Brakeman does "whole program" analysis, therefore skipping a file may affect warning results from more than just that one file.
+Values ending in `/` will cause Brakeman to skip any file with a matching directory anywhere in the path.
+To be more specific, start the directory name with `/` (e.g., `/app/some_dir/`). The directory will be matched relative to the root of the project being scanned.
+
+(Note Brakeman does "whole program" analysis, therefore skipping a file may affect warning results from more than just that one file.)
 
 The inverse but even more dangerous option is to specific which files to scan:
 
-    brakeman --only-files some_file,some_dir
+    brakeman --only-files some_file,some_dir/
 
 Again, since Brakeman looks at the whole program, it is very likely not going to behave as expected when scanning a subset of files. Also, if certain files are excluded Brakeman may not function at all.
 
