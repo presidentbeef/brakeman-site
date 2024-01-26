@@ -28,6 +28,7 @@ Read more about the different warnings Brakeman reports:
 * [Information Disclosure](/docs/warning_types/information_disclosure)
 * [Mail Link](/docs/warning_types/CVE-2011-0446)
 * [Mass Assignment](/docs/warning_types/mass_assignment)
+* [Path Traversal](/docs/warnings_types/path_traversal)
 * [Remote Code Execution](/docs/warning_types/remote_code_execution)
 * [Remote Execution in YAML.load](/docs/warning_types/remote_code_execution_yaml_load)
 * [Session Manipulation](/docs/warning_types/session_manipulation)
