@@ -35,6 +35,7 @@ Read more about the different warnings Brakeman reports:
 * [Session Settings](/docs/warning_types/session_setting)
 * [SQL Injection](/docs/warning_types/sql_injection)
 * [SSL Verification Bypass](/docs/warning_types/ssl_verification_bypass)
+* [Unmaintained Dependencies](/docs/warning_types/unmaintained_dependency/)
 * [Unsafe Deserialization](/docs/warning_types/unsafe_deserialization)
 * [Unscoped Find](/docs/warning_types/unscoped_find)
 * [Unsafe Redirects](/docs/warning_types/redirect)
