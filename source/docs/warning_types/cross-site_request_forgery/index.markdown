@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-Cross-site request forgery is #5 on the [OWASP Top Ten](https://www.owasp.org/index.php/Top_10_2010-A5). CSRF allows an attacker to perform actions on a website as if they are an authenticated user.
+Cross-site request forgery is #5 on the [OWASP Top Ten](https://web.archive.org/web/20190223031311/https://www.owasp.org/index.php/Top_10_2010-A5). CSRF allows an attacker to perform actions on a website as if they are an authenticated user.
 
 This warning is raised when no call to `protect_from_forgery` is found in `ApplicationController`. This method prevents CSRF.
 

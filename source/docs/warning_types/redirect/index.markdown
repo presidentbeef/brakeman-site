@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-Unvalidated redirects and forwards are #10 on the [OWASP Top Ten](https://www.owasp.org/index.php/Top_10_2010-A10).
+Unvalidated redirects and forwards are #10 on the [OWASP Top Ten](https://web.archive.org/web/20190223031311/https://www.owasp.org/index.php/Top_10_2010-A10).
 
 Redirects which rely on user-supplied values can be used to "spoof" websites or hide malicious links in otherwise harmless-looking URLs. They can also allow access to restricted areas of a site if the destination is not validated.
 
