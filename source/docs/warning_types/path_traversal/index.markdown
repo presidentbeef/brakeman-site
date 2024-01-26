@@ -41,5 +41,17 @@ Note that `Rails.root` is a `Pathname`.
 
 Exercise extreme caution when passing user-provided input to this function.
 
+### Additional Protections
+
+Besides coding defensively, there are additional options for protecting against path traversal:
+
+* Use the ActiveStorage module for handling uploaded files and store them in a service like S3, rather than storing user data on the same server or directory as the application.
+* Configure permissions on the application server to disallow writing files or reading files outside of the application directory.
+* Never include user-provided values in the file path or the file name.
+
+A common pattern is to store files using application-generated file names, but keep a record of the user-provided name. When the user downloads the file, the [`download`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-download) attribute and/or the [Content Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) header can be used to tell the browser the preferred name of the file, which can be the original user-provided name. Note that libraries like ActiveStorage will handle this for you.
+
+However, be careful if users can download files named by _other_ users. Overall, it is safer to generate file names from known-safe values.
+
 ---
 Back to [Warning Types](/docs/warning_types)
