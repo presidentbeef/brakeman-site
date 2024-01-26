@@ -31,7 +31,7 @@ _Important:_ Rails uses a slightly modified version of ERB, so the output from t
 
 If the file is a Haml template, then the output of `haml` needs to be checked.
 
-Run `haml -e --debug file_name.html.haml` to check the output. Note that this will attempt to execute the code, which will likely fail. However, it will also indicate syntax problems.
+Run `haml compile -c file_name.html.haml` to check the output. Note that this will attempt to execute the code, which will likely fail. However, it will also indicate syntax problems.
 
 ### File an Issue
 
