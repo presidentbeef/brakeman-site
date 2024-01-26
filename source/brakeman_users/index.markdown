@@ -28,6 +28,7 @@ Here are a few of the companies using Brakeman:
 [![nVisium](/images/users/nvisium.png)](https://www.nvisium.com/)
 [![New Relic](/images/users/newrelic.png)](http://newrelic.com)
 [![OpenCage](/images/users/opencage.png)](https://opencagedata.com/)
+[![SearchApi](/images/users/searchapi.png)](https://www.searchapi.io/)
 [![Semaphore](/images/users/semaphore.png)](https://semaphoreci.com/)
 [![PullReview](/images/users/pullreview.png)](https://www.pullreview.com/)
 [![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
