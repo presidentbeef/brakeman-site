@@ -30,7 +30,7 @@ warning about dynamic render paths when using components.
 
 ### Performance Improvement with Complex Branching
 
-Brakemn has a very hard time with code like
+Brakeman has a very hard time with code like
 
 ```ruby
 x = thing
