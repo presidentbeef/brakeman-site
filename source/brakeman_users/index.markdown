@@ -32,6 +32,7 @@ Here are a few of the companies using Brakeman:
 [![Semaphore](/images/users/semaphore.png)](https://semaphoreci.com/)
 [![PullReview](/images/users/pullreview.png)](https://www.pullreview.com/)
 [![ThreadFix](/images/users/threadfix.png)](http://www.threadfix.org/)
+[![Toolsfactory](/images/users/toolsfactory.png)](https://toolsfactory.nl/)
 [![TranslateFX](/images/users/translatefx.png)](http://www.translatefx.com/)
 [![Twitter](/images/users/twitter.png)](https://twitter.com)
 [![Vinted](/images/users/vinted.png)](http://www.vinted.com/)
