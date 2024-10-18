@@ -34,7 +34,7 @@ Unfortunately, timing of this Brakeman release means Brakeman is already warning
 
 The SHA256 sums for this release are:
 
-    f8892719490ed5f23e08fc14cb0020311a0af18fb47f7c7650345d0a35826413  brakeman-6.2.2.gem
+    d502d653699f4d451b21225ff4d19a9ec9345d23eaab5576e246185ffd7bf618  brakeman-6.2.2.gem
     fb7ba15cd309f995c95d15d9e0e590f3aad6f95a5dfa030854e8806f3ba196d9  brakeman-lib-6.2.2.gem
     b3a5b59a14a527bfaca4d2637765e98c12ae800c8f044b1939da578d3ed31851  brakeman-min-6.2.2.gem
 
