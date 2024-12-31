@@ -141,7 +141,9 @@ The minimum Ruby version to run Brakeman is now Ruby 3.1.0.
 
 The SHA256 sums for this release are:
 
-
+    1a0122b0c70f17519a61548a53a332c0acc19e3aa10b445e15e025a4b13b8577  brakeman-7.0.0.gem
+    ecb1a4241df4d3756d0f81b6973852d0390511275a513768aee9ddc398bbfe05  brakeman-lib-7.0.0.gem
+    6cbe26b0cab0db59bf0a2dd77eb244386f8386d8f7081a8a843469fde6e55367  brakeman-min-7.0.0.gem
 
 ### Reporting Issues
 
