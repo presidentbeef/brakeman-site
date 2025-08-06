@@ -1,23 +1,30 @@
 ---
-layout: post
-title: "Brakeman 5.1.2 Released"
+layout: blog
+title: Brakeman 5.1.2 Released
 date: 2021-10-28 11:30
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 5.1.1
+  changes:
+  - Updated `ruby_parser` ([Ryan Davis](https://www.zenspider.com/))
+  - Fix issue where the previous output is still visible ([Jason Frey](https://github.com/Fryguy))
+  - Handle cases where enums are not symbols ([#1627](https://github.com/presidentbeef/brakeman/issues/1627))
+  - Support newer Haml with `::Haml::AttributeBuilder.build`
+  - Fix sorting with `nil` line numbers
+checksums:
+- hash: d95b1cee8d751db8300c9390d8c90cf3e54f725c4d448f7ccfbdb9a723b6377a
+  file: brakeman-5.1.2.gem
+- hash: 8e6a25a4da113269e70a0e536325e8a18b02745f23dea25ecf640c675961961c
+  file: brakeman-lib-5.1.2.gem
+- hash: 7b272fa7efc2f25208614bd801993e2b161b4edbf8c423c93b6b13aaee09ae84
+  file: brakeman-min-5.1.2.gem
 ---
+
 
 Here's a small bugfix release with a big parser update!
 
 Huge thanks as always to [Ryan Davis](https://github.com/sponsors/zenspider?o=esb) for maintaining `ruby_parser`.
 
-_Changes since 5.1.1:_
-
-* Updated `ruby_parser` ([Ryan Davis](https://www.zenspider.com/))
-* Fix issue where the previous output is still visible ([Jason Frey](https://github.com/Fryguy))
-* Handle cases where enums are not symbols ([#1627](https://github.com/presidentbeef/brakeman/issues/1627))
-* Support newer Haml with `::Haml::AttributeBuilder.build`
-* Fix sorting with `nil` line numbers
 
 ## Updated RubyParser
 
@@ -53,18 +60,3 @@ then it _could_ (but doesn't always) cause a sorting error.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1641))
 
-### Checksums
-
-The SHA256 sums for this release are:
-
-    d95b1cee8d751db8300c9390d8c90cf3e54f725c4d448f7ccfbdb9a723b6377a  brakeman-5.1.2.gem
-    8e6a25a4da113269e70a0e536325e8a18b02745f23dea25ecf640c675961961c  brakeman-lib-5.1.2.gem
-    7b272fa7efc2f25208614bd801993e2b161b4edbf8c423c93b6b13aaee09ae84  brakeman-min-5.1.2.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Gitter](https://gitter.im/presidentbeef/brakeman) for questions and discussion.

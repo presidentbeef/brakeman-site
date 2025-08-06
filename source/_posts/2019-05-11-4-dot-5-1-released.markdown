@@ -1,30 +1,37 @@
 ---
-layout: post
-title: "Brakeman 4.5.1 Released"
+layout: blog
+title: Brakeman 4.5.1 Released
 date: 2019-05-11 13:14
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 4.5.0
+  changes:
+  - Add initial Rails 6 support
+  - Add optional check for `config.force_ssl` ([#1181](https://github.com/presidentbeef/brakeman/issues/1181))
+  - Add deserialization warning for `Oj.load/object_load`
+  - Add SQL injection checks for `destroy_by`/`delete_by`
+  - Add SQL injection checks for `find_or_create_by` and friends
+  - Check `link_to` with block for href XSS ([#1339](https://github.com/presidentbeef/brakeman/issues/1339))
+  - Convert `!!` calls to boolean value ([#1343](https://github.com/presidentbeef/brakeman/issues/1343))
+  - Use relative paths for `__FILE__`
+  - Represent file paths internally as `Brakeman::FilePath`
+  - Handle empty partial names
+  - Handle trailing comma in block args
+  - Remove code for Ruby versions prior to 1.9
+checksums:
+- hash: c8c48a88e9cd837122a590837ff5dbb4bd8214ad72baaffb75e5e5cd3585166f
+  file: brakeman-4.5.1.gem
+- hash: 48eaff4eb661f63d43c2f8b33da8efbabc6196ae5ff2ec58ad711e1649eff686
+  file: brakeman-lib-4.5.1.gem
+- hash: c6fcfc5c32ec79a50281b0b97be5b703385ffb20ef45f770e7888ca6ba0b1666
+  file: brakeman-min-4.5.1.gem
 ---
+
 
 This release adds initial support for Rails 6!
 
-_Changes since 4.5.0:_
 
-* Add initial Rails 6 support
-* Add optional check for `config.force_ssl` ([#1181](https://github.com/presidentbeef/brakeman/issues/1181))
-* Add deserialization warning for `Oj.load/object_load`
-* Add SQL injection checks for `destroy_by`/`delete_by`
-* Add SQL injection checks for `find_or_create_by` and friends
-* Check `link_to` with block for href XSS ([#1339](https://github.com/presidentbeef/brakeman/issues/1339))
-* Convert `!!` calls to boolean value ([#1343](https://github.com/presidentbeef/brakeman/issues/1343))
-* Use relative paths for `__FILE__`
-* Represent file paths internally as `Brakeman::FilePath`
-* Handle empty partial names
-* Handle trailing comma in block args
-* Remove code for Ruby versions prior to 1.9
-
-### Initial Rails 6 Support
+## Initial Rails 6 Support
 
 Rails 6 is (almost?) here!
 
@@ -32,7 +39,7 @@ This release adds basic support internally for Rails 6 as well as the `-6` optio
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1335))
 
-### Optional Check for Force SSL Option
+## Optional Check for Force SSL Option
 
 In Rails, `config.force_ssl = true` turns on HSTS, redirects HTTP to HTTPS, and sets the `secure` flag on all cookies.
 
@@ -42,31 +49,31 @@ To enable this new check, use `-A` or `--enable ForceSSL`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1344))
 
-### Deserialization with Oj
+## Deserialization with Oj
 
 The deserialization check now looks for unsafe use of the `Oj` JSON library.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1334))
 
-### New SQL Injection Sinks
+## New SQL Injection Sinks
 
 The SQL injection check has been expanded to check for unsafe use of `destroy_by`/`delete_by` (new in Rails 6) and `find_or_create_by` and related methods.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1337))
 
-### `link_to` with Block
+## `link_to` with Block
 
 Brakeman now checks `link_to` calls with blocks for `javascript:` links.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1340))
 
-### Convert `!!` to Boolean
+## Convert `!!` to Boolean
 
 Use of `!!` to convert values to booleans will be treated as safe (turned into `true or false`).
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1345))
 
-### Relative Path for `__FILE__`
+## Relative Path for `__FILE__`
 
 When ruby\_parser parses `__FILE__`, it replaces it with the name of the current file. Unfortunately, Brakeman was passing in absolute paths for the current file.
 This meant that the fingerprints for warnings including `__FILE__` would vary based on the path where the code was scanned. 
@@ -75,7 +82,7 @@ Now a relative path is used instead, so fingerprints should stabilize.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1347))
 
-### `Brakeman::FilePath`
+## `Brakeman::FilePath`
 
 Internally, file paths are now represented with `Brakeman::FilePath` to make it easier to manage absolute/relative paths as needed. This was a pretty huge change, so please report any issues.
 
@@ -84,25 +91,9 @@ That old option used to report a completely messed-up file name, which is incomp
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1354))
 
-### Empty Partial Names
+## Empty Partial Names
 
 If any empty string ends up as a partial name in a `render` call, Brakeman will ignore it.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1352))
-
-### Checksums
-
-The SHA256 sums for this release are:
-
-    c8c48a88e9cd837122a590837ff5dbb4bd8214ad72baaffb75e5e5cd3585166f  brakeman-4.5.1.gem
-    48eaff4eb661f63d43c2f8b33da8efbabc6196ae5ff2ec58ad711e1649eff686  brakeman-lib-4.5.1.gem
-    c6fcfc5c32ec79a50281b0b97be5b703385ffb20ef45f770e7888ca6ba0b1666  brakeman-min-4.5.1.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Gitter](https://gitter.im/presidentbeef/brakeman) for questions and discussion.
 

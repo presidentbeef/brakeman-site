@@ -1,26 +1,33 @@
 ---
-layout: post
-title: "Brakeman 6.0.0 Released"
+layout: blog
+title: Brakeman 6.0.0 Released
 date: 2023-05-24 15:30
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 5.4.1
+  changes:
+  - Drop support for Ruby 1.8/1.9 syntax
+  - Raise minimum Ruby version to 3.0
+  - Add obsolete fingerprints to comparison report ([#1758](https://github.com/presidentbeef/brakeman/issues/1758))
+  - Warn about missing CSRF protection when defaults are not loaded ([Chris Kruger](https://github.com/montdidier))
+  - Fix false positive with `content_tag` in newer Rails ([#1778](https://github.com/presidentbeef/brakeman/issues/1778))
+  - Scan directories that include the word `public`
+  - Fix end-of-life dates for Ruby
+checksums:
+- hash: 6ff908e5bfca4651d909a31f3d3ae5846e33732284860a23aff454761c4145d0
+  file: brakeman-6.0.0.gem
+- hash: 9a5e68e34c1cffe73b51952937ed2b4f427afd5d11d4a1c10c61e971253ba505
+  file: brakeman-lib-6.0.0.gem
+- hash: db1d8e2118af4b4701fbe49bf1177ac5c89a6a956ca037fdc0e62eb062e2dbb9
+  file: brakeman-min-6.0.0.gem
 ---
+
 
 Brakeman 6.0 drops parsing support for Ruby 1.8/1.9, and raises the minimum Ruby version to run Brakeman to 3.0.
 
-_Changes since 5.4.1:_
-
-* Drop support for Ruby 1.8/1.9 syntax
-* Raise minimum Ruby version to 3.0
-* Add obsolete fingerprints to comparison report ([#1758](https://github.com/presidentbeef/brakeman/issues/1758))
-* Warn about missing CSRF protection when defaults are not loaded ([Chris Kruger](https://github.com/montdidier))
-* Fix false positive with `content_tag` in newer Rails ([#1778](https://github.com/presidentbeef/brakeman/issues/1778))
-* Scan directories that include the word `public`
-* Fix end-of-life dates for Ruby
 
 
-### Ruby Parsing Version Support 
+## Ruby Parsing Version Support 
 
 This version of Brakeman no longer supports parsing Ruby 1.8/1.9 syntax.
 
@@ -28,7 +35,7 @@ This version of Brakeman no longer supports parsing Ruby 1.8/1.9 syntax.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1771))
 
-### Minimum Ruby Version
+## Minimum Ruby Version
 
 The minimum Ruby version to run Brakeman is now 3.0.0.
 
@@ -36,7 +43,7 @@ Official support for the 2.x line of Ruby has ended, so it is a good time to bum
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1771))
 
-### Missing CSRF Protection Warning
+## Missing CSRF Protection Warning
 
 Since Rails 5.2.0, new applications have had cross-site request forgery protection enabled. Brakeman assumed the protection was enabled based on the Rails version. However, this was incorrect.
 
@@ -44,13 +51,13 @@ Now Brakeman correctly handles the default configuration values.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1776))
 
-### Content Tag Attributes
+## Content Tag Attributes
 
 Brakeman will no longer warn about user input in `content_tag` attribute names in Rails 6.1.6+
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1779)
 
-### Obsolete Warnings in Comparison Report
+## Obsolete Warnings in Comparison Report
 
 When using the `--compare` option, the output JSON will now include an `obsolete` key with an array of fingerprints.
 
@@ -74,7 +81,7 @@ The report will resemble:
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1777))
 
-### Scan 'public' Directories
+## Scan 'public' Directories
 
 In the old days, Brakeman tried to scan only the "standard" Rails directories, mostly within `/app/`. With the 5.0 release, Brakeman was revised to make very few assumptions about what kinds of files live where, instead making decisions based on the content of files rather than their location.
 
@@ -84,24 +91,9 @@ This exception has been removed.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1774))
 
-### EOL Dates for Ruby
+## EOL Dates for Ruby
 
 Fixed end-of-life date for Ruby 3.0 and added expected dates for 3.1 and 3.2.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1770))
 
-### Checksums
-
-The SHA256 sums for this release are:
-
-    6ff908e5bfca4651d909a31f3d3ae5846e33732284860a23aff454761c4145d0  brakeman-6.0.0.gem
-    9a5e68e34c1cffe73b51952937ed2b4f427afd5d11d4a1c10c61e971253ba505  brakeman-lib-6.0.0.gem
-    db1d8e2118af4b4701fbe49bf1177ac5c89a6a956ca037fdc0e62eb062e2dbb9  brakeman-min-6.0.0.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Github](https://github.com/presidentbeef/brakeman/discussions) for questions and discussion.

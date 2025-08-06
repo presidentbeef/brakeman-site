@@ -15,7 +15,7 @@ permalink: /blog/:year/:month/:day/:title
 * Show action help at start of interactive ignore ([#949](https://github.com/presidentbeef/brakeman/issues/949))
 * Avoid warning about `where_values_hash` in SQLi ([#942](https://github.com/presidentbeef/brakeman/issues/942))
 
-### Engine Paths Option
+## Engine Paths Option
 
 Thanks to the work of Jason Yeo, Brakeman now supports custom paths to Rails engines uses the `--add-engines-path` option.
 
@@ -23,25 +23,25 @@ Multiple comma-separated paths may be configured. To include all subdirectories,
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/948))
 
-### Expanded CSRF Check
+## Expanded CSRF Check
 
 Also thanks to Jason Yeo, any controller with `ActionController::Base` as a direct parent will be checked for a `protect_from_forgery` call.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/953))
 
-### Ruby Version Info
+## Ruby Version Info
 
 Brakeman will now pull information about the Ruby version used for an application either from the `Gemfile` or `.ruby-version`. Right now this is only used for disabling (the already optional) Symbol DoS check for versions of Ruby that have symbol garbage collection.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/947))
 
-### Link Interpolation False Positive
+## Link Interpolation False Positive
 
 Brakeman's warning about interpolating user input into URLs has always checked to see if the interpolation was at the beginning of the string. However, that check didn't work if the first thing in the string was another interpolation. This has been fixed.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/940))
 
-### More Help in Interactive Ignore
+## More Help in Interactive Ignore
 
 For clarity, "interactive ignore" mode will now display the action options before going through each warning.
 
@@ -49,7 +49,7 @@ For clarity, "interactive ignore" mode will now display the action options befor
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/950))
 
-### Reporting Issues
+## Reporting Issues
 
 Thank you to everyone who reported bugs and contributed to this release.
 

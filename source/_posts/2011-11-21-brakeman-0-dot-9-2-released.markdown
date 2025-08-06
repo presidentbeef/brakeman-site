@@ -14,10 +14,10 @@ Changes:
 
 Just a small release to get the Rails 3 config fix out.
 
-### Rails 3 Configuration Parsing
+## Rails 3 Configuration Parsing
 
 There was an issue that would cause Brakeman to crash on certain configurations. This has been fixed.
 
-### Look for t()
+## Look for t()
 
 Both the `translate` and its shorter alias `t` will cause the warning about the cross-site scripting bug in them to be set to high confidence. If neither of these functions are found in the application, the confidence is set to medium.

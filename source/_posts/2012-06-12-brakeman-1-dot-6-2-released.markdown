@@ -1,27 +1,28 @@
 ---
-layout: post
-title: "Brakeman 1.6.2 Released"
+layout: blog
+title: Brakeman 1.6.2 Released
 date: 2012-06-12 17:07
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 1.6.1
+  changes:
+  - " * Add checks for CVE-2012-2660, CVE-2012-2661, CVE-2012-2694, CVE-2012-2695
+    (Dave Worth)"
+  - " * Avoid warning when redirecting to a model instance"
+  - " * Raise confidence level for model attributes in redirects"
+  - " * Add `request.parameters` as a parameters hash"
+  - " * Return non-zero exit code when missing dependencies"
+  - " * Fix `before_filter :except` logic"
+  - " * Only accept symbol literals as before_filter names"
+  - " * Cache before_filter lookups"
+  - " * Turn off quiet mode by default for `--compare`"
 ---
+
 
 Besides checks for the latest CVEs, this release includes a slightly improved redirect check, noiser output with `--compare`, and better handling of `before_filter`.
 
-_Changes since 1.6.1_:
 
- * Add checks for CVE-2012-2660, CVE-2012-2661, CVE-2012-2694, CVE-2012-2695 (Dave Worth)
- * Avoid warning when redirecting to a model instance
- * Raise confidence level for model attributes in redirects
- * Add `request.parameters` as a parameters hash
- * Return non-zero exit code when missing dependencies
- * Fix `before_filter :except` logic
- * Only accept symbol literals as before_filter names
- * Cache before_filter lookups
- * Turn off quiet mode by default for `--compare`
-
-### Latest CVEs
+## Latest CVEs
 
 A number of Rails vulnerabilities were announced recently, although there are really only two issues.
 
@@ -35,19 +36,19 @@ For Rails 2.3, I believe [these changes](https://github.com/presidentbeef/rails/
 
 Older versions of Rails 2.x may be vulnerable to the "NULL" issue, but not to the nested hashes problem.
 
-### Unprotected Redirect Check
+## Unprotected Redirect Check
 
 There have been some minor changes to `CheckRedirect`. In most cases, it should no longer warn when redirecting to a model instance. If there are still false positives with this scenario, please report them.
 
 The other change is that redirects to model attributes will now be marked as high confidence, instead of weak.
 
-### Exit Code on Missing Dependencies
+## Exit Code on Missing Dependencies
 
 Brakeman catches errors from missing dependencies in order to show a nicer error message. Unfortunately, it was also returning `0` on exit. This is undesirable behavior when chaining commands together.
 
 This has been changed to return a non-zero exit code.
 
-### Before Filter Changes
+## Before Filter Changes
 
 There were some isues with how `before_filter` was being handled. The logic when using `:except` was broken, causing Brakeman to treat it like `:only`.
 
@@ -55,11 +56,11 @@ The other issue caused Brakeman to interpret arguments such as method calls as m
 
 While dealing with this, caching of filter lookups was also added for a minor performance improvement.
 
-### Noisier `--compare`
+## Noisier `--compare`
 
 Using the `--compare` option now shows the same output as a regular scan. If you are piping the output of `--compare` to a file or elsewhere, you may wish to use the `--quiet` option.
 
-### Report Issues
+## Report Issues
 
 Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release!
 

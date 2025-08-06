@@ -18,13 +18,13 @@ This release is mostly bug fixes and internal improvements, although it may find
 * Reduce open redirect duplicates
 * Fix SymbolDoS error with unknown Rails version
 
-### View Helpers
+## View Helpers
 
 Calls in view helpers are now indexed, which means Brakeman will search them for potential vulnerabilities.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/907))
 
-### Inline Templates
+## Inline Templates
 
 Brakeman will now process inline templates in controllers, if they are using ERB (the default):
 
@@ -32,7 +32,7 @@ Brakeman will now process inline templates in controllers, if they are using ERB
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/905))
 
-### Rails App Path
+## Rails App Path
 
 Thanks to [Neil Matatall](https://github.com/oreoshake), Brakeman will now display the path it tried to search for a Rails application if it cannot find it:
 
@@ -40,13 +40,13 @@ Thanks to [Neil Matatall](https://github.com/oreoshake), Brakeman will now displ
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/909))
 
-### Hashes as URLs
+## Hashes as URLs
 
 Brakeman will no longer warn about obvious hash arguments in the HREF for `link_to` calls, as well as handling `url_for` better.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/904))
 
-### Return Values
+## Return Values
 
 In some cases, Brakeman attempts to determine the possible return value(s) of a method call.
 This release includes a number of improvements to those guesses which may make some warnings easier to understand
@@ -54,19 +54,19 @@ and fix some false positives.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/896))
 
-### Render Path Booleans
+## Render Path Booleans
 
 The check for dynamic render paths will no longer warn about methods ending in `?`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/899))
 
-### Redirect Duplicates
+## Redirect Duplicates
 
 This release refactored much of the warning duplicate tracking, and as such there should be fewer duplicate warnings about open redirects.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/901))
 
-### SHAs
+## SHAs
 
 The SHA256 sums for this release are
 
@@ -74,7 +74,7 @@ The SHA256 sums for this release are
     793f1c69cca2681bdd0c98f11307ace4f1a43ed594dd45cbe5b67f0383e76e2f  brakeman-lib-3.3.3.gem
     dcc3a75b12f84cac582d383a375d3b85d033e25ba42af051bedcdc8b5377c2c5  brakeman-min-3.3.3.gem
 
-### Reporting Issues
+## Reporting Issues
 
 Thank you to everyone who reported bugs and contributed improvements in this release.
 

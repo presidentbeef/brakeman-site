@@ -1,23 +1,30 @@
 ---
-layout: post
-title: "Brakeman 5.3.0 Released"
+layout: blog
+title: Brakeman 5.3.0 Released
 date: 2022-08-09 08:30
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 5.2.3
+  changes:
+  - Add CWE information to warnings ([Stephen Aghaulor](https://github.com/saghaulor))
+  - Include explicit engine or lib paths in `vendor/` ([Joe Rafaniello](https://github.com/jrafanie))
+  - Add check for CVE-2022-32209
+  - Load rexml as a Brakeman dependency
+  - Fix "full call" information propagating unnecessarily
+checksums:
+- hash: 4fe584ef37c16e1011a0f2db36ebab540fef403ff8e26afed212e2d7ff5a3176
+  file: brakeman-5.3.0.gem
+- hash: 1f5caa0bd05fd8ea5b4f5791371dd0911f96d804612c7be986bab3ed0163a8cf
+  file: brakeman-lib-5.3.0.gem
+- hash: 4a4ccef090c4eb5857140c15fa69ff65167f3eb550f7a0ca555012642aafe7e9
+  file: brakeman-min-5.3.0.gem
 ---
+
 
 This release adds CWE information to reports - the first JSON report change in a long time!
 
-_Changes since 5.2.3:_
 
-* Add CWE information to warnings ([Stephen Aghaulor](https://github.com/saghaulor))
-* Include explicit engine or lib paths in `vendor/` ([Joe Rafaniello](https://github.com/jrafanie))
-* Add check for CVE-2022-32209
-* Load rexml as a Brakeman dependency
-* Fix "full call" information propagating unnecessarily
-
-### CWE Information 
+## CWE Information 
 
 Thanks to [Stephen Aghaulor](https://github.com/saghaulor) for taking on the arduous task of adding CWE information
 to every Brakeman warning type!
@@ -49,7 +56,7 @@ Example:
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1693))
 
-### Explicit Paths in Vendor Directory 
+## Explicit Paths in Vendor Directory 
 
 By default, Brakeman does not scan any code in the `vendor/` directory.
 
@@ -59,7 +66,7 @@ Thanks to [Joe Rafaniello](https://github.com/jrafanie) this is now changed to r
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1699))
 
-### CVE-2022-32209
+## CVE-2022-32209
 
 _As a reminder, Brakeman does not keep up with every CVE for Rails or other libraries. Use a dependency analysis tool for that!_
 
@@ -71,18 +78,3 @@ If only the vulnerable version of `rails-html-sanitizer` is detected, the warnin
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1718))
 
-### Checksums
-
-The SHA256 sums for this release are:
-
-    4fe584ef37c16e1011a0f2db36ebab540fef403ff8e26afed212e2d7ff5a3176  brakeman-5.3.0.gem
-    1f5caa0bd05fd8ea5b4f5791371dd0911f96d804612c7be986bab3ed0163a8cf  brakeman-lib-5.3.0.gem
-    4a4ccef090c4eb5857140c15fa69ff65167f3eb550f7a0ca555012642aafe7e9  brakeman-min-5.3.0.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Github](https://github.com/presidentbeef/brakeman/discussions) for questions and discussion.

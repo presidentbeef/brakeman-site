@@ -16,15 +16,15 @@ Changes:
 
 This is just a small release on the way to 1.0.
 
-### Rails 3 Configs
+## Rails 3 Configs
 
 Configurations in `config/application` and `config/environments/production.rb` will now be parsed.
 
-### Check for Disabled Mass Assignment
+## Check for Disabled Mass Assignment
 
 A new option was added in Rails 3.1 to globally disable mass assignment using `config.active_record.whitelist_attributes = true`. Brakeman will now turn off mass assignment warnings if this configuration setting is detected.
 
-### Always Warn on without_protection
+## Always Warn on without_protection
 
 Rails 3.1 adds a way to bypass attribute protection when doing mass assignment.
 
@@ -34,7 +34,7 @@ For example:
 
 Brakeman will now _always_ warn when `without_protection` is used, even if mass assignment is disabled or attributes are protected on that model.
 
-### Fix CSV Output
+## Fix CSV Output
 
 Brakeman reports using the CSV format should work once again.
 

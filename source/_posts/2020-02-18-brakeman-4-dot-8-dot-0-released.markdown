@@ -1,26 +1,33 @@
 ---
-layout: post
-title: "Brakeman 4.8.0 Released"
+layout: blog
+title: Brakeman 4.8.0 Released
 date: 2020-02-18 10:00
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 4.7.2
+  changes:
+  - Add JUnit XML report format ([Naoki Kimurai](https://github.com/naokikimura))
+  - Sort ignore files by fingerprint and line ([Ngan Pham](https://github.com/ngan))
+  - Catch dangerous concatenation in `CheckExecute` ([Jacob Evelyn](https://github.com/JacobEvelyn))
+  - User-friendly message when ignore config file has invalid JSON ([D. Hicks](https://github.com/deevis))
+  - Freeze call index results, fix thread-safety issue
+  - Properly render confidence in Markdown report ([#1446](https://github.com/presidentbeef/brakeman/issues/1446))
+  - Report old warnings as fixed if zero warnings reported
+checksums:
+- hash: 2febb3ce4111fe14f57a8ea447c5770eeb32ba43333955b4ed27864ef045c277
+  file: brakeman-4.8.0.gem
+- hash: c513373a37576d8107af724bf9f8a47e8d76253c85bdd6fdb4d3e93471a47ee6
+  file: brakeman-lib-4.8.0.gem
+- hash: d82206b9a60ef1eb4c96d32ba0157774db301e3ca10dcbdd7b4171044b28eccf
+  file: brakeman-min-4.8.0.gem
 ---
+
 
 First release of 2020!
 This release comes with a brand new report format: JUnit XML.
 
-_Changes since 4.7.2:_
 
-* Add JUnit XML report format ([Naoki Kimurai](https://github.com/naokikimura))
-* Sort ignore files by fingerprint and line ([Ngan Pham](https://github.com/ngan))
-* Catch dangerous concatenation in `CheckExecute` ([Jacob Evelyn](https://github.com/JacobEvelyn))
-* User-friendly message when ignore config file has invalid JSON ([D. Hicks](https://github.com/deevis))
-* Freeze call index results, fix thread-safety issue
-* Properly render confidence in Markdown report ([#1446](https://github.com/presidentbeef/brakeman/issues/1446))
-* Report old warnings as fixed if zero warnings reported
-
-### JUnit XML Report
+## JUnit XML Report
 
 Thanks to [Naoki Kimura](https://github.com/naokikimura), Brakeman can now generate a JUnit XML format.
 JUnit XML is produced and consumed by a number of different testing tools, including CircleCI.
@@ -31,14 +38,14 @@ To use the new format, either use `-f junit` or `-o report.junit`.
 
 [changes](https://github.com/presidentbeef/brakeman/pull/1453)
 
-### Sort Ignore Files
+## Sort Ignore Files
 
 Warnings in "ignore files" were previously only sorted by fingerprint.
 Thanks to [Ngan Pham](https://github.com/ngan) they are now sorted by fingerprint then line number, to maintain stable ordering between warnings with the same fingerprint.
 
 [changes](https://github.com/presidentbeef/brakeman/pull/1457)
 
-### Dangerous Concatenation in Commands
+## Dangerous Concatenation in Commands
 
 [Jacob Evelyn](https://github.com/JacobEvelyn) has updated the command injection check (`CheckExecute`) to also consider string concatenation with dangerous values.
 
@@ -50,7 +57,7 @@ system("ls " + maybe_dangerous)
 
 [changes](https://github.com/presidentbeef/brakeman/pull/1440)
 
-### Fix Thread-safety Issue
+## Fix Thread-safety Issue
 
 Two checks were modifying shared data (call site results), which introduced a race condition.
 Sometimes a result would strangely become `nil` and cause intermittent errors.
@@ -60,13 +67,13 @@ Now results from the `CallIndex` are frozen to help prevent this kind of modific
 
 [changes](https://github.com/presidentbeef/brakeman/pull/1452)
 
-### Render Confidence in Markdown
+## Render Confidence in Markdown
 
 Due to a previous refactoring, confidence levels were not being rendered in Markdown reports.
 
 [changes](https://github.com/presidentbeef/brakeman/pull/1448)
 
-### Report Comparison Fix 
+## Report Comparison Fix 
 
 Due to a _very_ old bug, when comparing an old report with some warnings to a new report with zero warnings, the old warnings were not reported as fixed.
 Now they will be.
@@ -74,20 +81,4 @@ Now they will be.
 Probably no one noticed because we generally only care about _new_ warnings.
 
 [changes](https://github.com/presidentbeef/brakeman/pull/1448)
-
-### Checksums
-
-The SHA256 sums for this release are:
-
-    2febb3ce4111fe14f57a8ea447c5770eeb32ba43333955b4ed27864ef045c277  brakeman-4.8.0.gem
-    c513373a37576d8107af724bf9f8a47e8d76253c85bdd6fdb4d3e93471a47ee6  brakeman-lib-4.8.0.gem
-    d82206b9a60ef1eb4c96d32ba0157774db301e3ca10dcbdd7b4171044b28eccf  brakeman-min-4.8.0.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Gitter](https://gitter.im/presidentbeef/brakeman) for questions and discussion.
 

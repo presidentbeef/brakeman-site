@@ -170,30 +170,31 @@
 }
 
 .checksums-section {
-    background: #1e1e1e;
-    color: #d4d4d4;
-    padding: 2rem;
-    border-radius: 12px;
+    background: #f8f9fa;
+    color: #6c757d;
+    padding: 1.5rem;
+    border-radius: 8px;
     margin: 2rem 0;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     overflow-x: auto;
+    border: 1px solid #e9ecef;
 
     h3 {
-        color: #c586c0;
+        color: #495057;
         margin-bottom: 1rem;
     }
 
     .checksum-line {
-        margin-bottom: 0.5rem;
-        word-break: break-all;
+        margin-bottom: 0.25rem;
+        white-space: nowrap;
 
         .hash {
-            color: #b5cea8;
+            color: #6c757d;
         }
 
         .filename {
-            color: #ce9178;
+            color: #495057;
         }
     }
 }
