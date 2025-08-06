@@ -1,0 +1,226 @@
+// _sass/pages/_blog.scss
+// Blog page specific styles
+
+.blog-container {
+    margin-top: 100px;
+    min-height: calc(100vh - 100px);
+}
+
+.blog-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+/* Blog Sidebar */
+.blog-sidebar {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 2rem;
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .sidebar-card {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: #d73502;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+    }
+}
+
+/* Article */
+.article-main {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+}
+
+.article-header {
+    background: linear-gradient(135deg, #d73502 0%, #b12a00 100%);
+    color: white;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        animation: float 20s ease-in-out infinite;
+    }
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.article-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.article-content {
+    padding: 3rem;
+}
+
+/* Content Styling */
+.changelog-intro {
+    background: #f8f9fa;
+    border-left: 4px solid #d73502;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+
+    h3 {
+        color: #d73502;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+
+            &::before {
+                content: '•';
+                color: #d73502;
+                font-weight: bold;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    a {
+        color: #d73502;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.feature-section {
+    margin: 3rem 0;
+
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #f1f1f1;
+    }
+
+    p {
+        color: #4a4a4a;
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+    }
+
+    a {
+        color: #d73502;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.checksums-section {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+
+    h3 {
+        color: #c586c0;
+        margin-bottom: 1rem;
+    }
+
+    .checksum-line {
+        margin-bottom: 0.5rem;
+        word-break: break-all;
+
+        .hash {
+            color: #b5cea8;
+        }
+
+        .filename {
+            color: #ce9178;
+        }
+    }
+}
+
+.reporting-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+
+    h3 {
+        color: #d73502;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: #d73502;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Mobile sidebar toggle */
+.sidebar-toggle {
+    display: none;
+}

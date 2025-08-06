@@ -1,34 +1,23 @@
 ---
-layout: default
----
+layout: homepage
+title: "Brakeman Security Scanner"
+description: "Free, open-source static analysis security scanner for Ruby on Rails applications"
 
-<div class="blog-index">
-{% assign index = true %}
-{% for post in paginator.posts %}
-{% assign content = post.content %}
-  <article>
-    {% include article.html %}
-  </article>
-{% endfor %}
-<nav role="pagination">
-  <div>
-    <a href="/blog/archives">Blog Archives</a>
-  </div>
-</nav>
-{% if site.disqus_short_name %}
-<script type="text/javascript">
-    var disqus_shortname = '{{ site.disqus_short_name }}';
-    (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-{% endif %}
-</div>
-<aside role=sidebar>
-  {% include custom/asides/about.html %}
-  {% include custom/asides/github.html %}
-  {% include asides/recent_posts.html %}
-</aside>
+hero:
+  title: 'Secure Your <span class="highlight">Ruby</span> Applications'
+  subtitle: "Brakeman is a free, open-source static analysis security scanner for Ruby on Rails applications. Help make the Rails ecosystem more secure."
+  primary_button:
+    text: "Install Brakeman"
+    url: "/docs/quickstart/"
+  secondary_button:
+    text: "Read Documentation"
+    url: "/docs/"
+
+features:
+  title: "Why Use Brakeman?"
+  subtitle: "Free and open-source security scanning built by the community, for the community"
+
+news:
+  title: "Latest News"
+  subtitle: "Stay up to date with the latest releases and community contributions"
+---

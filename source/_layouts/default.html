@@ -1,13 +1,62 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
-{% include head.html %}
-<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %}>
-  <header>{% include header.html %}</header>
-  <nav role=navigation>{% include navigation.html %}</nav>
-  <div id="main">
-    <div id="content">
-      {{ content | expand_urls: root_url | backtick_codeblock | smart_quotes }}
-    </div>
-  </div>
-  <footer>{% include footer.html %}</footer>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ '/stylesheets/screen.css' | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+<body class="{{ page.layout }}">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="{{ '/' | relative_url }}" class="logo">
+                    <img src="{{ site.data.links.logo | relative_url }}" alt="Brakeman Logo">
+                    Brakeman
+                </a>
+                <ul class="nav-links">
+                    {%- for link in site.data.navigation.main -%}
+                        <li>
+                            <a href="{{ link.url | relative_url }}" 
+                               {%- if page.url contains link.url %} class="active"{% endif %}>
+                                {{ link.title }}
+                            </a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                {%- for section in site.data.navigation.footer -%}
+                    <div class="footer-section">
+                        <h4>{{ section[0] | capitalize }}</h4>
+                        {%- for link in section[1] -%}
+                            <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+                        {%- endfor -%}
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/javascripts/main.js' | relative_url }}"></script>
 </body>
 </html>

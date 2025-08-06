@@ -1,0 +1,84 @@
+# _data/documentation.yml
+
+sidebar:
+  - title: "Getting Started"
+    links:
+      - title: "Overview"
+        url: "/docs/"
+      - title: "Quickstart Guide"
+        url: "/docs/quickstart/"
+      - title: "Installation"
+        url: "/docs/installation/"
+      - title: "Basic Usage"
+        url: "/docs/basic-usage/"
+
+  - title: "Configuration"
+    links:
+      - title: "Options"
+        url: "/docs/options/"
+      - title: "Configuration Files"
+        url: "/docs/configuration/"
+      - title: "Output Formats"
+        url: "/docs/output-formats/"
+      - title: "Custom Rules"
+        url: "/docs/custom-rules/"
+
+  - title: "Advanced Usage"
+    links:
+      - title: "Warning Types"
+        url: "/docs/warning-types/"
+      - title: "Confidence Levels"
+        url: "/docs/confidence-levels/"
+      - title: "Ignoring Warnings"
+        url: "/docs/ignoring-warnings/"
+      - title: "CI/CD Integration"
+        url: "/docs/ci-cd/"
+
+  - title: "Development"
+    links:
+      - title: "As a Library"
+        url: "/docs/library/"
+      - title: "Rake Integration"
+        url: "/docs/rake/"
+      - title: "Contributing"
+        url: "/docs/contributing/"
+      - title: "API Reference"
+        url: "/docs/api/"
+
+getting_started:
+  - title: "Quickstart Guide"
+    url: "/docs/quickstart/"
+    description: "Get started with Brakeman in under 5 minutes. Install, scan, and understand your first security report."
+
+  - title: "Installation"
+    url: "/docs/installation/"
+    description: "Multiple ways to install Brakeman: gem, Docker, or integrate into your existing workflow."
+
+  - title: "Basic Usage"
+    url: "/docs/basic-usage/"
+    description: "Learn the essential commands and options to start scanning your Rails applications effectively."
+
+next_steps:
+  - title: "Confidence Levels"
+    url: "/docs/confidence-levels/"
+    description: "Understand how Brakeman rates the confidence of each warning and how to interpret results."
+
+  - title: "Warning Types"
+    url: "/docs/warning-types/"
+    description: "Comprehensive list of all vulnerability types that Brakeman can detect in your application."
+
+  - title: "Reducing False Positives"
+    url: "/docs/false-positives/"
+    description: "Learn strategies to minimize false positives and improve the accuracy of your scans."
+
+  - title: "Ignoring False Positives"
+    url: "/docs/ignoring-warnings/"
+    description: "How to safely ignore warnings that don't apply to your application or represent accepted risks."
+
+  - title: "Using Brakeman as a Library"
+    url: "/docs/library/"
+    description: "Integrate Brakeman directly into your Ruby applications and customize its behavior."
+
+  - title: "Brakeman and Rake"
+    url: "/docs/rake/"
+    description: "Set up Rake tasks for automated scanning and integration with your development workflow."

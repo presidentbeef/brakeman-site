@@ -1,0 +1,23 @@
+- icon: "⚡"
+  title: "Lightning Fast"
+  description: "Static analysis means no need to set up your application stack. Scan your entire codebase in seconds, completely free."
+
+- icon: "🎯"
+  title: "Rails-Specific"
+  description: "Built specifically for Ruby on Rails. Understands Rails patterns, conventions, and common vulnerability patterns."
+
+- icon: "🔧"
+  title: "Zero Configuration"
+  description: "Works out of the box with sensible defaults. No licenses, subscriptions, or complex setup required."
+
+- icon: "📊"
+  title: "Multiple Formats"
+  description: "Output results in JSON, HTML, CSV, SARIF, and more. Integrate freely with any workflow or toolchain."
+
+- icon: "🔍"
+  title: "Comprehensive Coverage"
+  description: "Detects SQL injection, cross-site scripting, command injection, and dozens of other vulnerability types."
+
+- icon: "🤖"
+  title: "Open Source"
+  description: "Completely free and open source. Contribute to the project, customize for your needs, or just use it without restrictions."

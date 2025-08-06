@@ -1,0 +1,40 @@
+main:
+  - title: "Features"
+    url: "/#features"
+  - title: "Documentation" 
+    url: "/docs/"
+  - title: "News"
+    url: "/blog/archives"
+  - title: "Code"
+    url: "https://github.com/presidentbeef/brakeman"
+
+footer:
+  project:
+    - title: "Download"
+      url: "/download/"
+    - title: "Documentation"
+      url: "/docs/"
+    - title: "Changelog"
+      url: "/changelog/"
+    - title: "Security Advisories"
+      url: "/security/"
+  
+  community:
+    - title: "GitHub"
+      url: "https://github.com/presidentbeef/brakeman"
+    - title: "Discussions"
+      url: "https://github.com/presidentbeef/brakeman/discussions"
+    - title: "Issues"
+      url: "https://github.com/presidentbeef/brakeman/issues"
+    - title: "Contributing"
+      url: "/contributing/"
+  
+  resources:
+    - title: "Getting Started"
+      url: "/docs/quickstart/"
+    - title: "Best Practices"
+      url: "/docs/best-practices/"
+    - title: "Ruby Security Guide"
+      url: "/docs/ruby-security/"
+    - title: "Rails Security"
+      url: "/docs/rails-security/"

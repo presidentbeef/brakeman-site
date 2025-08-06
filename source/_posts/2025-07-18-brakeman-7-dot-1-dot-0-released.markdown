@@ -1,23 +1,28 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman 7.1.0 Released"
-date: 2025-07-18 11:00
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+subtitle: "Haml 6 support, render shortcuts, and performance improvements"
+date: 2025-07-18
+version: "7.1.0"
+changelog:
+  since: "7.0.2"
+  changes:
+    - "Add Haml 6.x support ([#1914](https://github.com/presidentbeef/brakeman/issues/1914), [#1841](https://github.com/presidentbeef/brakeman/issues/1841), etc.)"
+    - "Support render model shortcut ([#959](https://github.com/presidentbeef/brakeman/issues/959), [#1940](https://github.com/presidentbeef/brakeman/issues/1940), etc.)"
+    - "Add `--ensure-no-obsolete-config-entries` option ([viralpraxis](https://github.com/viralpraxis))"
+    - "Update JUnit report for CircleCI ([Philippe Bernery](https://github.com/pbernery))"
+    - "Improve ignored warnings layout in HTML report ([Sebastien Savater](https://github.com/inkstak))"
+    - "Only load escape functionality from cgi library ([Earlopain](https://github.com/Earlopain))"
+    - "Add EOL dates for Rails 8.0 and Ruby 3.4"
+    - "Use lazy file lists for AppTree"
+checksums:
+  - hash: "bbc708a75a53008490c8b9600b97fa85cb3d5a8818dd1560f18e0b89475d48af"
+    file: "brakeman-7.1.0.gem"
+  - hash: "b5263ca27a725ad38fb98aa83908b0285eee46c29096eb4fb0b36b2795bbb082"
+    file: "brakeman-lib-7.1.0.gem"
+  - hash: "0a141eaf08f864680af69c6642f9cf855be3eb89c3d5a3f5b0bd182f9eba2d82"
+    file: "brakeman-min-7.1.0.gem"
 ---
-
-_Changes since 7.0.2:_
-
-* Add Haml 6.x support ([#1914](https://github.com/presidentbeef/brakeman/issues/1914), [#1841](https://github.com/presidentbeef/brakeman/issues/1841), etc.)
-* Support render model shortcut ([#959](https://github.com/presidentbeef/brakeman/issues/959), [#1940](https://github.com/presidentbeef/brakeman/issues/1940), etc.)
-* Add `--ensure-no-obsolete-config-entries` option ([viralpraxis](https://github.com/viralpraxis))
-* Update JUnit report for CircleCI (Philippe Bernery)
-* Improve ignored warnings layout in HTML report ([Sebastien Savater](https://github.com/inkstak))
-* Only load escape functionality from cgi library (Earlopain)
-* Add EOL dates for Rails 8.0 and Ruby 3.4
-* Use lazy file lists for AppTree
-
 
 ### Haml 6 Support
 

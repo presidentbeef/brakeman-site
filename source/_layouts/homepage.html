@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>{{ page.hero.title | default: 'Secure Your <span class="highlight">Ruby</span> Applications' }}</h1>
+                <p>{{ page.hero.subtitle | default: 'Brakeman is a free, open-source static analysis security scanner for Ruby on Rails applications. Help make the Rails ecosystem more secure.' }}</p>
+                <div class="hero-buttons">
+                    <a href="{{ page.hero.primary_button.url | default: '/docs/quickstart/' | relative_url }}" class="btn-primary">
+                        <span>🚀</span> {{ page.hero.primary_button.text | default: 'Install Brakeman' }}
+                    </a>
+                    <a href="{{ page.hero.secondary_button.url | default: '/docs/' | relative_url }}" class="btn-secondary">
+                        <span>📖</span> {{ page.hero.secondary_button.text | default: 'Read Documentation' }}
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="window-title">terminal</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line"><span class="code-comment"># Install Brakeman</span></div>
+                        <div class="code-line"><span class="code-command">gem install</span> <span class="code-string">brakeman</span></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"><span class="code-comment"># Scan your Rails app</span></div>
+                        <div class="code-line"><span class="code-command">brakeman</span></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"><span class="code-report">== Brakeman Report ==</span></div>
+                        <div class="code-line"><span class="code-comment"># ...</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ page.features.title | default: 'Why Use Brakeman?' }}</h2>
+            <p>{{ page.features.subtitle | default: 'Free and open-source security scanning built by the community, for the community' }}</p>
+        </div>
+        <div class="features-grid">
+            {% assign features = page.features.list | default: site.data.features %}
+            {% for feature in features %}
+                <div class="feature-card fade-in stagger-{{ forloop.index }}">
+                    <span class="feature-icon">{{ feature.icon }}</span>
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section class="news" id="news">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ page.news.title | default: 'Latest News' }}</h2>
+            <p>{{ page.news.subtitle | default: 'Stay up to date with the latest releases and community contributions' }}</p>
+        </div>
+        <div class="news-grid">
+            <div class="news-main">
+                {% assign latest_post = site.posts.first %}
+                {% if latest_post %}
+                    <article class="article-card">
+                        <div class="article-header">
+                            {% if latest_post.version %}
+                                <span class="version-badge">Version {{ latest_post.version }}</span>
+                            {% endif %}
+                            <h3>{{ latest_post.title }}</h3>
+                            <div class="article-meta">{{ latest_post.date | date: "%B %Y" }}{% if latest_post.subtitle %} • {{ latest_post.subtitle }}{% endif %}</div>
+                        </div>
+                        <div class="article-content">
+                            {{ latest_post.excerpt }}
+                            
+                            {% if latest_post.changelog %}
+                                <h4>🎉 What's New</h4>
+                                <ul>
+                                    {% for change in latest_post.changelog.changes limit:4 %}
+                                        <li>{{ change | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            
+                            <a href="{{ latest_post.url | relative_url }}" class="read-more-btn">Read Full Release Notes →</a>
+                        </div>
+                    </article>
+                {% endif %}
+            </div>
+            <div class="news-sidebar">
+                {% for post in site.posts offset:1 limit:4 %}
+                    <div class="sidebar-card">
+                        <h4>{{ post.title }}</h4>
+                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                        <span class="date">{{ post.date | date: "%B %Y" }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -20,7 +20,6 @@ url: "https://brakemanscanner.org" # the base hostname & protocol for your site,
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -29,6 +28,11 @@ subscribe_rss: feed.xml
 paginate: 5
 paginate_path: "/blog/page/:num/"
 recent_posts: 5       # Posts in the sidebar Recent Posts section
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
