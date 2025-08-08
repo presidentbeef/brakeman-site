@@ -51,6 +51,12 @@ code {
     color: #d73502;
 }
 
+// Code blocks
+.language-plaintext.highlighter-rouge,
+.highlighter-rouge {
+    margin-bottom: 1.5rem;
+}
+
 // Animations
 @keyframes fadeIn {
     to {
