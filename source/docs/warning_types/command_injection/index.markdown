@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Command Injection"
 date: 2011-11-09 14:33
 comments: false

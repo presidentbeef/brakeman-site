@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Information Disclosure"
 date: 2013-10-17 14:37
 comments: false

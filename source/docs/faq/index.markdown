@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Frequently Asked Questions"
 date: 2011-08-27 08:29
 comments: true

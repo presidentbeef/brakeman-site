@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Authentication"
 date: 2016-06-29 16:15
 comments: false

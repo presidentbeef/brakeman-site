@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Ignoring False Positives"
 date: 2014-11-28 09:18
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Denial of Service"
 date: 2013-05-16 12:47
 comments: false

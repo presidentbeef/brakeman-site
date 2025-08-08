@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Cross Site Scripting (Content Tag)"
 date: 2012-09-04 12:44
 comments: false

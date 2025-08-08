@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Contributing to Brakeman"
 date: 2011-11-28 16:29
 comments: false

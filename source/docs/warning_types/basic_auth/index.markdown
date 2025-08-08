@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Basic Authentication"
 date: 2011-11-10 12:47
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Troubleshooting"
 date: 2012-06-22 09:34
 comments: false

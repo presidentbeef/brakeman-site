@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Confidence Levels"
 date: 2011-08-27 08:18
 comments: false

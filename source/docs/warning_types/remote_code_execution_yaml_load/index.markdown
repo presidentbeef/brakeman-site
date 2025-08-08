@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Remote Code Execution in YAML.Load"
 date: 2013-01-18 17:08
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Cross Site Scripting"
 date: 2011-11-09 13:34
 comments: false

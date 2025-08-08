@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Unmaintained Dependencies"
 date: 2024-01-24 16:01
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Quickstart"
 date: 2018-09-24 11:49
 comments: true

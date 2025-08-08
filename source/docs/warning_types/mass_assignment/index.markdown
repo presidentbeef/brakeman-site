@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Mass Assignment"
 date: 2011-11-09 14:37
 comments: false

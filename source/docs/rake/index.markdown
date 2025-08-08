@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Brakeman with Rake"
 date: 2012-01-14 17:48
 comments: false

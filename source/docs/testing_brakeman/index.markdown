@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Testing Brakeman"
 date: 2012-02-09 10:02
 comments: false

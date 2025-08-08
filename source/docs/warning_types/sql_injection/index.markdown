@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "SQL Injection"
 date: 2011-11-09 14:12
 comments: false

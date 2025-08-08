@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Options"
 date: 2011-08-27 08:08
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Brakeman as a Library"
 date: 2012-01-10 10:48
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Cross Site Scripting (JSON)"
 date: 2012-08-29 18:09
 comments: false

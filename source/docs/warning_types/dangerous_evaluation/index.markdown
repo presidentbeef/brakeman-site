@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Dangerous Evaluation"
 date: 2011-11-10 16:04
 comments: false

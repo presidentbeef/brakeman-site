@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Reducing False Positives"
 date: 2012-01-10 10:23
 comments: false

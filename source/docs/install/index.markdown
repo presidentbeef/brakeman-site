@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Installing Brakeman"
 date: 2011-08-26 23:18
 comments: false

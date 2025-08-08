@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Remote Code Execution"
 date: 2013-03-01 11:22
 comments: false

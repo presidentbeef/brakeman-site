@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Session Manipulation"
 date: 2015-12-28 07:43
 comments: false
