@@ -102,11 +102,11 @@ layout: default
             </div>
             <div class="news-sidebar">
                 {% for post in site.posts offset:1 limit:4 %}
-                    <div class="sidebar-card">
-                        <h4>{{ post.title }}</h4>
-                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                        <span class="date">{{ post.date | date: "%B %Y" }}</span>
-                    </div>
+		<a href="{{ post.url | relative_url }}" class="sidebar-card">
+			<h4>{{ post.title }}</h4>
+			<p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+			<span class="date">{{ post.date | date: "%B %Y" }}</span>
+		</a>
                 {% endfor %}
             </div>
         </div>
