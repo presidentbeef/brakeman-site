@@ -1,6 +1,4 @@
 main:
-  - title: "Features"
-    url: "/#features"
   - title: "Documentation" 
     url: "/docs/"
   - title: "News"
