@@ -225,3 +225,132 @@
 .sidebar-toggle {
     display: none;
 }
+
+// Add to _sass/pages/_blog.scss
+
+/* Blog Archive Specific Styles */
+.archive-year-section {
+    margin-bottom: 3rem;
+}
+
+.archive-year {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d73502;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #f1f1f1;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, #d73502 0%, #b12a00 100%);
+    }
+}
+
+.archive-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.archive-post {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #f1f1f1;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: white;
+        border-color: #d73502;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.archive-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d73502 0%, #b12a00 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    min-height: 80px;
+
+    .month {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        opacity: 0.9;
+    }
+
+    .day {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+}
+
+.archive-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #d73502;
+            }
+        }
+    }
+
+    .archive-excerpt {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+
+/* Mobile responsiveness for archive */
+@media (max-width: 768px) {
+    .archive-post {
+        grid-template-columns: 60px 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .archive-date {
+        min-height: 60px;
+        padding: 0.75rem 0.25rem;
+
+        .day {
+            font-size: 1.2rem;
+        }
+    }
+
+    .archive-year {
+        font-size: 1.5rem;
+    }
+}
