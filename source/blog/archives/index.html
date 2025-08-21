@@ -1,18 +1,78 @@
 ---
-layout: page
+layout: default
 title: Blog Archive
 footer: false
 ---
 
-<div id="blog-archives">
-{% for post in site.posts  %}
-{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-{% unless year == this_year %}
-  {% assign year = this_year %}
-  <h2>{{ year }}</h2>
-{% endunless %}
-<article>
-  {% include archive_post.html %}
-</article>
-{% endfor %}
+---
+layout: default
+---
+
+<!-- Blog Archive Container -->
+<div class="blog-container">
+    <div class="container">
+        <div class="blog-layout">
+            <!-- Sidebar -->
+            <aside class="blog-sidebar fade-in stagger-1">
+                <div class="sidebar-card">
+                    <h4>Quick Links</h4>
+                    <a href="{{ '/docs/' | relative_url }}">Download Latest</a>
+                    <a href="{{ '/docs/quickstart/' | relative_url }}">Installation Guide</a>
+                    <a href="{{ site.data.links.github }}/issues">Report Issues</a>
+                    <a href="{{ site.data.links.github }}">GitHub Repository</a>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Recent Posts</h4>
+                    {% for post in site.posts limit:5 %}
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    {% endfor %}
+                </div>
+            </aside>
+
+            <!-- Main Archive Content -->
+            <div class="article-container">
+                <!-- Mobile Sidebar Toggle -->
+                <div class="sidebar-toggle">
+                    <span>Quick Navigation</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+
+                <article class="article-main">
+                    <div class="article-header">
+                        <div class="article-meta">
+                            <span class="date-badge">Archive</span>
+                        </div>
+                        <h1 class="article-title">Blog Archive</h1>
+                        <p class="article-subtitle">Complete history of Brakeman releases and announcements</p>
+                    </div>
+
+                    <div class="article-content">
+                        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+                        {% for year_group in posts_by_year %}
+                            <div class="archive-year-section">
+                                <h2 class="archive-year">{{ year_group.name }}</h2>
+                                <div class="archive-posts">
+                                    {% for post in year_group.items %}
+                                        <div class="archive-post">
+                                            <div class="archive-date">
+                                                <span class="month">{{ post.date | date: "%b" }}</span>
+                                                <span class="day">{{ post.date | date: "%d" }}</span>
+                                            </div>
+                                            <div class="archive-content">
+                                                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                                                {% if post.excerpt %}
+                                                    <p class="archive-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
 </div>
