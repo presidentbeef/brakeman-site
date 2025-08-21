@@ -22,6 +22,7 @@ checksums:
     file: "brakeman-lib-7.1.0.gem"
   - hash: "0a141eaf08f864680af69c6642f9cf855be3eb89c3d5a3f5b0bd182f9eba2d82"
     file: "brakeman-min-7.1.0.gem"
+permalink: /blog/:year/:month/:day/:title
 ---
 
 ## Haml 6 Support
