@@ -1,10 +1,6 @@
 ---
-layout: page
-title: "Adding Tests"
-date: 2012-02-09 10:02
-comments: false
-sharing: false
-footer: true
+layout: docs
+title: "Adding New Tests"
 ---
 
 Please see [this page](/docs/testing_brakeman) for details about how Brakeman is tested.
@@ -56,9 +52,3 @@ In the appropriate test suite under `test/tests`, add a new test for the warning
 ### Adding a False Positive
 
 This should follow the same process as adding a known vulnerability. However, when it comes time to add the test for the warning, use `assert_no_warning` instead of `assert_warning`.
-
----
-
-[More documentation](/docs)
-
-[More testing information](/docs/testing_brakeman)

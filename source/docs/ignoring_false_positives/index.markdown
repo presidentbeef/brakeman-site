@@ -1,10 +1,6 @@
 ---
 layout: docs
 title: "Ignoring False Positives"
-date: 2014-11-28 09:18
-comments: false
-sharing: true
-footer: true
 ---
 
 False positives (warnings about potential vulnerabilities which are not actual vulnerabilities) are present in any security tool. Before ignoring a false positive, be certain it is actually a false positive and also consider [reporting it](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue#false-positivesfalse-negatives) in case changes can be made to Brakeman to prevent the false positive in the future.
@@ -90,10 +86,3 @@ Otherwise, the location of the configuration file can be set using `-i` or `--ig
 ## When Warnings are Ignored
 
 JSON reports include an array of `ignored_warnings`, HTML reports have a table of ignored warnings which is hidden by default, and the basic text output will include the number of warnings ignored, if any.
-
----
-
-
-[Reducing false positives](/docs/reducing_false_positives)
-
-[More documentation](/docs)
