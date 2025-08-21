@@ -8,14 +8,10 @@ main:
 
 footer:
   project:
-    - title: "Download"
-      url: "/download/"
     - title: "Documentation"
       url: "/docs/"
     - title: "Changelog"
-      url: "/changelog/"
-    - title: "Security Advisories"
-      url: "/security/"
+      url: "https://github.com/presidentbeef/brakeman/releases"
   
   community:
     - title: "GitHub"
@@ -30,9 +26,5 @@ footer:
   resources:
     - title: "Getting Started"
       url: "/docs/quickstart/"
-    - title: "Best Practices"
-      url: "/docs/best-practices/"
-    - title: "Ruby Security Guide"
-      url: "/docs/ruby-security/"
-    - title: "Rails Security"
-      url: "/docs/rails-security/"
+    - title: "Rails Security Guide"
+      url: "https://guides.rubyonrails.org/security.html"
