@@ -27,7 +27,7 @@ sidebar:
         url: "/docs/warning_types/"
       - title: "Confidence Levels"
         url: "/docs/confidence/"
-      - title: "CI Integration"
+      - title: "Automation"
         url: "/docs/automation/"
       - title: "Brakeman as a Library"
         url: "/docs/brakeman_as_a_library/"
