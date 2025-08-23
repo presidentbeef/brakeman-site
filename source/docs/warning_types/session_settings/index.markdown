@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Session Settings"
 date: 2011-11-10 16:15
 comments: false

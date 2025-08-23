@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Attribute Restriction"
 date: 2011-11-10 12:46
 comments: false

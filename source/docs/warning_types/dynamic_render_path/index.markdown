@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Dynamic Render Path"
 date: 2011-11-10 12:47
 comments: false

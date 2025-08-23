@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<div class="blog-container">
+    <div class="container">
+        <div class="blog-layout">
+            <!-- Sidebar -->
+            <aside class="blog-sidebar fade-in stagger-1">
+                <div class="sidebar-card">
+                    <h4>Recent Posts</h4>
+                    {% for post in site.posts limit:4 %}
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    {% endfor %}
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Quick Links</h4>
+                    <a href="{{ '/docs/quickstart/' | relative_url }}">Quick Start</a>
+                    <a href="{{ '/docs/' | relative_url }}">Documentation</a>
+                    <a href="{{ site.data.links.github }}/issues">Report Issues</a>
+                    <a href="{{ site.data.links.github }}">GitHub Repository</a>
+                </div>
+            </aside>
+
+            <!-- Main Article -->
+            <div class="article-container">
+                <!-- Mobile Sidebar Toggle -->
+                <div class="sidebar-toggle">
+                    <span>Quick Navigation</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+
+                <article class="article-main fade-in">
+                    <div class="article-header">
+                        <div class="article-meta">
+                            <span class="date-badge">{{ page.date | date: "%B %d, %Y" }}</span>
+                        </div>
+                        <h1 class="article-title">{{ page.title }}</h1>
+                        {% if page.subtitle %}
+                            <p class="article-subtitle">{{ page.subtitle }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="article-content">
+                        {% if page.changelog %}
+                            <div class="changelog-intro">
+                                <h3>Changes since {{ page.changelog.since }}:</h3>
+                                <ul>
+                                    {% for change in page.changelog.changes %}
+                                        <li>{{ change | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+
+
+			<div class="feature-section">
+			    {{ content }}
+			</div>
+
+                        {% if page.checksums %}
+                            <div class="checksums-section">
+                                <h3>Checksums</h3>
+                                <p>The SHA256 sums for this release are:</p>
+                                {% for checksum in page.checksums %}
+                                    <div class="checksum-line">
+                                        <span class="hash">{{ checksum.hash }}</span> 
+                                        <span class="filename">{{ checksum.file }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="reporting-section">
+                            <h3>Reporting Issues</h3>
+                            <p>Thank you to everyone who reported bugs and contributed to this release!</p>
+                            <p>Please report any <a href="{{ site.data.links.github }}/issues">issues</a> with this release. Take a look at <a href="{{ site.data.links.github }}/wiki/How-to-Report-a-Brakeman-Issue">this guide</a> to reporting Brakeman problems.</p>
+                            <p>Hang out <a href="{{ site.data.links.github }}/discussions">on GitHub</a> for questions and discussion.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

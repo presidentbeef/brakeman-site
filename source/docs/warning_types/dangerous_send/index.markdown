@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Dangerous Send"
 date: 2012-06-19 16:49
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Cross Site Scripting: link\_to HREF"
 date: 2012-07-11 11:36
 comments: false

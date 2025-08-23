@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Introduction to Brakeman"
 date: 2011-08-30 11:37
 comments: false

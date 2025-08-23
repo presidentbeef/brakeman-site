@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Format Validation"
 date: 2011-11-10 12:44
 comments: false

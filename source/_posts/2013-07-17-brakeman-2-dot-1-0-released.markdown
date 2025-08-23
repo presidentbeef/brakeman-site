@@ -1,11 +1,30 @@
 ---
-layout: post
-title: "Brakeman 2.1.0 Released"
+layout: blog
+title: Brakeman 2.1.0 Released
 date: 2013-07-17 16:36
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 2.0.0
+  changes:
+  - " * Add support for ignoring warnings"
+  - " * Add brakeman-min gem"
+  - " * Add check for dangerous model attributes defined in `attr_accessible` ([Paul
+    Deardorff](https://github.com/themetric))"
+  - " * Add check for `authenticate_or_request_with_http_basic` ([#301](https://github.com/presidentbeef/brakeman/issues/301))"
+  - " * Add `--branch-limit` option, limit to 5 by default"
+  - " * Add more methods to check for command injection ([#206](https://github.com/presidentbeef/brakeman/issues/206))"
+  - " * Allow use of Slim 2.x ([Ian Zabel](https://github.com/iwz))"
+  - " * Load gem dependencies on-demand"
+  - " * Output JSON diff to file if `-o` option is used"
+  - " * Refactor of SQL injection check code ([Bart ten Brinke](https://github.com/barttenbrinke))"
+  - " * Return error exit code when application path is not found"
+  - " * Fix detection of duplicate XSS warnings"
+  - " * Fix output format detection to be more strict again"
+  - " * Fix Gemfile.lock parsing for non-native line endings ([#359](https://github.com/presidentbeef/brakeman/issues/359))"
+  - " * Allow empty Brakeman configuration file ([#343](https://github.com/presidentbeef/brakeman/issues/343))"
+  - " * Update to ruby\_parser 3.2.2"
 ---
+
 
 Brakeman recently passed 250,000 downloads on [RubyGems.org](http://rubygems.org/gems/brakeman)! Thanks to everyone who has contributed!
 
@@ -13,26 +32,8 @@ With this release, the most requested and most controversional feature has been 
 
 Also, the brakeman-min gem has been updated to provide a minimal-dependency version of Brakeman.
 
-_Changes since 2.0.0_:
 
- * Add support for ignoring warnings
- * Add brakeman-min gem
- * Add check for dangerous model attributes defined in `attr_accessible` ([Paul Deardorff](https://github.com/themetric))
- * Add check for `authenticate_or_request_with_http_basic` ([#301](https://github.com/presidentbeef/brakeman/issues/301))
- * Add `--branch-limit` option, limit to 5 by default
- * Add more methods to check for command injection ([#206](https://github.com/presidentbeef/brakeman/issues/206))
- * Allow use of Slim 2.x ([Ian Zabel](https://github.com/iwz))
- * Load gem dependencies on-demand
- * Output JSON diff to file if `-o` option is used
- * Refactor of SQL injection check code ([Bart ten Brinke](https://github.com/barttenbrinke))
- * Return error exit code when application path is not found
- * Fix detection of duplicate XSS warnings
- * Fix output format detection to be more strict again
- * Fix Gemfile.lock parsing for non-native line endings ([#359](https://github.com/presidentbeef/brakeman/issues/359))
- * Allow empty Brakeman configuration file ([#343](https://github.com/presidentbeef/brakeman/issues/343))
- * Update to ruby\_parser 3.2.2
-
-### Ignoring Warnings
+## Ignoring Warnings
 
 It should be stressed that warnings should only be ignored when it is absolutely certain they are false positives *and* the false positive cannot be fixed on Brakeman's side. If there is uncertainty, please [open an issue](https://github.com/presidentbeef/brakeman/issues/new) so we have the opportunity to improve Brakeman.
 
@@ -50,7 +51,7 @@ Again, please use this power responsibly.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/368))
 
-### brakeman-min Gem Updated
+## brakeman-min Gem Updated
 
 You may have noticed the ancient (0.5.2) version of brakeman-min hanging around and hopefully you ignored it.
 
@@ -62,17 +63,17 @@ The version for brakeman-min will match the regular gem and there are no changes
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/367))
 
-### Mass Assignment to Dangerous Attributes
+## Mass Assignment to Dangerous Attributes
 
 Paul Deardorff has added a new check which warns on model attributes included in `attr_accessible` which perhaps should not have been. 
 
-### More Basic Auth Warnings
+## More Basic Auth Warnings
 
 Brakeman will now warn on use of password strings used directly in `authenticate_or_request_with_http_basic`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/362))
 
-### Branch Limiting
+## Branch Limiting
 
 When dealing with conditional branches, Brakeman generates basically "union" values of possible values for a given variable. (See one of the many other issues dealing with this for more info, like [#297](https://github.com/presidentbeef/brakeman/pull/297)).
 
@@ -88,25 +89,25 @@ In testing, a value of `5` did not show any difference in detected vulnerabiliti
 
 (Description copied from the [pull request](https://github.com/presidentbeef/brakeman/pull/345).)
 
-### More Command Injection Methods
+## More Command Injection Methods
 
 Several more Ruby methods for launching processes have been added to the command injection check, including a bunch from [Open3](http://rdoc.info/stdlib/open3/Open3).
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/348))
 
-### Support for Slim 2.x
+## Support for Slim 2.x
 
 No real changes here, but the gem has been updated to allow Slim 2.x.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/353))
 
-### Gems Loaded On-Demand
+## Gems Loaded On-Demand
 
 Gem dependencies which Brakeman does not need for its core functionality are now loaded as-needed instead of everything being loaded at start time. Besides maybe wasting less time and memory, this enabled the brakeman-min gem discussed above.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/367))
 
-### Output JSON Compare to File
+## Output JSON Compare to File
 
 The `-o` option can now be used with `--compare` to output the JSON diff to a file.
 
@@ -114,41 +115,41 @@ If multiple `-o` options are given, the first one will be used for the JSON diff
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/363))
 
-### Error Exit Code When Application Not Found
+## Error Exit Code When Application Not Found
 
 The last version of Brakeman had a bug where the program would exit with return code `0` when no Rails application was found. It will now return `1` like it did before.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/350))
 
-### Fewer Cross Site Scripting Duplicates
+## Fewer Cross Site Scripting Duplicates
 
 Some cross site scripting warnings were being reported with both high and low confidence. This has been fixed.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/355))
 
-### Stricter Report Format Detection
+## Stricter Report Format Detection
 
 For a while, Brakeman would match `-o` file names like `blah.jsonness` and assume you wanted JSON output. This is fixed.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/346))
 
-### Parse Gemfile.lock with Non-Native Line Endings
+## Parse Gemfile.lock with Non-Native Line Endings
 
 Thanks to Paul Deardorff for updating Gemfile.lock parsing for files created on a different operating system. 
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/370)
 
-### Allow Empty Brakeman Config File
+## Allow Empty Brakeman Config File
 
 Sure, why not?
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/344)) 
 
-### RubyParser Update
+## RubyParser Update
 
 Brakeman now uses the latest ruby\_parser, which has support for Ruby 2.0 syntax and a lot of bug fixes. You may also notice some line numbers in warnings will be more accurate.
 
-### Report Issues
+## Report Issues
 
 This was a big release, so please report any [issues](https://github.com/presidentbeef/brakeman/issues)! Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
 

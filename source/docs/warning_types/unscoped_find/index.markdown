@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Unscoped Find"
 date: 2014-10-14 08:48
 comments: false

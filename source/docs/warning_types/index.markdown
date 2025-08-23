@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Warning Types"
 date: 2011-08-27 08:25
 comments: false
@@ -40,6 +40,3 @@ Read more about the different warnings Brakeman reports:
 * [Unscoped Find](/docs/warning_types/unscoped_find)
 * [Unsafe Redirects](/docs/warning_types/redirect)
 * [Weak Hash](/docs/warning_types/weak_hash)
-
----
-[More Documentation](/docs)

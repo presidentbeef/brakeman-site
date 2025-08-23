@@ -9,7 +9,7 @@ permalink: /blog/:year/:month/:day/:title
 
 A new gem version has been released because the 2.4.2 gem was not signed. No other changes were introduced.
 
-### Signed Gems
+## Signed Gems
 
 As a reminder, the Brakeman gems are (supposed to be) signed and can be verified with [this certificate](https://github.com/presidentbeef/brakeman/blob/master/brakeman-public_cert.pem).
 
@@ -26,14 +26,14 @@ There is some weirdness around `-P MediumSecurity` currently. The simplest solut
     gem uninstall brakeman # Remove the Brakeman gem
     gem install brakeman -P MediumSecurity  # Install Brakeman gem and check signature
 
-### SHAs
+## SHAs
 
 The SHA1 sums for this release are
 
     16b4890fa8ee6bad1d429a12bf3f0cb8e76cb2d8  brakeman-2.4.3.gem
     be5743d77140e64b75eefc53f8697f767ab370d9  brakeman-min-2.4.3.gem 
 
-### Reporting Issues
+## Reporting Issues
 
 Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release! Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
 

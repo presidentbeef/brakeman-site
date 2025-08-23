@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Options"
 date: 2011-08-27 08:08
 comments: false
@@ -243,16 +243,6 @@ To only get warnings above a given confidence level:
 
 The `-w` switch takes a number from 1 to 3, with 1 being low (all warnings) and 3 being high (only highest confidence warnings).
 
-## Configuration Files
-
-Brakeman options can stored and read from YAML files. To simplify the process of writing a configuration file, the `-C` option will output the currently set options.
-
-Options passed in on the commandline have priority over configuration files.
-
-The default config locations are `./config/brakeman.yml`, `~/.brakeman/config.yml`, and `/etc/brakeman/config.yml`
-
-The `-c` option can be used to specify a configuration file to use.
-
 ## Miscellaneous
 
 To list available checks with short descriptions:
@@ -273,7 +263,5 @@ To see the real list of options:
 
 
 ---
-
-[More documentation](/docs)
 
 [日本語](/docs/options/ja)

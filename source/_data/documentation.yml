@@ -1,0 +1,76 @@
+# _data/documentation.yml
+
+sidebar:
+  - title: "Getting Started"
+    links:
+      - title: "Overview"
+        url: "/docs/"
+      - title: "Quickstart Guide"
+        url: "/docs/quickstart/"
+      - title: "Installation"
+        url: "/docs/install/"
+      - title: "Basic Usage"
+        url: "/docs/running/"
+
+  - title: "Configuration"
+    links:
+      - title: "Options"
+        url: "/docs/options/"
+      - title: "Configuration Files"
+        url: "/docs/configuration/"
+      - title: "Ignoring False Positives"
+        url: "/docs/ignoring_false_positives/"
+
+  - title: "More Information"
+    links:
+      - title: "Warning Types"
+        url: "/docs/warning_types/"
+      - title: "Confidence Levels"
+        url: "/docs/confidence/"
+      - title: "Automation"
+        url: "/docs/automation/"
+      - title: "Brakeman as a Library"
+        url: "/docs/brakeman_as_a_library/"
+
+
+  - title: "Development"
+    links:
+      - title: "Contributing"
+        url: "/docs/contributing/"
+      - title: "Test Structure"
+        url: "/docs/testing_brakeman/"
+      - title: "Adding a Test"
+        url: "/docs/contributing/adding_tests/"
+
+
+getting_started:
+  - title: "Quickstart Guide"
+    url: "/docs/quickstart/"
+    description: "Get started with Brakeman in under 5 minutes. Install, scan, and understand your first security report."
+
+  - title: "Confidence Levels"
+    url: "/docs/confidence/"
+    description: "Understand how Brakeman rates the confidence of each warning and how to interpret results."
+
+  - title: "Warning Types"
+    url: "/docs/warning_types/"
+    description: "List of vulnerability types that Brakeman can detect in your application."
+
+
+next_steps:
+  - title: "Automating and Integrating"
+    url: "/docs/automation/"
+    description: "Turn Brakeman into an always-on defense."
+
+  - title: "Configuring Brakeman"
+    url: "/docs/options/"
+    description: "Adjust Brakeman to your environment and needs."
+
+  - title: "Reducing False Positives"
+    url: "/docs/reducing_false_positives/"
+    description: "Learn strategies to minimize false positives and improve the accuracy of your scans."
+
+  - title: "Ignoring False Positives"
+    url: "/docs/ignoring_false_positives/"
+    description: "How to safely ignore warnings that don't apply to your application or represent accepted risks."
+

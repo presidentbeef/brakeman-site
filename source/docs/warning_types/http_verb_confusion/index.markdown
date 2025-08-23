@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "HTTP Verb Confusion"
 date: 2020-10-23 15:21
 comments: false

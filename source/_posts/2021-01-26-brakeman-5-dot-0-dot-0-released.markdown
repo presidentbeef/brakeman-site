@@ -1,34 +1,42 @@
 ---
-layout: post
-title: "Brakeman 5.0.0 Released"
+layout: blog
+title: Brakeman 5.0.0 Released
 date: 2021-01-26 12:00
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 4.10.1
+  changes:
+  - Scan (almost) all Ruby files in project
+  - Revamp CSV report to a CSV list of warnings
+  - Add Sonarqube report format ([Adam England](https://github.com/adamnengland))
+  - Add check for (more) unsafe method reflection ([#1488](https://github.com/presidentbeef/brakeman/issues/1488),
+    [#1507](https://github.com/presidentbeef/brakeman/issues/1507), and [#1508](https://github.com/presidentbeef/brakeman/issues/1508))
+  - Add check for potential HTTP verb confusion ([#1432](https://github.com/presidentbeef/brakeman/issues/1432))
+  - Add `--[no-]skip-vendor` option
+  - Ignore `uuid` as a safe attribute
+  - Ignore `Tempfile#path` in shell commands
+  - Ignore development environment
+  - Collapse `__send__` calls
+  - Set Rails configuration defaults based on `load_defaults` version
+  - Update Ruby requirement to version 2.4.0
+  - Suggest using `--force` if no Rails application is detected
+checksums:
+- hash: 21b91f67cde4cf487df0a4dbf6e54729064c665bb0b4b370b71bac9435b63e4c
+  file: brakeman-5.0.0.gem
+- hash: 3641c52448ca1d12423595ca1a874c1362f438cd58196825be648bb797096cb5
+  file: brakeman-lib-5.0.0.gem
+- hash: 50bab26fe8fcf8d962baaf5b08b7c178315b7c0e4be07d1b134e8ae00338c908
+  file: brakeman-min-5.0.0.gem
 ---
+
 
 It has been a long time coming, but it is finally here! Lots of changes in this one...
 
 Brakeman now scans (almost) all Ruby (and ERB, Haml, Slim) files in an application.
 This may have a significant impact on reported warnings and scan times - see below for more information.
 
-_Changes since 4.10.1:_
 
-* Scan (almost) all Ruby files in project
-* Revamp CSV report to a CSV list of warnings
-* Add Sonarqube report format ([Adam England](https://github.com/adamnengland))
-* Add check for (more) unsafe method reflection ([#1488](https://github.com/presidentbeef/brakeman/issues/1488), [#1507](https://github.com/presidentbeef/brakeman/issues/1507), and [#1508](https://github.com/presidentbeef/brakeman/issues/1508))
-* Add check for potential HTTP verb confusion ([#1432](https://github.com/presidentbeef/brakeman/issues/1432))
-* Add `--[no-]skip-vendor` option
-* Ignore `uuid` as a safe attribute
-* Ignore `Tempfile#path` in shell commands
-* Ignore development environment
-* Collapse `__send__` calls
-* Set Rails configuration defaults based on `load_defaults` version
-* Update Ruby requirement to version 2.4.0
-* Suggest using `--force` if no Rails application is detected
-
-### Scan Almost All Ruby Files 
+## Scan Almost All Ruby Files 
 
 Since the beginning, Brakeman has been picky about what directories it searches for files.
 In general, Brakeman has looked in 'normal' Rails directores like `app/controllers/`, `app/models/`, `app/views/`, `lib/`, `config`, etc.
@@ -49,7 +57,7 @@ Please report any issues!
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1520))
 
-### CSV Report Update 
+## CSV Report Update 
 
 The CSV report format has been completely changed! Previously, it was meant as an 'Excel-lite' format, only really useful for viewing in a spreadsheet program.
 
@@ -57,7 +65,7 @@ Now it is regular CSV with normalized columns to mostly match the JSON report (e
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1547))
 
-### Sonarqube Report Format
+## Sonarqube Report Format
 
 Thanks to [Adam England](https://github.com/adamnengland), Brakeman now supports the Sonarqube "[Generic Issue Import Format](https://docs.sonarqube.org/latest/analysis/generic-issue/)". 
 
@@ -65,13 +73,13 @@ Thanks to [Adam England](https://github.com/adamnengland), Brakeman now supports
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1505))
 
-### More Unsafe Method Reflection
+## More Unsafe Method Reflection
 
 A new check was added for unsafe use of `method`, `to_proc`, and `tap`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1527))
 
-### HTTP Verb Confusion Check
+## HTTP Verb Confusion Check
 
 In Rails, `HEAD` requests are routed like `GET` requests, but `request.get?` will be false.
 
@@ -90,13 +98,13 @@ Brakeman will warn when an `if` expression checks `request.get?` but has an `els
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1524))
 
-### UUIDs as Safe Attributes
+## UUIDs as Safe Attributes
 
 `#uuid` will be treated as a safe value, particular in SQL.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1553))
 
-### Tempfile Paths in Shell Commands
+## Tempfile Paths in Shell Commands
 
 `Tempfile#path` will be considered as safe value for command injection.
 
@@ -110,7 +118,7 @@ end
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1544)
 
-### Ignore Development Environment
+## Ignore Development Environment
 
 Brakeman will ignore code that is guarded like
 
@@ -124,7 +132,7 @@ This was already true for `Rails.env.test?`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1549))
 
-### Collapse `__send__` Calls
+## Collapse `__send__` Calls
 
 Brakeman will treat
 
@@ -142,33 +150,17 @@ This was already true for `send` and `try`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1551))
 
-### Set Rails Defaults
+## Set Rails Defaults
 
 Brakeman will set default values for Rails configuration options based on the version argument to `config.load_defaults` which is usually called in `application.rb`.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1532))
 
-### Requires Ruby 2.4.0
+## Requires Ruby 2.4.0
 
 The minimal Ruby version for running Brakeman is now 2.4.0 (which is already EOL!)
 
 Note Brakeman can analyze Ruby syntax from 1.8 to 2.6 (some 2.7+ syntax is not supported yet).
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1515))
-
-### Checksums
-
-The SHA256 sums for this release are:
-
-    21b91f67cde4cf487df0a4dbf6e54729064c665bb0b4b370b71bac9435b63e4c  brakeman-5.0.0.gem
-    3641c52448ca1d12423595ca1a874c1362f438cd58196825be648bb797096cb5  brakeman-lib-5.0.0.gem
-    50bab26fe8fcf8d962baaf5b08b7c178315b7c0e4be07d1b134e8ae00338c908  brakeman-min-5.0.0.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Follow [@brakeman](https://twitter.com/brakeman) on Twitter and hang out [on Gitter](https://gitter.im/presidentbeef/brakeman) for questions and discussion.
 

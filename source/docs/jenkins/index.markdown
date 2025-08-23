@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Running Brakeman with Jenkins"
 date: 2021-01-04 10:26
 comments: false

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "SSL Verification Bypass"
 date: 2014-01-06 17:27
 comments: false

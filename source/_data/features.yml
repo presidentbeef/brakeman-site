@@ -1,0 +1,11 @@
+- icon: "🎯"
+  title: "Rails-Specific"
+  description: "Built specifically for Ruby on Rails. Understands Rails patterns, conventions, and common vulnerability patterns."
+
+- icon: "🔧"
+  title: "Zero Configuration"
+  description: "Works out of the box with sensible defaults."
+
+- icon: "🔍"
+  title: "Broad Coverage"
+  description: "Detects SQL injection, cross-site scripting, command injection, and dozens of other vulnerability types."

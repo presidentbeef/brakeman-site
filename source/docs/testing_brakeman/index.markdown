@@ -1,17 +1,13 @@
 ---
-layout: page
-title: "Testing Brakeman"
-date: 2012-02-09 10:02
-comments: false
-sharing: false
-footer: true
+layout: docs
+title: "Test Structure"
 ---
 
-Tests for Brakeman are written using the standard library's [test/unit](http://rubydoc.info/stdlib/test/1.8.7/Test/Unit).
+Tests for Brakeman are written using [Minitest](https://docs.seattlerb.org/minitest/).
 
-The main test file is in `test/test.rb`. It can be run using `ruby test/test.rb` (or from any directory).
+The main test file is in `test/test.rb`. It can be run using `ruby test/test.rb` (or from any directory) or using `rake`.
 
-### Structure
+## Structure
 
 Brakeman is tested by running it against full Rails applications and then checking the reported warnings.
 
@@ -21,9 +17,9 @@ Brakeman is tested by running it against full Rails applications and then checki
 
 There are several Rails applications, including:
 
-    test/apps/rails2    #Rails 2.3.11
-    test/apps/rails3    #Rails 3.0.5
-    test/apps/rails3.1  #Rails 3.1.0
+    test/apps/rails2    # Rails 2.3.11
+    test/apps/rails3    # Rails 3.0.5
+    test/apps/rails3.1  # Rails 3.1.0
 
 There are corresponding sets of tests for each application:
 
@@ -31,7 +27,19 @@ There are corresponding sets of tests for each application:
     test/tests/rails3.rb
     test/tests/rails31.rb
 
-### Test Setup
+## Autogenerating Tests
+
+The simplest way to create a test is to add a vulnerability to an existing test app (preferably the most recent version of Rails) and then run:
+
+```
+ruby test/to_test.rb [APP_NAME]
+```
+
+Then copy the test method that corresponds to the new warning.
+
+Paste that method into the corresponding test file (preferably at the end).
+
+## Test Setup
 
 Each of the test files starts off like this:
 
@@ -91,9 +99,3 @@ Options:
 For the message matching, it is generally enough to just include the first part of the message, instead of trying for an exact match.
 
 For the file name, generally just the name of the file (without the path) is used, although it is matched against the full path.
-
----
-
-[More documentation](/docs)
-
-[Adding tests](/docs/contributing/adding_tests)

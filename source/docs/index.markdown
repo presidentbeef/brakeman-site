@@ -1,40 +1,33 @@
 ---
-layout: page
+layout: docs
 title: "Documentation"
-date: 2011-08-26 23:30
-comments: false
-sharing: false
-footer: true
+subtitle: "Comprehensive guides and references for using Brakeman to secure your Ruby on Rails applications."
+quickstart_alert:
+  title: "New to Brakeman?"
+  content: "See our [quickstart guide](/docs/quickstart/) to get up and running in minutes!"
 ---
 
-New to Brakeman? See our [quickstart guide](/docs/quickstart)!
-
 ## Getting Started
+{: .fade-in .stagger-1}
 
-* [Introduction]({{ root_url }}/docs/introduction)
-* [Installation]({{ root_url }}/docs/install)
-* [Running Brakeman]({{ root_url }}/docs/running)
-* [Brakeman Options]({{ root_url }}/docs/options)
+<div class="docs-grid">
+  {% for item in site.data.documentation.getting_started %}
+    <div class="docs-card">
+      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+      <p>{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</div>
+
 
 ## Next Steps
+{: .fade-in .stagger-2}
 
-* [Confidence Levels]({{ root_url }}/docs/confidence)
-* [Warning Types]({{ root_url }}/docs/warning_types)
-* [Reducing False Positives](/docs/reducing_false_positives)
-* [Ignoring False Positives](/docs/ignoring_false_positives)
-* [Using Brakeman as a Library](/docs/brakeman_as_a_library)
-* [Brakeman and Rake](/docs/rake)
-
-## More Information
-
-* [Video](/docs/video)
-* [Presentations](/docs/presentations)
-* [FAQ]({{ root_url }}/docs/faq)
-* [Troubleshooting](/docs/troubleshooting)
-* [Testing Brakeman](/docs/testing_brakeman)
-* [Contributing](/docs/contributing)
-
-## Continuous Integration 
-
-* [Brakeman with Jenkins]({{ root_url }}/docs/jenkins)
-
+<div class="docs-grid">
+  {% for item in site.data.documentation.next_steps %}
+    <div class="docs-card">
+      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+      <p>{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</div>

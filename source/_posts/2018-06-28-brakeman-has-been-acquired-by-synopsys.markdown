@@ -13,7 +13,7 @@ Started in 2014, Brakeman Pro has been a partnership between [Justin Collins](ht
 
 Justin Collins will be joining Synopsys to help integrate the Brakeman Pro Engine into their static application security testing (SAST) offerings, as well as continuing to develop and support the Brakeman OSS project. This is an exciting opportunity to focus on improving and expanding SAST for the Ruby community.
 
-### Brakeman OSS
+## Brakeman OSS
 
 This Brakeman OSS project is part of the acquisition, and Synopsys now owns the copyright previously held by Brakeman, Inc.
 
@@ -21,6 +21,6 @@ The project going forward and any future contributions will be made available un
 
 However, under the new license, it is no longer possible to use Brakeman OSS for the development of a commercial product or online service or to resell Brakeman OSS as a service. Companies wishing to do either will require a commercial agreement with Synopsys. Please see [here](https://github.com/presidentbeef/brakeman/pull/1238#issuecomment-401448976) for more details.
 
-### Thank You
+## Thank You
 
 Thank you again to our customers, friends, and family who supported us in making the web a little bit safer!

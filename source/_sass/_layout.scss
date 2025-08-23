@@ -1,0 +1,122 @@
+// _sass/_layout.scss
+// Header, footer, and main layout components
+
+/* Header - Shared across all pages */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #f1f1f1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d73502;
+    text-decoration: none;
+
+    img {
+        height: 40px;
+        width: auto;
+        margin-right: 0.75rem;
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: #4a4a4a;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+
+        &:hover, &.active {
+            color: #d73502;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #d73502;
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after, &.active::after {
+            width: 100%;
+        }
+    }
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+        width: 25px;
+        height: 3px;
+        background: #4a4a4a;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+}
+
+/* Footer - Shared across all pages */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .footer-section {
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #d73502;
+        }
+
+        a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #d73502;
+            }
+        }
+    }
+}

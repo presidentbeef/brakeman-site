@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "File Access"
 date: 2011-11-10 16:06
 comments: false

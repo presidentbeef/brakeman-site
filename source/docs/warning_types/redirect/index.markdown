@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Redirect"
 date: 2011-11-09 15:21
 comments: false

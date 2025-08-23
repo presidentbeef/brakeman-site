@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Video Documentation"
 date: 2011-12-22 12:24
 comments: false

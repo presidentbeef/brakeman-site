@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Unsafe Deserialization"
 date: 2013-05-17 14:37
 comments: false

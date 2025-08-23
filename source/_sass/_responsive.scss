@@ -1,0 +1,158 @@
+// _sass/_responsive.scss
+// Mobile and responsive styles
+
+@media (max-width: 768px) {
+    /* Header */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Homepage */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Documentation */
+    .docs-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .docs-sidebar {
+        position: static;
+        order: 2;
+    }
+
+    .docs-content {
+        order: 1;
+    }
+
+    .docs-header {
+        padding: 2rem;
+    }
+
+    .docs-body {
+        padding: 2rem;
+    }
+
+    /* Blog */
+    .blog-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .sidebar-toggle {
+        display: flex;
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        color: #1a1a1a;
+
+        &:hover {
+            border-color: #d73502;
+            background: white;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        &.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    .blog-sidebar {
+        position: static;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0 2rem;
+        margin-top: -2rem;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+
+        &.expanded {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .article-header {
+        padding: 2rem;
+    }
+
+    .article-content {
+        padding: 2rem;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .article-header {
+        padding: 1.5rem;
+    }
+
+    .article-content {
+        padding: 1.5rem;
+    }
+
+    .docs-header {
+        padding: 1.5rem;
+    }
+
+    .docs-body {
+        padding: 1.5rem;
+    }
+}

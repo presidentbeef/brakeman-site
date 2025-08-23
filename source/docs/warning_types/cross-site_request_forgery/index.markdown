@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Cross Site Request Forgery"
 date: 2011-11-10 12:24
 comments: false

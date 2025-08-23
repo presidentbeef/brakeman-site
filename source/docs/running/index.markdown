@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Running Brakeman"
 date: 2011-08-27 08:08
 comments: false
@@ -21,8 +21,3 @@ Alternatively, you can supply a path as an option to Brakeman:
 Even more specifically:
 
     brakeman -p your_rails_app
-
----
-[Brakeman Options](/docs/options)
-
-[More documentation](/docs)

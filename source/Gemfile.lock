@@ -32,8 +32,6 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
-    jekyll-seo-tag (2.5.0)
-      jekyll (~> 3.3)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.4.0)
@@ -45,10 +43,6 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    minima (2.5.0)
-      jekyll (~> 3.5)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (5.0.1)
@@ -65,6 +59,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     strscan (3.1.0)
+    webrick (1.9.1)
 
 PLATFORMS
   ruby
@@ -74,8 +69,8 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-paginate
   kramdown-parser-gfm
-  minima (~> 2.0)
   tzinfo-data
+  webrick
 
 RUBY VERSION
    ruby 3.2.0p0

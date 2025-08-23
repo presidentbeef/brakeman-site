@@ -1,0 +1,30 @@
+main:
+  - title: "Documentation" 
+    url: "/docs/"
+  - title: "News"
+    url: "/blog/archives"
+  - title: "Code"
+    url: "https://github.com/presidentbeef/brakeman"
+
+footer:
+  project:
+    - title: "Documentation"
+      url: "/docs/"
+    - title: "Changelog"
+      url: "https://github.com/presidentbeef/brakeman/releases"
+  
+  community:
+    - title: "GitHub"
+      url: "https://github.com/presidentbeef/brakeman"
+    - title: "Discussions"
+      url: "https://github.com/presidentbeef/brakeman/discussions"
+    - title: "Issues"
+      url: "https://github.com/presidentbeef/brakeman/issues"
+    - title: "Contributing"
+      url: "/contributing/"
+  
+  resources:
+    - title: "Getting Started"
+      url: "/docs/quickstart/"
+    - title: "Rails Security Guide"
+      url: "https://guides.rubyonrails.org/security.html"

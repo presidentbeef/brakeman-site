@@ -1,24 +1,31 @@
 ---
-layout: post
-title: "Brakeman 6.1.0 Released"
+layout: blog
+title: Brakeman 6.1.0 Released
 date: 2023-12-04 22:30
-comments: true
-categories:
-permalink: /blog/:year/:month/:day/:title
+permalink: "/blog/:year/:month/:day/:title"
+changelog:
+  since: 6.0.1
+  changes:
+  - Add check for unfiltered search with Ransack
+  - Add `--timing` to add timing duration for scan steps
+  - Add `PG::Connection.escape_string` as a SQL sanitization method ([Joévin Soulenq](https://github.com/joevin-slq-docto))
+  - Handle `class << self`
+  - Fix class method lookup in parent classes
+  - Fix keyword splats in filter arguments
+checksums:
+- hash: 0d4066936dd58f0fe757d0ff1ec0744479be9ff06c771be4b581bdf0cb8d7403
+  file: brakeman-6.1.0.gem
+- hash: e7c9e739a43ec719d981e9b401b980c11cbe81a333ccb166965b9264ef413cc8
+  file: brakeman-lib-6.1.0.gem
+- hash: 709813eff010c9605dc09b9fcbe60742dd3b9e757ec7131808988a14b83eee23
+  file: brakeman-min-6.1.0.gem
 ---
+
 
 It's been a while!
 
-_Changes since 6.0.1:_
 
-* Add check for unfiltered search with Ransack
-* Add `--timing` to add timing duration for scan steps
-* Add `PG::Connection.escape_string` as a SQL sanitization method ([Joévin Soulenq](https://github.com/joevin-slq-docto))
-* Handle `class << self`
-* Fix class method lookup in parent classes
-* Fix keyword splats in filter arguments
-
-### Ransack Searches
+## Ransack Searches
 
 [Ransack](https://activerecord-hackery.github.io/ransack/) is a popular library for enabling search against ActiveRecord attributes.
 
@@ -71,7 +78,7 @@ Brakeman will warn about unrestricted use of `ransack`:
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1799))
 
-### Timing Output
+## Timing Output
 
 Use `--timing` to output duration of various steps during the scan.
 
@@ -79,13 +86,13 @@ Useful for debugging slowness.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1801))
 
-### Another SQL Escaping Method
+## Another SQL Escaping Method
 
 Brakeman will not warn about use of `escape_string` in SQL queries. 
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1789))
 
-### Class Methods
+## Class Methods
 
 Brakeman will now treat methods defined inside of `class << self` as class methods.
 
@@ -93,13 +100,13 @@ This does mean fingerprints of warnings found inside those methods will change.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1792))
 
-### Class Method Lookups
+## Class Method Lookups
 
 Searching for class method definitions in parent classes will now actually look for class methods, not instance methods.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1796))
 
-### Keyword Splats in Filters
+## Keyword Splats in Filters
 
 Code like
 
@@ -113,18 +120,3 @@ Will no longer cause an error.
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/1800))
 
-### Checksums
-
-The SHA256 sums for this release are:
-
-    0d4066936dd58f0fe757d0ff1ec0744479be9ff06c771be4b581bdf0cb8d7403  brakeman-6.1.0.gem
-    e7c9e739a43ec719d981e9b401b980c11cbe81a333ccb166965b9264ef413cc8  brakeman-lib-6.1.0.gem
-    709813eff010c9605dc09b9fcbe60742dd3b9e757ec7131808988a14b83eee23  brakeman-min-6.1.0.gem
-
-### Reporting Issues
-
-Thank you to everyone who reported bugs and contributed to this release!
-
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release. Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
-
-Hang out [on Github](https://github.com/presidentbeef/brakeman/discussions) for questions and discussion.

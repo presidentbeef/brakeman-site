@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Authentication Whitelist"
 date: 2013-03-01 11:33
 comments: true

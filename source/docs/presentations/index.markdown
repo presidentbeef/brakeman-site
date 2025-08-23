@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Presentations"
 date: 2011-12-05 10:40
 comments: false

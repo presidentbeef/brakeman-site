@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: "Brakeman as a Library"
 date: 2012-01-10 10:48
 comments: false
@@ -77,7 +77,3 @@ Below is a list of options, but always [check the source](https://github.com/pre
 * `:skip_files` - List of files/directories to skip
 * `:skip_checks` - Checks not to run (run all if not specified)
 * `:summary_only` - Only output summary section of report for plain/table (`:summary_only`, `:no_summary`, or `true`)
-
----
-
-[More documentation](/docs)

@@ -1,9 +1,6 @@
 ---
-layout: page
+layout: docs
 title: "Weak Hash"
-comments: false
-sharing: true
-footer: true
 ---
 
 Brakeman reports a "Weak Hash" warning when it finds uses of hashing algorithms that should not be used for security-sensitive contexts

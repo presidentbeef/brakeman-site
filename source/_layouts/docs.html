@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<!-- Documentation Container -->
+<div class="docs-container">
+    <div class="container">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                {% for section in site.data.documentation.sidebar %}
+                    <div class="sidebar-section">
+                        <h3>{{ section.title }}</h3>
+                        <ul class="sidebar-links">
+                            {% for link in section.links %}
+                                <li>
+                                    <a href="{{ link.url | relative_url }}" 
+                                       {% if page.url == link.url %}class="active"{% endif %}>
+                                        {{ link.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </aside>
+
+            <!-- Main Content -->
+            <main class="docs-content">
+                <div class="docs-header">
+                    <h1 class="docs-title">{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                        <p class="docs-subtitle">{{ page.subtitle }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="docs-body">
+                    {% if page.quickstart_alert %}
+                        <div class="quickstart-alert fade-in">
+                            <span class="icon">🚀</span>
+                            <div>
+                                <strong>{{ page.quickstart_alert.title | default: 'New to Brakeman?' }}</strong> 
+                                {{ page.quickstart_alert.content | markdownify | remove: '<p>' | remove: '</p>' }}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {{ content }}
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
