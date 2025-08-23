@@ -10,6 +10,10 @@
     
     <link rel="stylesheet" href="{{ '/stylesheets/screen.css' | relative_url }}">
     <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+
+    <meta name="og:title" content="Brakeman{% if page.title %} - {{page.title}}{% else %} Security Scanner{% endif %}" />
+    <meta name="og:description" content="Brakeman Static Analysis Security Scanner for Ruby on Rails" />
+    <meta name="og:image" content="https://brakemanscanner.org/images/brakeman_logo_dark.png" />
 </head>
 <body class="{{ page.layout }}">
     <!-- Header -->
