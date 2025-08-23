@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Happy 8th Birthday, Brakeman!"
 date: 2018-08-30 09:37
 comments: true

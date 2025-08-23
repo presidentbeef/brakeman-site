@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman is Four Years Old!"
 date: 2014-08-27 02:41
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman Turns Ten!"
 date: 2020-08-27 08:10
 comments: true

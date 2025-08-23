@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman 1.0 Release Candidate Available"
 date: 2011-12-05 14:04
 comments: true

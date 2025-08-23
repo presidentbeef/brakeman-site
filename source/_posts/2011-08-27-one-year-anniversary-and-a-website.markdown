@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: blog
 title: "One Year Anniversary"
 date: 2011-08-27 01:00
-comments: true
-categories:
 permalink: /blog/:year/:month/:day/:title
 ---
 

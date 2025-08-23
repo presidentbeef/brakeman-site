@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman Has Been Acquired by Synopsys"
 date: 2018-06-28 13:37
 comments: true

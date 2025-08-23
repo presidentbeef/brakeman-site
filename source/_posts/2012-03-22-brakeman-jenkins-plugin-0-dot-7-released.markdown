@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman Jenkins Plugin 0.7 Released"
 date: 2012-03-22 13:27
 comments: true

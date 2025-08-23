@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman 1.0 Released!"
 date: 2011-12-08 01:35
 comments: true

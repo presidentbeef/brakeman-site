@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Brakeman 2.4.3 Released"
 date: 2014-03-22 17:49
 comments: true
