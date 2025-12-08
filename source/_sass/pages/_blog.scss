@@ -94,6 +94,25 @@
 
 .article-content {
     padding: 3rem;
+
+    code {
+        background: #f8f9fa;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+    }
+
+    pre {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: scroll;
+        border: 1px solid #e9ecef;
+
+        code {
+            background: none;
+            padding: 0;
+        }
+    }
 }
 
 /* Content Styling */
