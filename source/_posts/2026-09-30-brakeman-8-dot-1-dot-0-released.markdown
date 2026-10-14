@@ -80,14 +80,3 @@ Yuriy also fixed an issue where `Haml::AttributeBuilder.build_class` was falsely
 
 ([changes](https://github.com/presidentbeef/brakeman/pull/2052))
 
-
-
-
-- Update SonarQube report to use generic issue format ([fangxing](https://github.com/fffx))
-- Include regex code in validation warnings ([Eliot Sykes](https://github.com/eliotsykes))
-- Check validation regexes in non-activerecord models ([Eliot Sykes](https://github.com/eliotsykes))
-- Skip top-level vendor directory before recursive globbing ([Conor O'Donnell](https://github.com/ronocod))
-- Support Rails 7.1+ positional enum syntax in SQL injection check ([Michael Vogl](https://github.com/cubasepp)/[Yuriy Tumanov](https://github.com/Eljees))
-- Recognize `Haml::AttributeBuilder.build_class` as an escaped output ([Yuriy Tumanov](https://github.com/Eljees))
-- Fix frozen string error ([Shai Coleman](https://github.com/shaicoleman))
-- Better help and error message for `--ensure-latest` ([#2036](https://github.com/presidentbeef/brakeman/issues/2036)
