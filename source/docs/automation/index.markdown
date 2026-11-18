@@ -37,8 +37,51 @@ You can run Brakeman with:
 
 Documentation for setting up Brakeman in various CI tools:
 
+* [GitHub Actions](#github-actions)
 * [Travis CI](https://rietta.com/blog/2017/10/03/automate-security-scans-with-continuous-integration/)
 * [Semaphore CI](https://semaphoreci.com/community/tutorials/automatic-security-testing-of-rails-applications-using-brakeman)
 * [Electric Cloud](https://electric-cloud.com/plugins/directory/p/brakeman/)
 * [GitLab CI](https://medium.com/digital-banking-labs/setup-gitlab-ci-for-a-rails-application-ee38ea8c907d)
 
+## GitHub Actions
+
+Run Brakeman in [GitHub Actions](https://github.com/features/actions) and upload its [SARIF](https://sarifweb.azurewebsites.net/) report
+to GitHub Code Scanning with [CodeQL](https://github.com/features/security). This displays Brakeman warnings
+in the repository's Security tab and on pull requests.
+
+For example, create `.github/workflows/brakeman.yml`:
+
+```yaml
+name: Brakeman
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  brakeman:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run Brakeman
+        run: bundle exec brakeman -f sarif -o brakeman.sarif
+
+      - name: Upload SARIF report
+        uses: github/codeql-action/upload-sarif@v4
+        if: always()
+        with:
+          sarif_file: brakeman.sarif
+```
